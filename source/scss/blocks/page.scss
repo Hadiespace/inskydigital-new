@@ -1,0 +1,21 @@
+.page {
+	scroll-padding-top: 84px;
+}
+
+.page__body {
+	overflow-anchor: none;
+	min-width: 320px;
+	min-height: calc(var(--vh) * 100);
+	font-family: "GraphikLCG", arial, sans-serif;
+	font-weight: var(--text-font-weight-400);
+	font-style: normal;
+	font-size: var(--text-font-size-m);
+	line-height: var(--text-line-height-m);
+	color: var(--color-main);
+	background-color: var(--color-default-background);
+}
+
+.page__wrapper {
+	display: flex;
+	flex-direction: column;
+}

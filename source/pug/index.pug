@@ -1,0 +1,24 @@
+extends layout/layout
+include modules/review-open
+
+block const
+	- const isHome = true;
+
+block meta
+	title Insky.digital | Главная
+	meta(name="description", content="Главная страница")
+block content
+	// заголовок страницы
+	h1.visually-hidden Главная страница компании Insky.digital
+	// превью
+	include modules/home-preview/home-preview
+	// наши проекты
+	include modules/home-projects/home-projects
+	// услуги
+	include modules/home-services/home-services
+	// процесс
+	include modules/home-process/home-process
+	// команда
+	include modules/home-team/home-team
+
+block prepend page-bottom

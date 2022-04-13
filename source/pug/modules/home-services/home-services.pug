@@ -1,0 +1,19 @@
+include home-services-data
+include ../service-card
+
+section.home-services
+	div.home-services__container.container
+		// боковая панель
+		div.home-projects__aside
+			// заголовок секции
+			h2.home-projects__title.title Услуги
+			// информация
+			p: b У вас уже есть описание <br> или техническое задание?
+			p Мы оценим в течение 1 рабочего дня и сообщим стоимость.
+			// открыть модальное окно "проконсультироваться"
+			+button('Прислать ТЗ').home-projects__modal-open
+		// услуги
+		ul.home-services__card-list
+			each card in servicesCards
+				li.home-projects__card-item
+					+serviceCard(card)

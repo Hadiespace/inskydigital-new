@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#2d3035">
+    <meta name="msapplication-TileColor" content="#2d3035">
+    <meta name="theme-color" content="#ffffff">
+    <title>Insky.digital | Главная</title>
+    <meta name="description" content="Главная страница">
+    <link rel="stylesheet" href="css/theme-light.min.css?_v=20220413211626">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220413211626">
+    <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220413211626" rel="stylesheet">
+  </head>
+  <body class="page__body">
+    <noscript>У вас отключен JavaScript. Это пугает.</noscript>
+    <div class="page__wrapper">
+      <header class="header">
+        <div class="header__container container">
+          <!-- открыть/закрыть меню-->
+          <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Открыть меню</span><span></span><span></span><span></span></button>
+          <!-- логотип--><a class="logo header__logo"><img class="logo" src="images/content/logo.svg" alt="Логотип Insky.digital"><span>Insky.digital</span></a>
+          <!-- переключение темы-->
+                <button class="theme-switcher theme-switcher--light header__theme-switcher" type="button"><span class="visually-hidden">Переключить на темную тему</span><span class="theme-switcher__check"></span>
+                  <svg class="theme-switcher__icon theme-switcher__icon--moon" width="8" height="8" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                  <svg class="theme-switcher__icon theme-switcher__icon--sun" width="8" height="8" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+          <!-- главная навигация по страницам-->
+          <div class="header__nav-wrap">
+            <nav class="header__nav main-nav" id="main-nav">
+              <!-- страницы-->
+              <!-- main-nav__link--current (активная страница)-->
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Портфолио</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Услуги</a>
+                              <button class="nav-arrow" type="button">
+                                <svg width="16" height="16" aria-hidden="true">
+                                  <use xlink:href="images/sprite.svg#"></use>
+                                </svg>
+                              </button>
+                  <!-- выпадающее меню (большое)-->
+                  <div class="menu-big">
+                    <div class="menu-big__wrapper">
+                      <p class="menu-big__title">Аналитика <br> и автоматизация бизнеса</p>
+                      <ul class="menu-big__list">
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Внедрение и поддержка Битрикс24</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Поддержка 1С</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu-big__wrapper">
+                      <p class="menu-big__title">Разработка сайтов <br> и мобильных приложений</p>
+                      <ul class="menu-big__list">
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Сайты для бизнеса</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">E-commerce</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Мобильные приложения</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Техническая поддержка проектов</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Айдентика и дизайн</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu-big__wrapper">
+                      <p class="menu-big__title">Продвижение и PR</p>
+                      <ul class="menu-big__list">
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по позициям</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по трафику</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по вашим KPI</a></li>
+                        <li class="menu-big__item"><a class="menu-big__link" href="index.html">SEO-продвижение</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Наши цены</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">О нас</a>
+                              <button class="nav-arrow" type="button">
+                                <svg width="16" height="16" aria-hidden="true">
+                                  <use xlink:href="images/sprite.svg#"></use>
+                                </svg>
+                              </button>
+                  <!-- выпадающее меню (маленькое)-->
+                  <div class="menu-small">
+                    <ul class="menu-small__list">
+                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Кто мы?</a></li>
+                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Команда</a></li>
+                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Контакты?</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <!-- контакты-->
+              <div class="main-nav__contacts"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#whatsapp"></use>
+                        </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#telegram"></use>
+                        </svg></a><a class="main-nav__phone" href="tel:+74993507512">+7 499 350-75-12</a>
+              </div>
+              <!-- открыть модальное окно "проконсультироваться"-->
+                    <button class="button button--accent main-nav__modal-open" type="button">Обратный звонок</button>
+            </nav>
+          </div>
+          <!-- контакты-->
+          <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#whatsapp"></use>
+                    </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#telegram"></use>
+                    </svg></a><a class="header__phone" href="tel:+74993507512">+7 499 350-75-12</a>
+          </div>
+          <!-- открыть модальное окно "проконсультироваться"-->
+                <button class="button button--accent header__modal-open" type="button">Обратный звонок</button>
+          <!-- номер телефона--><a class="header__phone-icon" href="tel:+74993507512"><span class="visually-hidden">+7 499 350-75-12</span>
+            <svg width="12" height="20" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#"></use>
+            </svg></a>
+        </div>
+      </header>
+      <main class="main" id="main">
+        <!-- заголовок страницы-->
+        <h1 class="visually-hidden">Главная страница компании Insky.digital</h1>
+        <!-- превью-->
+        <section class="home-preview">
+          <div class="home-preview__wrapper">
+            <div class="home-preview__container container">
+              <!-- заголовок секции-->
+              <h2 class="home-preview__title title">
+                Разработка сайтов, <br>
+                мобильные приложения, <br>
+                продвижение и PR
+              </h2>
+              <!-- преимущества-->
+              <ul class="home-preview__list">
+                <li class="home-preview__item">Быстро запустим и продвинем</li>
+                <li class="home-preview__item">Не требуем ТЗ и бриф</li>
+                <li class="home-preview__item">Сделаем все «под ключ»</li>
+              </ul>
+              <!-- открыть видео-отзывы--><a class="review-open home-preview__review-open" tabindex="0">
+                        <picture class="review-open__picture">
+                          <source srcset="images/content/" type="image/webp"><img src="images/content/" alt="Фото клиента">
+                        </picture><span class="review-open__text"><b>Видео-отзывы <br> наших клиентов</b></span></a>
+              <!-- открыть модальное окно "проконсультироваться"-->
+                      <button class="button button--secondary home-preview__modal-open" type="button">Получить оценку</button>
+            </div>
+          </div>
+          <!-- открыть видео-отзывы (для мобильной версии)-->
+          <div class="home-preview__review-container container"><a class="review-open home-preview__mobile-review-open" tabindex="0">
+                      <picture class="review-open__picture">
+                        <source srcset="images/content/" type="image/webp"><img src="images/content/" alt="Фото клиента">
+                      </picture><span class="review-open__text"><b>Видео-отзывы <br> наших клиентов</b></span></a>
+          </div>
+        </section>
+        <!-- наши проекты-->
+        <section class="home-projects">
+          <div class="home-projects__container container">
+            <!-- боковая панель-->
+            <div class="home-projects__aside">
+              <!-- заголовок секции-->
+              <h2 class="home-projects__title title">Наши проекты</h2>
+              <!-- типы проектов-->
+              <ul class="home-projects__types-list">
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Интернет-магазины</button>
+                </li>
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Сайты для бизнеса</button>
+                </li>
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Порталы</button>
+                </li>
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Промо-сайты</button>
+                </li>
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Лендинги</button>
+                </li>
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Продвижение</button>
+                </li>
+                <li class="home-projects__types-item">
+                          <button class="tab-filter" type="button" aria-expanded="false">Лендинги</button>
+                </li>
+              </ul>
+              <!-- открыть страницу портфолио--><a class="button button--accent home-projects__portfolio-open" href="index.html">Показать еще проекты</a>
+            </div>
+            <!-- проекты в портфолио-->
+            <ul class="home-projects__card-list">
+              <li class="home-projects__card-item">
+                        <div class="project-card">
+                          <div class="project-card__wrapper">
+                            <h3 class="project-card__title"><a href="index.html">Интернет-магазин <br> женской одежды <br> премиум-класса</a></h3>
+                          </div>
+                          <picture class="project-card__logo">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.png" alt="Логотип">
+                          </picture>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="project-card">
+                          <div class="project-card__wrapper">
+                            <h3 class="project-card__title"><a href="index.html">Сайт компании пассажирских перевозок</a></h3>
+                          </div>
+                          <picture class="project-card__logo">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.png" alt="Логотип">
+                          </picture>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="project-card">
+                          <div class="project-card__wrapper">
+                            <h3 class="project-card__title"><a href="index.html">Интернет-магазин <br> женской одежды</a></h3><span>+ видео-разбор</span>
+                          </div>
+                          <picture class="project-card__logo">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.png" alt="Логотип">
+                          </picture>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="project-card">
+                          <div class="project-card__wrapper">
+                            <h3 class="project-card__title"><a href="index.html">Сайт для юридической компании</a></h3>
+                          </div>
+                          <picture class="project-card__logo">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.png" alt="Логотип">
+                          </picture>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="project-card">
+                          <div class="project-card__wrapper">
+                            <h3 class="project-card__title"><a href="index.html">Лендинг дистрибьютора оборудования</a></h3>
+                          </div>
+                          <picture class="project-card__logo">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.png" alt="Логотип">
+                          </picture>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="project-card">
+                          <div class="project-card__wrapper">
+                            <h3 class="project-card__title"><a href="index.html">Разработка портала программы лояльности</a></h3>
+                          </div>
+                          <picture class="project-card__logo">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.png" alt="Логотип">
+                          </picture>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+            </ul>
+            <!-- открыть страницу портфолио (для мобильной версии)--><a class="button button--accent home-projects__mobile-portfolio-open" href="index.html">Показать еще проекты</a>
+          </div>
+        </section>
+        <!-- услуги-->
+        <section class="home-services">
+          <div class="home-services__container container">
+            <!-- боковая панель-->
+            <div class="home-projects__aside">
+              <!-- заголовок секции-->
+              <h2 class="home-projects__title title">Услуги</h2>
+              <!-- информация-->
+              <p><b>У вас уже есть описание <br> или техническое задание?</b></p>
+              <p>Мы оценим в течение 1 рабочего дня и сообщим стоимость.</p>
+              <!-- открыть модальное окно "проконсультироваться"-->
+                      <button class="button button--accent home-projects__modal-open" type="button">Прислать ТЗ</button>
+            </div>
+            <!-- услуги-->
+            <ul class="home-services__card-list">
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Сайты для <br> бизнеса</h3>
+                          <p class="service-card__description">От одностраничных <br> лендингов до сложных <br> веб-порталов</p><span>Узнать подробнее</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">E-commerce</h3>
+                          <p class="service-card__description">Современные B2B <br> и B2C решения для <br> онлайн-бизнеса</p><span>Больше информации</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Мобильные <br> приложения</h3>
+                          <p class="service-card__description">Разработка <br> приложений для платформ IOS и Android</p><span>Подробнее</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Техническая <br> поддержка проектов</h3>
+                          <p class="service-card__description">Берем на поддержку сайты, интернет-магазины, порталы и мобильные приложения.
+        Редизайн <br> и доработка существующих проектов.</p><span>Как мы работаем</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Продвижение <br> и PR</h3>
+                          <p class="service-card__description">Погружение в ваш бизнес, анализ сильных и <br> слабых сторон,
+        разработка стратегии продвижения и борьбы с конкурентами в digital-среде</p><span>Узнать подробнее</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Айдентика <br> и дизайн</h3>
+                          <p class="service-card__description">От логотипов <br> до бренд-буков <br> и полиграфии</p><span>Узнать больше</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Внедрение <br> и поддержка <br> Битрикс24</h3>
+                          <p class="service-card__description">Автоматизируем <br> бизнес-процессы, интегрируем CRM, обучаем персонал</p><span>Подробнее</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+              <li class="home-projects__card-item">
+                        <div class="service-card">
+                          <h3 class="service-card__title">Поддержка 1 °C</h3>
+                          <p class="service-card__description">Настроим и доработаем продукты 1С используя стандарты системы</p><span>Проконсультироваться</span>
+                          <picture class="project-card__background" aria-hidden="true">
+                            <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Фон">
+                          </picture>
+                        </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- процесс-->
+        <section class="home-process">
+          <div class="home-process__container container">
+            <!-- боковая панель-->
+            <div class="home-process__aside">
+              <!-- заголовок секции-->
+              <h2 class="home-process__title">Процесс</h2>
+              <!-- открыть модальное окно "проконсультироваться"-->
+                      <button class="button button--accent" type="button">Начать проект</button>
+            </div>
+            <!-- шаги процесса-->
+            <ul class="home-process__steps">
+              <li class="home-process__step">
+                <button class="home-process__toggle" type="button" aria-controls="item0" aria-expanded="false"><span>Бизнес-анализ</span>
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
+        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
+        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
+        совершать действия, необходимые вам по их доброй воле.</p></div>
+              </li>
+              <li class="home-process__step">
+                <button class="home-process__toggle" type="button" aria-controls="item1" aria-expanded="false"><span>Дизайн</span>
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
+        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
+        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
+        совершать действия, необходимые вам по их доброй воле.</p></div>
+              </li>
+              <li class="home-process__step">
+                <button class="home-process__toggle" type="button" aria-controls="item2" aria-expanded="false"><span>Разработка</span>
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
+        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
+        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
+        совершать действия, необходимые вам по их доброй воле.</p></div>
+              </li>
+              <li class="home-process__step">
+                <button class="home-process__toggle" type="button" aria-controls="item3" aria-expanded="false"><span>Тестирование</span>
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
+        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
+        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
+        совершать действия, необходимые вам по их доброй воле.</p></div>
+              </li>
+              <li class="home-process__step">
+                <button class="home-process__toggle" type="button" aria-controls="item4" aria-expanded="false"><span>Запуск</span>
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
+        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
+        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
+        совершать действия, необходимые вам по их доброй воле.</p></div>
+              </li>
+              <li class="home-process__step">
+                <button class="home-process__toggle" type="button" aria-controls="item5" aria-expanded="false"><span>Поддержка и продвижение</span>
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#"></use>
+                  </svg>
+                </button>
+                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
+        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
+        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
+        совершать действия, необходимые вам по их доброй воле.</p></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- команда-->
+        <section class="home-team">
+          <div class="home-team__container container">
+            <div class="home-team__wrapper">
+              <!-- заголовок и описание-->
+              <div class="home-team__top-wrap">
+                <h2 class="home-team__title title">Команды</h2>
+                <p class="home-team__description">
+                  Мы развиваемся вместе с нашими клиентами.
+                  Усердно трудимся, отдыхая на любимой работе.
+                </p>
+              </div>
+              <!-- информация-->
+              <p class="home-team__text"><span>50+</span>профессионалов в Москве, <br> Минске, Риге и Томске.</p>
+              <!-- контакты-->
+              <div class="home-team__socials"><a class="social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#facebook"></use>
+                          </svg></a><a class="social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#instagram"></use>
+                          </svg></a><a class="social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#vkontakte"></use>
+                          </svg></a><a class="social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#telegram"></use>
+                          </svg></a>
+              </div>
+            </div>
+            <!-- слайдер-->
+            <div class="home-team__slider team-slider swiper">
+              <div class="team-slider__swiper">
+                <ul class="team-slider__wrapper swiper-wrapper">
+                  <li class="team-slider__slide swiper-slide">
+                    <!-- изображение-->
+                    <picture class="team-slider__picture">
+                      <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Дмитрий Кучинский">
+                    </picture>
+                    <!-- информация-->
+                    <div class="team-slider__wrapper">
+                      <!-- имя, статус и город-->
+                      <div class="team-slider__top-wrap">
+                        <h3 class="team-slider__title sub-title">Дмитрий Кучинский</h3><span class="team-slider__status">Генеральный директор Insky.digital</span><span class="team-slider__city">Москва</span>
+                      </div>
+                      <!-- специализация-->
+                      <p class="team-slider__specialization"><b>Специализация:</b> <br>
+        Маркетинг, бизнес-аналитика, стратегическое планирование, продажи</p>
+                    </div>
+                  </li>
+                  <li class="team-slider__slide swiper-slide">
+                    <!-- изображение-->
+                    <picture class="team-slider__picture">
+                      <source srcset="images/content/.webp" type="image/webp"><img src="images/content/.jpg" alt="Кристина Цыцкина">
+                    </picture>
+                    <!-- информация-->
+                    <div class="team-slider__wrapper">
+                      <!-- имя, статус и город-->
+                      <div class="team-slider__top-wrap">
+                        <h3 class="team-slider__title sub-title">Кристина Цыцкина</h3><span class="team-slider__status">Бизнес-аналитик Insky.digital</span><span class="team-slider__city">Рига</span>
+                      </div>
+                      <!-- специализация-->
+                      <p class="team-slider__specialization"><b>Специализация:</b> <br>
+        Бизнес-аналитика, ведение проектов, маркетинг</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-slider__navigation">
+                <div class="team-slider__buttons">
+                  <!-- перейти на предыдущий слайд-->
+                  <button class="team-slider__button team-slider__button--prev" type="button"><span class="visually-hidden">Предыдущий слайд</span>
+                    <svg width="48" height="48" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#"></use>
+                    </svg>
+                  </button>
+                  <!-- перейти на следующий слайд-->
+                  <button class="team-slider__button team-slider__button--next" type="button"><span class="visually-hidden">Следующий слайд</span>
+                    <svg width="48" height="48" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#"></use>
+                    </svg>
+                  </button>
+                </div>
+                <!-- открыть модальное окно "проконсультироваться"-->
+                        <button class="button button--accent team-slider__modal-open" type="button">Давайте встретимся!</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <!-- Контакты-->
+          <div class="footer__contacts">
+            <div class="footer__contact-wrap"><a class="footer__contact" href="tel:+74993507512">+7 499 350-75-12</a><span>Позвоните нам</span></div>
+            <div class="footer__contact-wrapper"><a class="footer__contact" href="mailto:info@insky.digital">info@insky.digital</a><span>Напишите нам</span></div>
+          </div>
+          <!-- Адреса-->
+          <div class="footer__addresses">
+            <div class="footer__address-wrap">
+              <p class="footer__address">Москва</p>
+              <address class="footer__text">ул. Б. Новодмитровская, д. 36, стр. 12, <br> дизайн-завод «Флакон»</address>
+            </div>
+            <div class="footer__address-wrap">
+              <p class="footer__address">Минск</p>
+              <address class="footer__text">ул. Сурганова, д. 43, офис 804, <br> бизнес-центр «Соло»</address>
+            </div>
+            <div class="footer__address-wrap">
+              <p class="footer__address">Рига</p>
+              <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
+            </div>
+          </div>
+          <!-- Страницы-->
+          <div class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="index.html">Портфолио</a></li>
+              <li class="footer__item"><a href="index.html">Услуги</a></li>
+              <li class="footer__item"><a href="index.html">Наши цены</a></li>
+              <li class="footer__item"><a href="index.html">Кто мы?</a></li>
+              <li class="footer__item"><a href="index.html">Команда</a></li>
+              <li class="footer__item"><a href="index.html">Контакты</a></li>
+              <li class="footer__item"><a href="index.html">Внедрение Битрикс24</a></li>
+              <li class="footer__item"><a href="index.html">Поддержка 1С</a></li>
+              <li class="footer__item"><a href="index.html">Сайты для бизнеса</a></li>
+              <li class="footer__item"><a href="index.html">Мобильные приложения</a></li>
+              <li class="footer__item"><a href="index.html">Техническая поддержка</a></li>
+              <li class="footer__item"><a href="index.html">SEO-продвижение</a></li>
+            </ul>
+          </div>
+          <!-- Логотип--><a class="logo footer__logo" href="index.html"><img class="logo" src="images/content/logo.svg" alt="Логотип Insky.digital"><span>Insky.digital</span></a>
+          <!-- Копирайт-->
+          <p class="footer__copyright">
+            Нажимая кнопку «Отправить», вы соглашаетесь с
+            <a href="index.html">политикой конфиденциальности</a>
+            и обработкой персональных данных. <br>
+            2000-2021. Все права защищены.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/bundle.min.js?_v=20220413211626"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220413211626"></script>
+    <!-- навигация по страницам вёрстки во время разработки-->
+    <script src="js/switcher.js?_v=20220413211626"></script>
+  </body>
+</html>

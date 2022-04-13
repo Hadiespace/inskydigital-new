@@ -1,0 +1,23 @@
+include ../social
+
+section.home-team
+	div.home-team__container.container
+		div.home-team__wrapper
+			// заголовок и описание
+			div.home-team__top-wrap
+				h2.home-team__title.title Команды
+				p.home-team__description
+					| Мы развиваемся вместе с нашими клиентами.
+					| Усердно трудимся, отдыхая на любимой работе.
+			// информация
+			p.home-team__text
+				span 50+
+				| профессионалов в Москве, <br> Минске, Риге и Томске.
+			// контакты
+			div.home-team__socials
+				+social('facebook').home-team__social
+				+social('instagram').home-team__social
+				+social('vkontakte').home-team__social
+				+social('telegram').home-team__social
+		// слайдер
+		include team-slider

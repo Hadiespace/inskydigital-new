@@ -1,0 +1,10 @@
+include home-process-data
+
+ul.home-process__steps
+	each step, index in processSteps
+		li.home-process__step
+			button.home-process__toggle(type="button", aria-controls=`item${index}`, aria-expanded="false")
+				span!= step.title
+				svg(width="32", height="32", aria-hidden="true")
+					use(xlink:href="images/sprite.svg#")
+			div.home-process__text!= step.text

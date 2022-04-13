@@ -1,1 +1,1 @@
-# insky.digital
+# Insky.digital

@@ -1,0 +1,10 @@
+mixin serviceCard(props)
+	- const { title, description, more, background } = props;
+
+	div.service-card
+		h3.service-card__title!= title
+		p.service-card__description!= description
+		span!= more
+		picture.project-card__background(aria-hidden="true")
+			source(srcset=`images/content/${background}.webp`, type="image/webp")
+			img(src=`images/content/${background}.jpg`, alt="Фон")

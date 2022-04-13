@@ -1,0 +1,8 @@
+div.menu-big
+	each item in servicesList
+		div.menu-big__wrapper
+			p.menu-big__title!= item.name
+			ul.menu-big__list
+				each link in item.links
+					li.menu-big__item
+						a.menu-big__link(href=link.href)!= link.name

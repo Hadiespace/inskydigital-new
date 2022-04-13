@@ -1,0 +1,12 @@
+include ../button
+
+section.home-process
+	div.home-process__container.container
+		// боковая панель
+		div.home-process__aside
+			// заголовок секции
+			h2.home-process__title Процесс
+			// открыть модальное окно "проконсультироваться"
+			+button('Начать проект')
+		// шаги процесса
+		include home-process-steps

@@ -1,0 +1,8 @@
+mixin themeSwitcher()
+	button.theme-switcher.theme-switcher--light(type="button")&attributes(attributes)
+		span.visually-hidden Переключить на темную тему
+		span.theme-switcher__check
+		svg.theme-switcher__icon.theme-switcher__icon--moon(width="8", height="8", aria-hidden="true")
+			use(xlink:href="images/sprite.svg#")
+		svg.theme-switcher__icon.theme-switcher__icon--sun(width="8", height="8", aria-hidden="true")
+			use(xlink:href="images/sprite.svg#")

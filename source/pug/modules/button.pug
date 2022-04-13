@@ -1,0 +1,9 @@
+mixin button(text, isSecondary, isLink, linkHref)
+	if isSecondary && !isLink
+		button.button.button--secondary(type="button")&attributes(attributes)!= text
+	if !isSecondary && !isLink
+		button.button.button--accent(type="button")&attributes(attributes)!= text
+	if isSecondary && isLink
+		a.button.button--secondary(href=linkHref)&attributes(attributes)!= text
+	if !isSecondary && isLink
+		a.button.button--accent(href=linkHref)&attributes(attributes)!= text

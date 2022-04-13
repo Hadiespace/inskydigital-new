@@ -1,0 +1,16 @@
+mixin projectCard(props)
+	- const { title, logo, background, addons } = props;
+
+	div.project-card
+		div.project-card__wrapper
+			h3.project-card__title
+				a(href="index.html")!= title
+			if addons
+				each addon in addons
+					span + #{addon}
+		picture.project-card__logo
+			source(srcset=`images/content/${logo}.webp`, type="image/webp")
+			img(src=`images/content/${logo}.png`, alt="Логотип")
+		picture.project-card__background(aria-hidden="true")
+			source(srcset=`images/content/${background}.webp`, type="image/webp")
+			img(src=`images/content/${background}.jpg`, alt="Фон")

@@ -1,0 +1,28 @@
+include header-data
+include ../nav-arrow
+
+nav.header__nav.main-nav#main-nav
+	// страницы
+	// main-nav__link--current (активная страница)
+	ul.main-nav__list
+		li.main-nav__item
+			a.main-nav__link(href="index.html") Портфолио
+		li.main-nav__item
+			a.main-nav__link(href="index.html") Услуги
+			+navArrow
+			// выпадающее меню (большое)
+			include menu-big
+		li.main-nav__item
+			a.main-nav__link(href="index.html") Наши цены
+		li.main-nav__item
+			a.main-nav__link(href="index.html") О нас
+			+navArrow
+			// выпадающее меню (маленькое)
+			include menu-small
+	// контакты
+	div.main-nav__contacts
+		+socialAccent('whatsapp').main-nav__social
+		+socialAccent('telegram').main-nav__social
+		a.main-nav__phone(href=`tel:${phoneHref}`)!= phoneName
+	// открыть модальное окно "проконсультироваться"
+	+button('Обратный звонок').main-nav__modal-open

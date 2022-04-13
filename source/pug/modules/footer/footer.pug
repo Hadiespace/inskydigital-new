@@ -1,0 +1,33 @@
+include ../logo
+include footer-data
+
+footer.footer
+	div.footer__container.container
+		// Контакты
+		div.footer__contacts
+			div.footer__contact-wrap
+				a.footer__contact(href=`tel:${phoneHref}`)!= phoneName
+				span Позвоните нам
+			div.footer__contact-wrapper
+				a.footer__contact(href=`mailto:${email}`)!= email
+				span Напишите нам
+		// Адреса
+		div.footer__addresses
+			each city in addresses
+				div.footer__address-wrap
+					p.footer__address!= city.name
+					address.footer__text!= city.address
+		// Страницы
+		div.footer__nav
+			ul.footer__list
+				each link in navLinks
+					li.footer__item
+						a(href=link.href)!= link.name
+		// Логотип
+		+logo.footer__logo
+		// Копирайт
+		p.footer__copyright.
+			Нажимая кнопку «Отправить», вы соглашаетесь с
+			#[a(href="index.html") политикой конфиденциальности]
+			и обработкой персональных данных. <br>
+			2000-2021. Все права защищены.
