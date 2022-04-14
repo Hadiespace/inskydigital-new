@@ -1,0 +1,73 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+
+	&::before {
+		@include adaptive("height", 160);
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		background: var(--color-header-background);
+		pointer-events: none;
+	}
+}
+
+.header__container {
+	@include grid;
+	align-items: center;
+}
+
+.header__right-wrap {
+	display: flex;
+	align-items: center;
+}
+
+.header__main-nav-toggle {
+	display: none;
+}
+
+.header__logo {
+	@include adaptive("margin-right", 20);
+}
+
+.header__theme-switcher {}
+
+.header__phone-icon {
+	display: none;
+}
+
+.header__left-wrap {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr max-content max-content;
+}
+
+.header__nav-wrap {}
+
+.header__contacts {
+	@include adaptive("margin", -4);
+	@include adaptive("margin-right", 16);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.header__social {
+	@include adaptive("margin", 4);
+}
+
+.header__phone {
+	@include adaptive("margin-left", 16);
+	font-weight: 600;
+}
+
+.header__modal-open {
+	@include adaptive("min-width", 200);
+}

@@ -1,0 +1,13 @@
+// calc(РАЗМЕРpx + (РАЗМЕР * 3 - РАЗМЕР) * ((100vw - 1280px) / (3840 - 1280)));
+$max-width: 3840;
+
+@mixin adaptive($property, $size) {
+	$add-size: calc($size * 3) - $size;
+	#{$property}: calc(#{$size + px} + #{$add-size} * ((100vw - 1280px) / #{$max-width - 1280}));
+}
+
+@mixin grid {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	grid-template-columns: calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280))) 1fr;
+}

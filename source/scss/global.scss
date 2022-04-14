@@ -5,18 +5,18 @@
 }
 
 * {
-	scrollbar-color: rgb(255 255 255 / 20%) rgb(255 255 255 / 5%);
+	scrollbar-color: var(--color-accent) var(--color-background);
 	scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
 	width: 8px;
-	background-color: rgb(255 255 255 / 5%);
+	background-color: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
 	height: 8px;
-	background-color: rgb(255 255 255 / 20%);
+	background-color: var(--color-accent);
 }
 
 picture {
@@ -80,4 +80,9 @@ a {
 b,
 strong {
 	font-weight: 500;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
 }

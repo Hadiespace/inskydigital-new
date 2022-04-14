@@ -1,4 +1,4 @@
-mixin navArrow()
-	button.nav-arrow(type="button")&attributes(attributes)
+mixin navArrow(id)
+	button.nav-arrow(type="button", aria-controls=id, aria-expanded="false")&attributes(attributes)
 		svg(width="16", height="16", aria-hidden="true")
-			use(xlink:href="images/sprite.svg#")
+			use(xlink:href="images/sprite.svg#arrow-link")

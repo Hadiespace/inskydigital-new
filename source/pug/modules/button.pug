@@ -1,9 +1,29 @@
 mixin button(text, isSecondary, isLink, linkHref)
 	if isSecondary && !isLink
 		button.button.button--secondary(type="button")&attributes(attributes)!= text
+			span.button__line.button__line--top
+			span.button__line.button__line--top-right
+			span.button__line.button__line--bottom-right
+			span.button__line.button__line--left
+			span.button__line.button__line--bottom
 	if !isSecondary && !isLink
 		button.button.button--accent(type="button")&attributes(attributes)!= text
+			span.button__line.button__line--top
+			span.button__line.button__line--top-right
+			span.button__line.button__line--bottom-right
+			span.button__line.button__line--left
+			span.button__line.button__line--bottom
 	if isSecondary && isLink
 		a.button.button--secondary(href=linkHref)&attributes(attributes)!= text
+			span.button__line.button__line--top
+			span.button__line.button__line--top-right
+			span.button__line.button__line--bottom-right
+			span.button__line.button__line--left
+			span.button__line.button__line--bottom
 	if !isSecondary && isLink
 		a.button.button--accent(href=linkHref)&attributes(attributes)!= text
+			span.button__line.button__line--top
+			span.button__line.button__line--top-right
+			span.button__line.button__line--bottom-right
+			span.button__line.button__line--left
+			span.button__line.button__line--bottom

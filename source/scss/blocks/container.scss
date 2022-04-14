@@ -1,6 +1,7 @@
 .container {
+	@include adaptive("max-width", 1268);
+	@include adaptive("padding-left", 20);
+	@include adaptive("padding-right", 20);
 	margin: 0 auto;
-	padding: 0 20px;
 	width: 100%;
-	max-width: 1268px;
 }

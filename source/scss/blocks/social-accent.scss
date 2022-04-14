@@ -1,0 +1,23 @@
+.social-accent {
+	@include adaptive("width", 24);
+	@include adaptive("height", 24);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+
+	svg {
+		@include adaptive("width", 12);
+		@include adaptive("height", 12);
+	}
+
+	&--whatsapp {
+		fill: var(--color-alternate);
+		background: var(--color-whatsapp);
+	}
+
+	&--telegram {
+		fill: var(--color-alternate);
+		background: var(--color-telegram);
+	}
+}

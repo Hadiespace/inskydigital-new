@@ -1,0 +1,34 @@
+.home-preview {
+	@include adaptive("min-height", 720);
+	@include adaptive("padding-top", 84);
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+
+	&::before {
+		@include adaptive("width", 1600);
+		@include adaptive("height", 680);
+		@include adaptive("margin-left", -80);
+		@include adaptive("margin-bottom", -60);
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: -1;
+		background-image: url("../images/common/home-preview-background.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.home-preview__wrapper {
+}
+.home-preview__container {}
+.home-preview__title {}
+.home-preview__list {}
+.home-preview__item {}
+.home-preview__review-open {}
+.home-preview__modal-open {}
+.home-preview__review-container {}
+.home-preview__mobile-review-open {}

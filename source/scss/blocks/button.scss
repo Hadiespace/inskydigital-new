@@ -1,0 +1,68 @@
+.button {
+	@include adaptive("min-height", 84);
+	@include adaptive("padding", 12);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+	border: none;
+}
+
+.button__line {
+	position: absolute;
+
+	&--top {
+		@include adaptive("height", 2);
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+
+	&--top-right {
+		@include adaptive("width", 2);
+		right: 0;
+		top: 0;
+		height: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+	}
+
+	&--bottom-right {
+		@include adaptive("height", 2);
+		@include adaptive("right", -4);
+		@include adaptive("bottom", 12);
+		@include adaptive("width", 34);
+		transform: rotate(-45deg);
+	}
+
+	&--bottom {
+		@include adaptive("height", 2);
+		left: 0;
+		bottom: 0;
+		width: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+	}
+
+	&--left {
+		@include adaptive("width", 2);
+		left: 0;
+		top: 0;
+		height: 100%;
+	}
+}
+
+.button--accent {
+	color: var(--color-alternate);
+	background: var(--color-accent);
+
+	.button__line {
+		background: var(--color-accent);
+	}
+}
+
+.button--secondary {
+	color: var(--color-button-secondary);
+	background: transparent;
+
+	.button__line {
+		background: var(--color-button-secondary);
+	}
+}

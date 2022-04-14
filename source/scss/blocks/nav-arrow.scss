@@ -1,0 +1,14 @@
+.nav-arrow {
+	@include adaptive("width", 16);
+	@include adaptive("height", 16);
+	border: none;
+	padding: 0;
+	background: transparent;
+
+	svg {
+		@include adaptive("width", 16);
+		@include adaptive("height", 16);
+		fill: none;
+		stroke: var(--color-main);
+	}
+}

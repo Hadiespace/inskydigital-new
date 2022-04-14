@@ -1,0 +1,22 @@
+.logo {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, max-content);
+}
+
+.logo__image {
+	@include adaptive("width", 84);
+	@include adaptive("height", 84);
+}
+
+.logo__text {
+	font-weight: 500;
+	cursor: default;
+}
+
+.logo[href] {
+	.logo__text {
+		cursor: pointer;
+	}
+}

@@ -5,28 +5,31 @@ include ../button
 
 header.header
 	div.header__container.container
-		// открыть/закрыть меню
-		button.header__main-nav-toggle(type="button", aria-expanded="false", aria-controls="main-nav")
-			span.visually-hidden Открыть меню
-			span
-			span
-			span
-		// логотип
-		+logo(isHome).header__logo
-		// переключение темы
-		+themeSwitcher.header__theme-switcher
-		// главная навигация по страницам
-		div.header__nav-wrap
-			include main-nav
-		// контакты
-		div.header__contacts
-			+socialAccent('whatsapp').header__social
-			+socialAccent('telegram').header__social
-			a.header__phone(href=`tel:${phoneHref}`)!= phoneName
-		// открыть модальное окно "проконсультироваться"
-		+button('Обратный звонок').header__modal-open
-		// номер телефона
-		a.header__phone-icon(href=`tel:${phoneHref}`)
-			span.visually-hidden!= phoneName
-			svg(width="12", height="20", aria-hidden="true")
-				use(xlink:href="images/sprite.svg#")
+		div.header__right-wrap
+			// открыть/закрыть меню
+			button.header__main-nav-toggle(type="button", aria-expanded="false", aria-controls="main-nav")
+				span.visually-hidden Открыть меню
+				span
+				span
+				span
+			// логотип
+			+logo(isHome).header__logo
+			// переключение темы
+			+themeSwitcher.header__theme-switcher
+			// номер телефона
+			a.header__phone-icon(href=`tel:${phoneHref}`)
+				span.visually-hidden!= phoneName
+				svg(width="12", height="20", aria-hidden="true")
+					use(xlink:href="images/sprite.svg#")
+		div.header__left-wrap
+			// главная навигация по страницам
+			div.header__nav-wrap
+				include main-nav
+			// контакты
+			div.header__contacts
+				+socialAccent('whatsapp').header__social
+				+socialAccent('telegram').header__social
+				a.header__phone(href=`tel:${phoneHref}`)!= phoneName
+			// открыть модальное окно "проконсультироваться"
+			+button('Обратный звонок').header__modal-open
+
