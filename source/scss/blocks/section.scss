@@ -1,0 +1,6 @@
+.section {
+	@include adaptive("margin-bottom", 60);
+	@include adaptive("padding-top", 24);
+	@include adaptive("padding-bottom", 24);
+	display: grid;
+}

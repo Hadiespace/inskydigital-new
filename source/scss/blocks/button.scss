@@ -5,8 +5,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
 	border: none;
+	font-weight: 500;
 }
 
 .button__line {
@@ -23,7 +24,7 @@
 		@include adaptive("width", 2);
 		right: 0;
 		top: 0;
-		height: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+		height: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 	}
 
 	&--bottom-right {
@@ -38,7 +39,7 @@
 		@include adaptive("height", 2);
 		left: 0;
 		bottom: 0;
-		width: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+		width: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 	}
 
 	&--left {
@@ -59,10 +60,10 @@
 }
 
 .button--secondary {
-	color: var(--color-button-secondary);
+	color: var(--color-accent-secondary);
 	background: transparent;
 
 	.button__line {
-		background: var(--color-button-secondary);
+		background: var(--color-accent-secondary);
 	}
 }

@@ -3,23 +3,23 @@ include ../button
 include ../projects/projects-data
 include ../project-card
 
-section.home-projects
+section.home-projects.section
 	div.home-projects__container.container
 		// боковая панель
-		div.home-projects__aside
+		div.home-projects__aside.aside
 			// заголовок секции
 			h2.home-projects__title.title Наши проекты
 			// типы проектов
-			ul.home-projects__types-list
+			ul.home-projects__types
 				each item in projectsTypes
-					li.home-projects__types-item
+					li.home-projects__type
 						+tabFilter(item)
 			// открыть страницу портфолио
 			+button('Показать еще проекты', false, true, 'index.html').home-projects__portfolio-open
 		// проекты в портфолио
-		ul.home-projects__card-list
+		ul.home-projects__cards
 			each card in projectsCards
-				li.home-projects__card-item
+				li.home-projects__card
 					+projectCard(card)
 		// открыть страницу портфолио (для мобильной версии)
 		+button('Показать еще проекты', false, true, 'index.html').home-projects__mobile-portfolio-open

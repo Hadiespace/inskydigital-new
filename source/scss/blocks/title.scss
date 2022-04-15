@@ -1,0 +1,6 @@
+.title {
+	@include adaptive("font-size", 48);
+	@include adaptive("line-height", 56);
+	margin: 0;
+	font-weight: 600;
+}

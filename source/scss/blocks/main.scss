@@ -1,3 +1,28 @@
 .main {
 	flex: 1 0 auto;
 }
+
+.main__background {
+	@include adaptive("height", 739);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+
+	&::before {
+		@include adaptive("width", 1902);
+		@include adaptive("height", 739);
+		@include adaptive("margin-left", -100);
+		@include adaptive("top", -60);
+		content: "";
+		position: absolute;
+		left: 50%;
+		z-index: -1;
+		background-image: url("../images/common/home-preview-background.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateX(-50%);
+	}
+}

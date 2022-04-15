@@ -1,0 +1,6 @@
+.sub-title {
+	@include adaptive("font-size", 24);
+	@include adaptive("line-height", 32);
+	margin: 0;
+	font-weight: 600;
+}

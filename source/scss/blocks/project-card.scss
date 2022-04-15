@@ -1,0 +1,80 @@
+.project-card {
+	@include adaptive("padding", 20);
+	@include adaptive("border-radius", 2);
+	position: absolute;
+	display: grid;
+	grid-template-rows: minmax(max-content, 1fr) max-content;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.project-card__wrapper {
+	@include adaptive("min-height", 72);
+	display: grid;
+	align-self: start;
+	order: 2;
+}
+
+.project-card__title {
+	@include adaptive("font-size", 16);
+	@include adaptive("line-height", 24);
+	display: flex;
+	margin: 0;
+	font-weight: 400;
+	color: var(--color-alternate);
+
+	a {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.project-card__addon {
+	@include adaptive("font-size", 12);
+	@include adaptive("line-height", 20);
+	color: var(--color-alternate);
+}
+
+.project-card__logo {
+	@include adaptive("padding", 20);
+	position: relative;
+	align-self: start;
+	order: 1;
+
+	img {
+		@include adaptive("max-height", 120);
+	}
+}
+
+.project-card__background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background: var(--color-card-gradient);
+	}
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

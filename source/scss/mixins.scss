@@ -1,4 +1,6 @@
-// calc(РАЗМЕРpx + (РАЗМЕР * 3 - РАЗМЕР) * ((100vw - 1280px) / (3840 - 1280)));
+// calc(px + (x * 3 - x) * ((100vw - 1280px) / (3840 - 1280)));
+// calc(px + (x * 2 - x) * ((100vw - 1280px) / (3840 - 1280)));
+// @media (min-aspect-ratio: 20/9) {}
 $max-width: 3840;
 
 @mixin adaptive($property, $size) {
@@ -6,8 +8,41 @@ $max-width: 3840;
 	#{$property}: calc(#{$size + px} + #{$add-size} * ((100vw - 1280px) / #{$max-width - 1280}));
 }
 
+@mixin adaptive_2($property, $size) {
+	$add-size: calc($size * 2) - $size;
+	#{$property}: calc(#{$size + px} + #{$add-size} * ((100vw - 1280px) / #{$max-width - 1280}));
+}
+
 @mixin grid {
 	@include adaptive("grid-column-gap", 20);
 	display: grid;
-	grid-template-columns: calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280))) 1fr;
+	grid-template-columns:
+		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)))
+		1fr;
+}
+
+@mixin grid_2 {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	grid-template-columns:
+		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)))
+		1fr;
+}
+
+@mixin grid2 {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	grid-template-columns:
+		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)))
+		1fr
+		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+}
+
+@mixin grid2_2 {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	grid-template-columns:
+		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)))
+		1fr
+		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)));
 }

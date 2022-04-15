@@ -1,34 +1,78 @@
 .home-preview {
-	@include adaptive("min-height", 720);
 	@include adaptive("padding-top", 84);
 	position: relative;
 	overflow: hidden;
-	height: 100vh;
+	height: 100%;
+	min-height: calc(var(--vh) * 100);
+}
+
+.home-preview__wrapper {}
+
+.home-preview__container {
+	@include grid2;
+	grid-template-rows: 1fr max-content;
+	height: 100%;
+}
+
+.home-preview__title {
+	@include adaptive("margin-bottom", 40);
+	align-self: end;
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+.home-preview__list {
+	@include adaptive("margin-top", -4);
+	@include adaptive("margin-right", -8);
+	@include adaptive("margin-bottom", -4);
+	@include adaptive("margin-left", -8);
+	display: flex;
+	flex-wrap: wrap;
+	align-self: center;
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.home-preview__item {
+	@include adaptive("margin-top", 4);
+	@include adaptive("margin-right", 8);
+	@include adaptive("margin-bottom", 4);
+	@include adaptive("margin-left", 8);
+	@include adaptive("padding-left", 16);
+	position: relative;
 
 	&::before {
-		@include adaptive("width", 1600);
-		@include adaptive("height", 680);
-		@include adaptive("margin-left", -80);
-		@include adaptive("margin-bottom", -60);
+		@include adaptive("width", 8);
+		@include adaptive("height", 6);
 		content: "";
 		position: absolute;
-		left: 50%;
+		left: 0;
 		top: 50%;
-		z-index: -1;
-		background-image: url("../images/common/home-preview-background.svg");
+		background-image: url("../images/common/icon-check.svg");
 		background-size: cover;
 		background-repeat: no-repeat;
-		transform: translate(-50%, -50%);
+		transform: translateY(-50%);
 	}
 }
 
-.home-preview__wrapper {
+.home-preview__review-open {
+	align-self: center;
+	justify-self: start;
+	grid-column: 1/2;
+	grid-row: 2/3;
 }
-.home-preview__container {}
-.home-preview__title {}
-.home-preview__list {}
-.home-preview__item {}
-.home-preview__review-open {}
-.home-preview__modal-open {}
-.home-preview__review-container {}
-.home-preview__mobile-review-open {}
+
+.home-preview__modal-open {
+	@include adaptive("min-width", 200);
+	align-self: center;
+	justify-self: end;
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+
+.home-preview__review-container {
+	display: none;
+}
+
+.home-preview__mobile-review-open {
+}

@@ -16,12 +16,12 @@
     <meta name="theme-color" content="#ffffff">
     <title>Insky.digital | Главная</title>
     <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/theme-light.min.css?_v=20220414181037">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220414181037">
+    <link rel="stylesheet" href="css/theme-light.min.css?_v=20220415203831">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220415203831">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220414181037" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220415203831" rel="stylesheet">
   </head>
   <body class="page__body">
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
@@ -132,8 +132,10 @@
       <main class="main" id="main">
         <!-- заголовок страницы-->
         <h1 class="visually-hidden">Главная страница компании Insky.digital</h1>
+        <!-- Фон превью-->
+        <div class="main__background"></div>
         <!-- превью-->
-        <section class="home-preview">
+        <section class="home-preview section">
           <div class="home-preview__wrapper">
             <div class="home-preview__container container">
               <!-- заголовок секции-->
@@ -151,7 +153,7 @@
               <!-- открыть видео-отзывы--><a class="review-open home-preview__review-open" tabindex="0">
                         <picture class="review-open__picture">
                           <source srcset="images/content/review-client.webp" type="image/webp"><img src="images/content/review-client.jpg" alt="Фото клиента">
-                        </picture><span class="review-open__text"><b>Видео-отзывы <br> наших клиентов</b></span></a>
+                        </picture><span class="review-open__text"><b>Видео-отзывы</b><b>наших клиентов</b></span></a>
               <!-- открыть модальное окно "проконсультироваться"-->
                       <button class="button button--secondary home-preview__modal-open" type="button">Получить оценку<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
@@ -160,45 +162,45 @@
           <div class="home-preview__review-container container"><a class="review-open home-preview__mobile-review-open" tabindex="0">
                       <picture class="review-open__picture">
                         <source srcset="images/content/review-client.webp" type="image/webp"><img src="images/content/review-client.jpg" alt="Фото клиента">
-                      </picture><span class="review-open__text"><b>Видео-отзывы <br> наших клиентов</b></span></a>
+                      </picture><span class="review-open__text"><b>Видео-отзывы</b><b>наших клиентов</b></span></a>
           </div>
         </section>
         <!-- наши проекты-->
-        <section class="home-projects">
+        <section class="home-projects section">
           <div class="home-projects__container container">
             <!-- боковая панель-->
-            <div class="home-projects__aside">
+            <div class="home-projects__aside aside">
               <!-- заголовок секции-->
               <h2 class="home-projects__title title">Наши проекты</h2>
               <!-- типы проектов-->
-              <ul class="home-projects__types-list">
-                <li class="home-projects__types-item">
+              <ul class="home-projects__types">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Интернет-магазины</button>
                 </li>
-                <li class="home-projects__types-item">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Сайты для бизнеса</button>
                 </li>
-                <li class="home-projects__types-item">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Порталы</button>
                 </li>
-                <li class="home-projects__types-item">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Промо-сайты</button>
                 </li>
-                <li class="home-projects__types-item">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Лендинги</button>
                 </li>
-                <li class="home-projects__types-item">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Продвижение</button>
                 </li>
-                <li class="home-projects__types-item">
+                <li class="home-projects__type">
                           <button class="tab-filter" type="button" aria-expanded="false">Лендинги</button>
                 </li>
               </ul>
               <!-- открыть страницу портфолио--><a class="button button--accent home-projects__portfolio-open" href="index.html">Показать еще проекты<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
             </div>
             <!-- проекты в портфолио-->
-            <ul class="home-projects__card-list">
-              <li class="home-projects__card-item">
+            <ul class="home-projects__cards">
+              <li class="home-projects__card">
                         <div class="project-card">
                           <div class="project-card__wrapper">
                             <h3 class="project-card__title"><a href="index.html">Интернет-магазин <br> женской одежды <br> премиум-класса</a></h3>
@@ -211,7 +213,7 @@
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-projects__card">
                         <div class="project-card">
                           <div class="project-card__wrapper">
                             <h3 class="project-card__title"><a href="index.html">Сайт компании пассажирских перевозок</a></h3>
@@ -224,10 +226,10 @@
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-projects__card">
                         <div class="project-card">
                           <div class="project-card__wrapper">
-                            <h3 class="project-card__title"><a href="index.html">Интернет-магазин <br> женской одежды</a></h3><span>+ видео-разбор</span>
+                            <h3 class="project-card__title"><a href="index.html">Интернет-магазин <br> женской одежды</a></h3><span class="project-card__addon">+ видео-разбор</span>
                           </div>
                           <picture class="project-card__logo">
                             <source srcset="images/content/project-logo03.webp" type="image/webp"><img src="images/content/project-logo03.png" alt="Логотип">
@@ -237,7 +239,7 @@
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-projects__card">
                         <div class="project-card">
                           <div class="project-card__wrapper">
                             <h3 class="project-card__title"><a href="index.html">Сайт для юридической компании</a></h3>
@@ -250,7 +252,7 @@
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-projects__card">
                         <div class="project-card">
                           <div class="project-card__wrapper">
                             <h3 class="project-card__title"><a href="index.html">Лендинг дистрибьютора оборудования</a></h3>
@@ -263,7 +265,7 @@
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-projects__card">
                         <div class="project-card">
                           <div class="project-card__wrapper">
                             <h3 class="project-card__title"><a href="index.html">Разработка портала программы лояльности</a></h3>
@@ -281,90 +283,90 @@
           </div>
         </section>
         <!-- услуги-->
-        <section class="home-services">
+        <section class="home-services section">
           <div class="home-services__container container">
             <!-- боковая панель-->
-            <div class="home-projects__aside">
+            <div class="home-services__aside aside">
               <!-- заголовок секции-->
-              <h2 class="home-projects__title title">Услуги</h2>
+              <h2 class="home-services__title title">Услуги</h2>
               <!-- информация-->
-              <p><b>У вас уже есть описание <br> или техническое задание?</b></p>
-              <p>Мы оценим в течение 1 рабочего дня и сообщим стоимость.</p>
+              <p class="home-services__text-first"><b>У вас уже есть описание <br> или техническое задание?</b></p>
+              <p class="home-services__text-secondary">Мы оценим в течение 1 рабочего дня и сообщим стоимость.</p>
               <!-- открыть модальное окно "проконсультироваться"-->
-                      <button class="button button--accent home-projects__modal-open" type="button">Прислать ТЗ<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+                      <button class="button button--accent home-services__modal-open" type="button">Прислать ТЗ<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
             <!-- услуги-->
-            <ul class="home-services__card-list">
-              <li class="home-projects__card-item">
+            <ul class="home-services__cards">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Сайты для <br> бизнеса</h3>
                           <p class="service-card__description">От одностраничных <br> лендингов до сложных <br> веб-порталов</p><span>Узнать подробнее</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background01.webp" type="image/webp"><img src="images/content/service-background01.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">E-commerce</h3>
                           <p class="service-card__description">Современные B2B <br> и B2C решения для <br> онлайн-бизнеса</p><span>Больше информации</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background02.webp" type="image/webp"><img src="images/content/service-background02.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Мобильные <br> приложения</h3>
                           <p class="service-card__description">Разработка <br> приложений для платформ IOS и Android</p><span>Подробнее</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background03.webp" type="image/webp"><img src="images/content/service-background03.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Техническая <br> поддержка проектов</h3>
                           <p class="service-card__description">Берем на поддержку сайты, интернет-магазины, порталы и мобильные приложения.
         Редизайн <br> и доработка существующих проектов.</p><span>Как мы работаем</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background04.webp" type="image/webp"><img src="images/content/service-background04.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Продвижение <br> и PR</h3>
                           <p class="service-card__description">Погружение в ваш бизнес, анализ сильных и <br> слабых сторон,
         разработка стратегии продвижения и борьбы с конкурентами в digital-среде</p><span>Узнать подробнее</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background05.webp" type="image/webp"><img src="images/content/service-background05.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Айдентика <br> и дизайн</h3>
                           <p class="service-card__description">От логотипов <br> до бренд-буков <br> и полиграфии</p><span>Узнать больше</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background06.webp" type="image/webp"><img src="images/content/service-background06.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Внедрение <br> и поддержка <br> Битрикс24</h3>
                           <p class="service-card__description">Автоматизируем <br> бизнес-процессы, интегрируем CRM, обучаем персонал</p><span>Подробнее</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background07.webp" type="image/webp"><img src="images/content/service-background07.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
-              <li class="home-projects__card-item">
+              <li class="home-services__card">
                         <div class="service-card">
                           <h3 class="service-card__title">Поддержка 1 °C</h3>
                           <p class="service-card__description">Настроим и доработаем продукты 1С используя стандарты системы</p><span>Проконсультироваться</span>
-                          <picture class="project-card__background" aria-hidden="true">
+                          <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background08.webp" type="image/webp"><img src="images/content/service-background08.jpg" alt="Фон">
                           </picture>
                         </div>
@@ -593,9 +595,9 @@
         </div>
       </footer>
     </div>
-    <script src="js/bundle.min.js?_v=20220414181037"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220414181037"></script>
+    <script src="js/bundle.min.js?_v=20220415203831"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220415203831"></script>
     <!-- навигация по страницам вёрстки во время разработки-->
-    <script src="js/switcher.js?_v=20220414181037"></script>
+    <script src="js/switcher.js?_v=20220415203831"></script>
   </body>
 </html>
