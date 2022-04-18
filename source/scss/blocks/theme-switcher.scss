@@ -7,6 +7,12 @@
 	display: flex;
 	border: none;
 	background: var(--color-switcher-background);
+	transition: background .3s;
+
+	&:hover,
+	&:focus {
+		background: var(--color-switcher-background-state);
+	}
 }
 
 .theme-switcher__icon {

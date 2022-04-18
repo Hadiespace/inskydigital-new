@@ -1,3 +1,83 @@
 .menu-big {
-	display: none;
+	@include adaptive("top", 84);
+	@include adaptive("padding-top", 24);
+	@include adaptive("padding-bottom", 24);
+	position: absolute;
+	left: 0;
+	z-index: -2;
+	display: grid;
+	width: 100%;
+	background: var(--color-default-background);
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: background .3s, box-shadow .3s, transform .3s, opacity .3s;
+
+	&--opened {
+		z-index: 0;
+		box-shadow:
+			0
+			calc(112px + (112 * 3 - 112) * ((100vw - 1280px) / (3840 - 1280)))
+			calc(184px + (184 * 3 - 184) * ((100vw - 1280px) / (3840 - 1280)))
+			rgba(0, 0, 0, .04);
+		opacity: 1;
+		transform: translateY(0%);
+		transition: background .3s, box-shadow .3s, transform .3s, opacity .3s, z-index .6s;
+
+		&::before {
+			@include adaptive("height", 30);
+			@include adaptive("top", -30);
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+		}
+	}
+}
+
+.menu-big__container {
+	@include adaptive("grid-gap", 20);
+	display: grid;
+	justify-content: center;
+	grid-auto-flow: column;
+	opacity: 0;
+	transition: opacity .3s;
+
+	&--visible {
+		opacity: 1;
+	}
+}
+
+.menu-big__wrapper {
+	@include adaptive("width", 188);
+	display: grid;
+	align-content: start;
+}
+
+.menu-big__title {
+	@include adaptive("font-size", 12);
+	@include adaptive("line-height", 20);
+	@include adaptive("min-height", 40);
+	margin: 0 0 calc(20px + (20 * 3 - 20) * ((100vw - 1280px) / (3840 - 1280)));
+	font-weight: 500;
+}
+
+.menu-big__list {
+	@include adaptive("grid-row-gap", 12);
+	display: grid;
+}
+
+.menu-big__item {
+	display: grid;
+	justify-items: start;
+}
+
+.menu-big__link {
+	@include adaptive("font-size", 12);
+	@include adaptive("line-height", 20);
+	transition: color .3s;
+
+	&:hover,
+	&:focus {
+		color: var(--color-accent);
+	}
 }

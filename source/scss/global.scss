@@ -87,3 +87,7 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+
+[data-whatintent="mouse"] *:focus {
+	outline: none;
+}

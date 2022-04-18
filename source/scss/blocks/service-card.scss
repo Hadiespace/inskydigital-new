@@ -1,0 +1,148 @@
+.service-card {
+	@include adaptive("padding", 20);
+	@include adaptive("border-radius", 2);
+	position: absolute;
+	display: grid;
+	grid-template-rows:
+		minmax(max-content, 1fr)
+		max-content
+		max-content;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	&--number {
+		grid-template-rows:
+			max-content
+			minmax(max-content, 1fr)
+			max-content
+			max-content;
+
+		&::before {
+			@include adaptive("margin-bottom", 16);
+			counter-increment: cards;
+			content: counters(cards, "", decimal-leading-zero);
+			justify-self: start;
+			color: var(--color-alternate);
+			opacity: .8;
+		}
+	}
+}
+
+.service-card__title {
+	@include adaptive("font-size", 24);
+	@include adaptive("line-height", 32);
+	display: flex;
+	align-self: start;
+	margin: 0;
+	font-weight: 500;
+	color: var(--color-alternate);
+
+	a {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.service-card__description {
+	@include adaptive("font-size", 16);
+	@include adaptive("line-height", 24);
+	@include adaptive("min-height", 72);
+	margin: 0 0 24px;
+	color: var(--color-alternate);
+}
+
+.service-card__more {
+	@include adaptive("font-size", 12);
+	@include adaptive("grid-column-gap", 8);
+	@include adaptive("line-height", 20);
+	position: relative;
+	display: grid;
+	align-items: center;
+	justify-self: start;
+	grid-template-columns: repeat(2, max-content);
+	color: var(--color-caption);
+	transition: color .3s;
+
+	&::before {
+		@include adaptive("width", 23);
+		@include adaptive("height", 1);
+		content: "";
+		position: relative;
+		grid-column: 2/3;
+		grid-row: 1/2;
+		background: var(--color-caption);
+		transition: width .3s, background .3s;
+	}
+
+	&::after {
+		@include adaptive("left", 20);
+		@include adaptive("width", 5);
+		@include adaptive("height", 8);
+		content: "";
+		position: relative;
+		grid-column: 2/3;
+		grid-row: 1/2;
+		background-image: url("../images/common/icon-more.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		transition: left .3s, background-image .3s;
+	}
+}
+
+.service-card__background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background: var(--color-card-gradient);
+	}
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 1s;
+	}
+}
+
+.service-card:hover,
+.service-card:focus-within {
+	.service-card__more {
+		color: var(--color-accent);
+
+		&::before {
+			@include adaptive("width", 47);
+			background: var(--color-accent);
+		}
+
+		&::after {
+			@include adaptive("left", 44);
+			background-image: url("../images/common/icon-more-state.svg");
+		}
+	}
+
+	.service-card__background {
+		img {
+			transform: scale(110%);
+		}
+	}
+}

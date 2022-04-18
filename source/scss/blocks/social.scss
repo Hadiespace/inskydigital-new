@@ -1,0 +1,25 @@
+.social {
+	@include adaptive("width", 48);
+	@include adaptive("height", 48);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--color-background);
+	transition: background .3s;
+
+	svg {
+		@include adaptive("width", 20);
+		@include adaptive("height", 20);
+		transition: fill .3s;
+	}
+
+	&:hover,
+	&:focus {
+		background: var(--color-accent);
+
+		svg {
+			fill: var(--color-alternate);
+		}
+	}
+}

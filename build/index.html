@@ -16,12 +16,12 @@
     <meta name="theme-color" content="#ffffff">
     <title>Insky.digital | Главная</title>
     <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/theme-light.min.css?_v=20220415203831">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220415203831">
+    <link rel="stylesheet" href="css/theme-light.min.css?_v=20220418235341">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220418235341">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220415203831" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220418235341" rel="stylesheet">
   </head>
   <body class="page__body">
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
@@ -49,7 +49,7 @@
                 <!-- main-nav__link--current (активная страница)-->
                 <ul class="main-nav__list">
                   <li class="main-nav__item"><a class="main-nav__link" href="index.html">Портфолио</a></li>
-                  <li class="main-nav__item"><a class="main-nav__link" href="index.html">Услуги</a>
+                  <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html">Услуги</a>
                                   <button class="nav-arrow" type="button" aria-expanded="false">
                                     <svg width="16" height="16" aria-hidden="true">
                                       <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -57,36 +57,38 @@
                                   </button>
                     <!-- выпадающее меню (большое)-->
                     <div class="menu-big">
-                      <div class="menu-big__wrapper">
-                        <p class="menu-big__title">Аналитика <br> и автоматизация бизнеса</p>
-                        <ul class="menu-big__list">
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Внедрение и поддержка Битрикс24</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Поддержка 1С</a></li>
-                        </ul>
-                      </div>
-                      <div class="menu-big__wrapper">
-                        <p class="menu-big__title">Разработка сайтов <br> и мобильных приложений</p>
-                        <ul class="menu-big__list">
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Сайты для бизнеса</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">E-commerce</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Мобильные приложения</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Техническая поддержка проектов</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Айдентика и дизайн</a></li>
-                        </ul>
-                      </div>
-                      <div class="menu-big__wrapper">
-                        <p class="menu-big__title">Продвижение и PR</p>
-                        <ul class="menu-big__list">
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по позициям</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по трафику</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по вашим KPI</a></li>
-                          <li class="menu-big__item"><a class="menu-big__link" href="index.html">SEO-продвижение</a></li>
-                        </ul>
+                      <div class="menu-big__container container">
+                        <div class="menu-big__wrapper">
+                          <p class="menu-big__title">Аналитика <br> и автоматизация бизнеса</p>
+                          <ul class="menu-big__list">
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Внедрение и поддержка Битрикс24</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Поддержка 1С</a></li>
+                          </ul>
+                        </div>
+                        <div class="menu-big__wrapper">
+                          <p class="menu-big__title">Разработка сайтов <br> и мобильных приложений</p>
+                          <ul class="menu-big__list">
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Сайты для бизнеса</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">E-commerce</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Мобильные приложения</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Техническая поддержка проектов</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Айдентика и дизайн</a></li>
+                          </ul>
+                        </div>
+                        <div class="menu-big__wrapper">
+                          <p class="menu-big__title">Продвижение и PR</p>
+                          <ul class="menu-big__list">
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по позициям</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по трафику</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">Продвижение по вашим KPI</a></li>
+                            <li class="menu-big__item"><a class="menu-big__link" href="index.html">SEO-продвижение</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="index.html">Наши цены</a></li>
-                  <li class="main-nav__item"><a class="main-nav__link" href="index.html">О нас</a>
+                  <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html">О нас</a>
                                   <button class="nav-arrow" type="button" aria-expanded="false">
                                     <svg width="16" height="16" aria-hidden="true">
                                       <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -298,74 +300,74 @@
             <!-- услуги-->
             <ul class="home-services__cards">
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Сайты для <br> бизнеса</h3>
-                          <p class="service-card__description">От одностраничных <br> лендингов до сложных <br> веб-порталов</p><span>Узнать подробнее</span>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Сайты для <br> бизнеса</a></h3>
+                          <p class="service-card__description">От одностраничных <br> лендингов до сложных <br> веб-порталов</p><span class="service-card__more">Узнать подробнее</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background01.webp" type="image/webp"><img src="images/content/service-background01.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">E-commerce</h3>
-                          <p class="service-card__description">Современные B2B <br> и B2C решения для <br> онлайн-бизнеса</p><span>Больше информации</span>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">E-commerce</a></h3>
+                          <p class="service-card__description">Современные B2B <br> и B2C решения для <br> онлайн-бизнеса</p><span class="service-card__more">Больше информации</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background02.webp" type="image/webp"><img src="images/content/service-background02.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Мобильные <br> приложения</h3>
-                          <p class="service-card__description">Разработка <br> приложений для платформ IOS и Android</p><span>Подробнее</span>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Мобильные <br> приложения</a></h3>
+                          <p class="service-card__description">Разработка <br> приложений для платформ IOS и Android</p><span class="service-card__more">Подробнее</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background03.webp" type="image/webp"><img src="images/content/service-background03.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Техническая <br> поддержка проектов</h3>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Техническая <br> поддержка проектов</a></h3>
                           <p class="service-card__description">Берем на поддержку сайты, интернет-магазины, порталы и мобильные приложения.
-        Редизайн <br> и доработка существующих проектов.</p><span>Как мы работаем</span>
+        Редизайн <br> и доработка существующих проектов.</p><span class="service-card__more">Как мы работаем</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background04.webp" type="image/webp"><img src="images/content/service-background04.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Продвижение <br> и PR</h3>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Продвижение <br> и PR</a></h3>
                           <p class="service-card__description">Погружение в ваш бизнес, анализ сильных и <br> слабых сторон,
-        разработка стратегии продвижения и борьбы с конкурентами в digital-среде</p><span>Узнать подробнее</span>
+        разработка стратегии продвижения и борьбы с конкурентами в digital-среде</p><span class="service-card__more">Узнать подробнее</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background05.webp" type="image/webp"><img src="images/content/service-background05.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Айдентика <br> и дизайн</h3>
-                          <p class="service-card__description">От логотипов <br> до бренд-буков <br> и полиграфии</p><span>Узнать больше</span>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Айдентика <br> и дизайн</a></h3>
+                          <p class="service-card__description">От логотипов <br> до бренд-буков <br> и полиграфии</p><span class="service-card__more">Узнать больше</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background06.webp" type="image/webp"><img src="images/content/service-background06.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Внедрение <br> и поддержка <br> Битрикс24</h3>
-                          <p class="service-card__description">Автоматизируем <br> бизнес-процессы, интегрируем CRM, обучаем персонал</p><span>Подробнее</span>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Внедрение <br> и поддержка <br> Битрикс24</a></h3>
+                          <p class="service-card__description">Автоматизируем <br> бизнес-процессы, интегрируем CRM, обучаем персонал</p><span class="service-card__more">Подробнее</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background07.webp" type="image/webp"><img src="images/content/service-background07.jpg" alt="Фон">
                           </picture>
                         </div>
               </li>
               <li class="home-services__card">
-                        <div class="service-card">
-                          <h3 class="service-card__title">Поддержка 1 °C</h3>
-                          <p class="service-card__description">Настроим и доработаем продукты 1С используя стандарты системы</p><span>Проконсультироваться</span>
+                        <div class="service-card service-card--number">
+                          <h3 class="service-card__title"><a href="index.html">Поддержка 1 °C</a></h3>
+                          <p class="service-card__description">Настроим и доработаем продукты 1С используя стандарты системы</p><span class="service-card__more">Проконсультироваться</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source srcset="images/content/service-background08.webp" type="image/webp"><img src="images/content/service-background08.jpg" alt="Фон">
                           </picture>
@@ -375,14 +377,14 @@
           </div>
         </section>
         <!-- процесс-->
-        <section class="home-process">
+        <section class="home-process section">
           <div class="home-process__container container">
             <!-- боковая панель-->
-            <div class="home-process__aside">
+            <div class="home-process__aside aside">
               <!-- заголовок секции-->
-              <h2 class="home-process__title">Процесс</h2>
+              <h2 class="home-process__title title">Процесс</h2>
               <!-- открыть модальное окно "проконсультироваться"-->
-                      <button class="button button--accent" type="button">Начать проект<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+                      <button class="button button--accent home-process__modal-open" type="button">Начать проект<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
             <!-- шаги процесса-->
             <ul class="home-process__steps">
@@ -456,7 +458,7 @@
           </div>
         </section>
         <!-- команда-->
-        <section class="home-team">
+        <section class="home-team section">
           <div class="home-team__container container">
             <div class="home-team__wrapper">
               <!-- заголовок и описание-->
@@ -470,24 +472,24 @@
               <!-- информация-->
               <p class="home-team__text"><span>50+</span>профессионалов в Москве, <br> Минске, Риге и Томске.</p>
               <!-- контакты-->
-              <div class="home-team__socials"><a class="social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+              <div class="home-team__socials"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#facebook"></use>
-                          </svg></a><a class="social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                          </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#instagram"></use>
-                          </svg></a><a class="social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
+                          </svg></a><a class="social social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#vkontakte"></use>
-                          </svg></a><a class="social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          </svg></a><a class="social social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#telegram"></use>
                           </svg></a>
               </div>
             </div>
             <!-- слайдер-->
-            <div class="home-team__slider team-slider swiper">
-              <div class="team-slider__swiper">
+            <div class="home-team__slider team-slider">
+              <div class="team-slider__swiper swiper">
                 <ul class="team-slider__wrapper swiper-wrapper">
                   <li class="team-slider__slide swiper-slide">
                     <!-- изображение-->
@@ -495,7 +497,7 @@
                       <source srcset="images/content/team-person01.webp" type="image/webp"><img src="images/content/team-person01.jpg" alt="Дмитрий Кучинский">
                     </picture>
                     <!-- информация-->
-                    <div class="team-slider__wrapper">
+                    <div class="team-slider__info-wrap">
                       <!-- имя, статус и город-->
                       <div class="team-slider__top-wrap">
                         <h3 class="team-slider__title sub-title">Дмитрий Кучинский</h3><span class="team-slider__status">Генеральный директор Insky.digital</span><span class="team-slider__city">Москва</span>
@@ -511,7 +513,7 @@
                       <source srcset="images/content/team-person02.webp" type="image/webp"><img src="images/content/team-person02.jpg" alt="Кристина Цыцкина">
                     </picture>
                     <!-- информация-->
-                    <div class="team-slider__wrapper">
+                    <div class="team-slider__info-wrap">
                       <!-- имя, статус и город-->
                       <div class="team-slider__top-wrap">
                         <h3 class="team-slider__title sub-title">Кристина Цыцкина</h3><span class="team-slider__status">Бизнес-аналитик Insky.digital</span><span class="team-slider__city">Рига</span>
@@ -549,8 +551,8 @@
         <div class="footer__container container">
           <!-- Контакты-->
           <div class="footer__contacts">
-            <div class="footer__contact-wrap"><a class="footer__contact" href="tel:+74993507512">+7 499 350-75-12</a><span>Позвоните нам</span></div>
-            <div class="footer__contact-wrapper"><a class="footer__contact" href="mailto:info@insky.digital">info@insky.digital</a><span>Напишите нам</span></div>
+            <div class="footer__contact-wrap"><a class="footer__contact-link" href="tel:+74993507512">+7 499 350-75-12</a><span class="footer__contact-text">Позвоните нам</span></div>
+            <div class="footer__contact-wrap"><a class="footer__contact-link" href="mailto:info@insky.digital">info@insky.digital</a><span class="footer__contact-text">Напишите нам</span></div>
           </div>
           <!-- Адреса-->
           <div class="footer__addresses">
@@ -570,24 +572,24 @@
           <!-- Страницы-->
           <div class="footer__nav">
             <ul class="footer__list">
-              <li class="footer__item"><a href="index.html">Портфолио</a></li>
-              <li class="footer__item"><a href="index.html">Услуги</a></li>
-              <li class="footer__item"><a href="index.html">Наши цены</a></li>
-              <li class="footer__item"><a href="index.html">Кто мы?</a></li>
-              <li class="footer__item"><a href="index.html">Команда</a></li>
-              <li class="footer__item"><a href="index.html">Контакты</a></li>
-              <li class="footer__item"><a href="index.html">Внедрение Битрикс24</a></li>
-              <li class="footer__item"><a href="index.html">Поддержка 1С</a></li>
-              <li class="footer__item"><a href="index.html">Сайты для бизнеса</a></li>
-              <li class="footer__item"><a href="index.html">Мобильные приложения</a></li>
-              <li class="footer__item"><a href="index.html">Техническая поддержка</a></li>
-              <li class="footer__item"><a href="index.html">SEO-продвижение</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Портфолио</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Услуги</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Наши цены</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Кто мы?</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Команда</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Внедрение Битрикс24</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Поддержка 1С</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Сайты для бизнеса</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Мобильные приложения</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Техническая поддержка</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">SEO-продвижение</a></li>
             </ul>
           </div>
           <!-- Логотип--><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
           <!-- Копирайт-->
           <p class="footer__copyright">
-            Нажимая кнопку «Отправить», вы соглашаетесь с
+            Нажимая кнопку «Отправить», вы соглашаетесь с <br>
             <a href="index.html">политикой конфиденциальности</a>
             и обработкой персональных данных. <br>
             2000-2021. Все права защищены.
@@ -595,9 +597,9 @@
         </div>
       </footer>
     </div>
-    <script src="js/bundle.min.js?_v=20220415203831"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220415203831"></script>
+    <script src="js/bundle.min.js?_v=20220418235341"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220418235341"></script>
     <!-- навигация по страницам вёрстки во время разработки-->
-    <script src="js/switcher.js?_v=20220415203831"></script>
+    <script src="js/switcher.js?_v=20220418235341"></script>
   </body>
 </html>

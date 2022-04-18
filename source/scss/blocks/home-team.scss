@@ -1,0 +1,43 @@
+.home-team {}
+
+.home-team__container {
+	@include grid;
+}
+
+.home-team__wrapper {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}
+.home-team__top-wrap {}
+
+.home-team__title {
+	@include adaptive("margin-bottom", 24);
+}
+
+.home-team__description {
+	align-self: start;
+	margin: 0;
+}
+
+.home-team__text {
+	@include adaptive("padding-top", 40);
+	display: grid;
+	align-self: center;
+	margin: 0 0 calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280)));
+
+	span {
+		@include adaptive("font-size", 48);
+		@include adaptive("line-height", 56);
+	}
+}
+
+.home-team__socials {
+	@include adaptive("margin", -8);
+	display: flex;
+	flex-wrap: wrap;
+	align-self: end;
+}
+
+.home-team__social {
+	@include adaptive("margin", 8);
+}

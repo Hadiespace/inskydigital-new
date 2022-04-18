@@ -4,6 +4,7 @@
 	top: 0;
 	z-index: 10;
 	width: 100%;
+	transition: background .3s;
 
 	&::before {
 		@include adaptive("height", 160);
@@ -14,7 +15,16 @@
 		z-index: -1;
 		width: 100%;
 		background: var(--color-header-background);
+		transition: opacity .3s;
 		pointer-events: none;
+	}
+
+	&--menu-open {
+		background: var(--color-default-background);
+
+		&::before {
+			opacity: 0;
+		}
 	}
 }
 
@@ -66,6 +76,12 @@
 .header__phone {
 	@include adaptive("margin-left", 16);
 	font-weight: 600;
+	transition: color .3s;
+
+	&:hover,
+	&:focus {
+		color: var(--color-accent);
+	}
 }
 
 .header__modal-open {

@@ -1,0 +1,123 @@
+.home-process {
+
+}
+
+.home-process__container {
+	@include grid;
+}
+.home-process__aside {}
+
+.home-process__title {
+	margin: 0 0 auto;
+}
+
+.home-process__modal-open {
+	@include adaptive("min-width", 260);
+	align-self: start;
+}
+
+.home-process__steps {
+	counter-reset: cards;
+	display: grid;
+	align-self: start;
+	border-bottom: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+}
+
+.home-process__step {
+	position: relative;
+	display: grid;
+	overflow: hidden;
+	border-top: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+
+	&::before {
+		@include adaptive("top", 32);
+		@include adaptive("left", 8);
+		@include adaptive("width", 40);
+		@include adaptive("font-size", 24);
+		@include adaptive("line-height", 32);
+		counter-increment: cards;
+		content: counters(cards, "") ".";
+		position: absolute;
+		color: var(--color-secondary);
+		transition: transform .3s, color .3s;
+		pointer-events: none;
+	}
+}
+
+.home-process__toggle {
+	@include adaptive("padding", 32);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: none;
+	background: transparent;
+
+	span {
+		@include adaptive("padding-left", 24);
+		@include adaptive("font-size", 24);
+		@include adaptive("line-height", 32);
+		color: var(--color-secondary);
+		transition: color .3s;
+		pointer-events: none;
+	}
+
+	svg {
+		@include adaptive("width", 32);
+		@include adaptive("height", 32);
+		fill: none;
+		stroke: var(--color-decor);
+		transition: transform .3s, stroke .3s;
+	}
+}
+
+.home-process__text {
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	transition: height .3s, opacity .3s, margin-bottom .3s;
+
+	p {
+		@include adaptive("line-height", 32);
+		margin: 0;
+	}
+}
+
+.home-process__step--active {
+	&::before {
+		color: var(--color-main);
+	}
+
+	.home-process__toggle {
+		span {
+			color: var(--color-main);
+		}
+
+		svg {
+			stroke: var(--color-main);
+			transform: rotate(-180deg);
+		}
+	}
+
+	.home-process__text {
+		@include adaptive("margin-bottom", 32);
+		height: inherit;
+		opacity: 1;
+	}
+}
+
+.home-process__step:hover,
+.home-process__step:focus-within {
+	&::before {
+		color: var(--color-main);
+	}
+
+	.home-process__toggle {
+		span {
+			color: var(--color-main);
+		}
+
+		svg {
+			stroke: var(--color-main);
+		}
+	}
+}

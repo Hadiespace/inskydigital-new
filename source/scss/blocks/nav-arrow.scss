@@ -1,8 +1,9 @@
 .nav-arrow {
-	@include adaptive("width", 16);
 	@include adaptive("height", 16);
 	border: none;
 	padding: 0;
+	// @include adaptive("width", 100);
+	width: 100%;
 	background: transparent;
 
 	svg {

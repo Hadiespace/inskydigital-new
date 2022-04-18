@@ -29,6 +29,14 @@ $max-width: 3840;
 		1fr;
 }
 
+@mixin grid_3 {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	grid-template-columns:
+		1fr
+		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+}
+
 @mixin grid2 {
 	@include adaptive("grid-column-gap", 20);
 	display: grid;

@@ -15,7 +15,20 @@
 	align-items: center;
 }
 
-.main-nav__link {}
+.main-nav__link {
+	position: relative;
+
+	&::before {
+		@include adaptive("height", 1);
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		background: var(--color-accent);
+		transition: width .3s ease 0s;
+	}
+}
 
 .main-nav__contacts {
 	display: none;
@@ -26,4 +39,13 @@
 
 .main-nav__modal-open {
 	display: none;
+}
+
+.main-nav__item:hover,
+.main-nav__item:focus-within {
+	.main-nav__link {
+		&::before {
+			width: 100%;
+		}
+	}
 }

@@ -5,6 +5,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
+	transition: background .3s;
 
 	svg {
 		@include adaptive("width", 12);
@@ -14,10 +15,20 @@
 	&--whatsapp {
 		fill: var(--color-alternate);
 		background: var(--color-whatsapp);
+
+		&:hover,
+		&:focus {
+			background: var(--color-whatsapp-state);
+		}
 	}
 
 	&--telegram {
 		fill: var(--color-alternate);
 		background: var(--color-telegram);
+
+		&:hover,
+		&:focus {
+			background: var(--color-telegram-state);
+		}
 	}
 }

@@ -1,5 +1,5 @@
 mixin social(icon)
-	a(class=`social social--${icon}`, href="index.html")&attributes(attributes)
+	a.social(class=`social social--${icon}`, href="index.html")&attributes(attributes)
 		span.visually-hidden Мы в #{icon}
 		svg(width="20", height="20", aria-hidden="true")
 			use(xlink:href=`images/sprite.svg#${icon}`)

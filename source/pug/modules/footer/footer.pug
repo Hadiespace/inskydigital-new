@@ -6,11 +6,11 @@ footer.footer
 		// Контакты
 		div.footer__contacts
 			div.footer__contact-wrap
-				a.footer__contact(href=`tel:${phoneHref}`)!= phoneName
-				span Позвоните нам
-			div.footer__contact-wrapper
-				a.footer__contact(href=`mailto:${email}`)!= email
-				span Напишите нам
+				a.footer__contact-link(href=`tel:${phoneHref}`)!= phoneName
+				span.footer__contact-text Позвоните нам
+			div.footer__contact-wrap
+				a.footer__contact-link(href=`mailto:${email}`)!= email
+				span.footer__contact-text Напишите нам
 		// Адреса
 		div.footer__addresses
 			each city in addresses
@@ -22,12 +22,12 @@ footer.footer
 			ul.footer__list
 				each link in navLinks
 					li.footer__item
-						a(href=link.href)!= link.name
+						a.footer__link(href=link.href)!= link.name
 		// Логотип
 		+logo.footer__logo
 		// Копирайт
 		p.footer__copyright.
-			Нажимая кнопку «Отправить», вы соглашаетесь с
+			Нажимая кнопку «Отправить», вы соглашаетесь с <br>
 			#[a(href="index.html") политикой конфиденциальности]
 			и обработкой персональных данных. <br>
 			2000-2021. Все права защищены.

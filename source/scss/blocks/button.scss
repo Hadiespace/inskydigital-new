@@ -5,13 +5,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
 	border: none;
 	font-weight: 500;
+	transition: background .3s, color .3s;
 }
 
 .button__line {
 	position: absolute;
+	transition: background .3s;
 
 	&--top {
 		@include adaptive("height", 2);
@@ -24,7 +26,7 @@
 		@include adaptive("width", 2);
 		right: 0;
 		top: 0;
-		height: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+		height: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 	}
 
 	&--bottom-right {
@@ -39,7 +41,7 @@
 		@include adaptive("height", 2);
 		left: 0;
 		bottom: 0;
-		width: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+		width: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 	}
 
 	&--left {
@@ -57,6 +59,15 @@
 	.button__line {
 		background: var(--color-accent);
 	}
+
+	&:hover,
+	&:focus {
+		background: var(--color-accent-state);
+
+		.button__line {
+			background: var(--color-accent-state);
+		}
+	}
 }
 
 .button--secondary {
@@ -65,5 +76,14 @@
 
 	.button__line {
 		background: var(--color-accent-secondary);
+	}
+
+	&:hover,
+	&:focus {
+		color: var(--color-accent-secondary-state);
+
+		.button__line {
+			background: var(--color-accent-secondary-state);
+		}
 	}
 }

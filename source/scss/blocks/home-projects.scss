@@ -30,6 +30,7 @@
 .home-projects__cards {
 	@include adaptive("grid-gap", 20);
 	display: grid;
+	align-self: start;
 	grid-template-columns: repeat(3, 1fr);
 }
 
