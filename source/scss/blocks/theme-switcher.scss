@@ -7,7 +7,7 @@
 	display: flex;
 	border: none;
 	background: var(--color-switcher-background);
-	transition: background .3s;
+	transition: background var(--theme-delay);
 
 	&:hover,
 	&:focus {
@@ -25,8 +25,8 @@
 	background-repeat: no-repeat;
 	transform: translateX(-50%);
 	transition:
-		margin-left .3s,
-		background .3s;
+		margin-left var(--theme-delay),
+		background var(--theme-delay);
 }
 
 .theme-switcher__check {
@@ -38,7 +38,7 @@
 	border-radius: 50%;
 	background: var(--color-alternate);
 	transform: translateX(-50%);
-	transition: margin-left .3s;
+	transition: margin-left var(--theme-delay);
 }
 
 .theme-switcher--light {

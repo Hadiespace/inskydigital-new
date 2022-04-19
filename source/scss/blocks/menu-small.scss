@@ -1,3 +1,31 @@
 .menu-small {
-	display: none;
+	@include adaptive("top", 54);
+	@include adaptive("border-radius", 2);
+
+	&.menu--opened {
+		box-shadow:
+			0
+			calc(22px + (22 * 3 - 22) * ((100vw - 1280px) / (3840 - 1280)))
+			calc(30px + (30 * 3 - 30) * ((100vw - 1280px) / (3840 - 1280)))
+			rgba(0, 0, 0, .06);
+	}
+}
+
+.menu-small__list {
+	@include adaptive("padding", 24);
+	@include adaptive("grid-row-gap", 24);
+}
+
+.menu-small__item {}
+
+.menu-small__link {
+	@include adaptive("line-height", 20);
+	@include adaptive("font-size", 12);
+	font-weight: 500;
+	transition: color var(--theme-delay2);
+
+	&:hover,
+	&:focus {
+		color: var(--color-accent);
+	}
 }

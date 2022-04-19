@@ -6,12 +6,13 @@
 	justify-content: center;
 	border-radius: 50%;
 	background: var(--color-background);
-	transition: background .3s;
+	transition: background var(--theme-delay);
 
 	svg {
 		@include adaptive("width", 20);
 		@include adaptive("height", 20);
-		transition: fill .3s;
+		fill: var(--color-main);
+		transition: fill var(--theme-delay);
 	}
 
 	&:hover,

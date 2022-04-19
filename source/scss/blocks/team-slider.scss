@@ -97,7 +97,7 @@
 		@include adaptive("width", 48);
 		@include adaptive("height", 48);
 		fill: var(--color-decor);
-		transition: fill .3s;
+		transition: fill var(--theme-delay);
 	}
 
 	&:hover,

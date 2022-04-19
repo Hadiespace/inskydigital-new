@@ -39,7 +39,7 @@
 		content: counters(cards, "") ".";
 		position: absolute;
 		color: var(--color-secondary);
-		transition: transform .3s, color .3s;
+		transition: transform var(--theme-delay), color var(--theme-delay);
 		pointer-events: none;
 	}
 }
@@ -57,7 +57,7 @@
 		@include adaptive("font-size", 24);
 		@include adaptive("line-height", 32);
 		color: var(--color-secondary);
-		transition: color .3s;
+		transition: color var(--theme-delay);
 		pointer-events: none;
 	}
 
@@ -66,7 +66,7 @@
 		@include adaptive("height", 32);
 		fill: none;
 		stroke: var(--color-decor);
-		transition: transform .3s, stroke .3s;
+		transition: transform var(--theme-delay), stroke var(--theme-delay);
 	}
 }
 
@@ -74,7 +74,7 @@
 	overflow: hidden;
 	height: 0;
 	opacity: 0;
-	transition: height .3s, opacity .3s, margin-bottom .3s;
+	transition: height var(--theme-delay), opacity var(--theme-delay), margin-bottom var(--theme-delay);
 
 	p {
 		@include adaptive("line-height", 32);

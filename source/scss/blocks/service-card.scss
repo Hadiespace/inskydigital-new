@@ -69,7 +69,7 @@
 	justify-self: start;
 	grid-template-columns: repeat(2, max-content);
 	color: var(--color-caption);
-	transition: color .3s;
+	transition: color var(--theme-delay);
 
 	&::before {
 		@include adaptive("width", 23);
@@ -79,7 +79,7 @@
 		grid-column: 2/3;
 		grid-row: 1/2;
 		background: var(--color-caption);
-		transition: width .3s, background .3s;
+		transition: width var(--theme-delay), background var(--theme-delay);
 	}
 
 	&::after {
@@ -93,7 +93,7 @@
 		background-image: url("../images/common/icon-more.svg");
 		background-size: cover;
 		background-repeat: no-repeat;
-		transition: left .3s, background-image .3s;
+		transition: left var(--theme-delay), background-image var(--theme-delay);
 	}
 }
 

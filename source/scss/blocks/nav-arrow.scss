@@ -2,7 +2,6 @@
 	@include adaptive("height", 16);
 	border: none;
 	padding: 0;
-	// @include adaptive("width", 100);
 	width: 100%;
 	background: transparent;
 
@@ -11,5 +10,6 @@
 		@include adaptive("height", 16);
 		fill: none;
 		stroke: var(--color-main);
+		transition: stroke var(--theme-delay), transform var(--theme-delay);
 	}
 }

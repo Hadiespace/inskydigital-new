@@ -4,7 +4,7 @@
 	top: 0;
 	z-index: 10;
 	width: 100%;
-	transition: background .3s;
+	transition: background var(--theme-delay);
 
 	&::before {
 		@include adaptive("height", 160);
@@ -15,7 +15,7 @@
 		z-index: -1;
 		width: 100%;
 		background: var(--color-header-background);
-		transition: opacity .3s;
+		transition: opacity var(--theme-delay);
 		pointer-events: none;
 	}
 
@@ -76,7 +76,7 @@
 .header__phone {
 	@include adaptive("margin-left", 16);
 	font-weight: 600;
-	transition: color .3s;
+	transition: color var(--theme-delay);
 
 	&:hover,
 	&:focus {

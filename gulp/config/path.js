@@ -21,6 +21,7 @@ export const path = {
 		themeDark: `${sourceFolder}/scss/theme-dark.scss`,
 		js: `${sourceFolder}/js/entry.js`,
 		switcher: `${sourceFolder}/js/switcher.js`,
+		theme: `${sourceFolder}/js/theme.js`,
 		images: `${sourceFolder}/images/**/*.{jpg,jpeg,png,webp}`,
 		svg: `${sourceFolder}/images/**/*.svg`,
 		sprite: `${sourceFolder}/icons/*.svg`,

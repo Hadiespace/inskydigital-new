@@ -14,14 +14,17 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#2d3035">
     <meta name="msapplication-TileColor" content="#2d3035">
     <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
+    <script src="js/theme.js?_v=20220419214602"></script>
     <title>Insky.digital | Главная</title>
     <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/theme-light.min.css?_v=20220418235341">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220418235341">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220419214602">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220418235341" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220419214602" rel="stylesheet">
   </head>
   <body class="page__body">
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
@@ -33,7 +36,7 @@
             <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Открыть меню</span><span></span><span></span><span></span></button>
             <!-- логотип--><a class="logo header__logo"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
             <!-- переключение темы-->
-                  <button class="theme-switcher theme-switcher--light header__theme-switcher" type="button"><span class="visually-hidden">Переключить на темную тему</span>
+                  <button class="theme-switcher header__theme-switcher" type="button"><span class="visually-hidden">Переключить на темную тему</span>
                     <svg class="theme-switcher__icon"></svg><span class="theme-switcher__check"></span>
                   </button>
             <!-- номер телефона--><a class="header__phone-icon" href="tel:+74993507512"><span class="visually-hidden">+7 499 350-75-12</span>
@@ -56,8 +59,8 @@
                                     </svg>
                                   </button>
                     <!-- выпадающее меню (большое)-->
-                    <div class="menu-big">
-                      <div class="menu-big__container container">
+                    <div class="menu-big menu">
+                      <div class="menu-big__container menu__container container">
                         <div class="menu-big__wrapper">
                           <p class="menu-big__title">Аналитика <br> и автоматизация бизнеса</p>
                           <ul class="menu-big__list">
@@ -88,15 +91,15 @@
                     </div>
                   </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="index.html">Наши цены</a></li>
-                  <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html">О нас</a>
+                  <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="index.html">О нас</a>
                                   <button class="nav-arrow" type="button" aria-expanded="false">
                                     <svg width="16" height="16" aria-hidden="true">
                                       <use xlink:href="images/sprite.svg#arrow-link"></use>
                                     </svg>
                                   </button>
                     <!-- выпадающее меню (маленькое)-->
-                    <div class="menu-small">
-                      <ul class="menu-small__list">
+                    <div class="menu-small menu">
+                      <ul class="menu-small__list menu__container">
                         <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Кто мы?</a></li>
                         <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Команда</a></li>
                         <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Контакты?</a></li>
@@ -463,7 +466,7 @@
             <div class="home-team__wrapper">
               <!-- заголовок и описание-->
               <div class="home-team__top-wrap">
-                <h2 class="home-team__title title">Команды</h2>
+                <h2 class="home-team__title title">Команда</h2>
                 <p class="home-team__description">
                   Мы развиваемся вместе с нашими клиентами.
                   Усердно трудимся, отдыхая на любимой работе.
@@ -597,9 +600,9 @@
         </div>
       </footer>
     </div>
-    <script src="js/bundle.min.js?_v=20220418235341"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220418235341"></script>
+    <script src="js/bundle.min.js?_v=20220419214602"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220419214602"></script>
     <!-- навигация по страницам вёрстки во время разработки-->
-    <script src="js/switcher.js?_v=20220418235341"></script>
+    <script src="js/switcher.js?_v=20220419214602"></script>
   </body>
 </html>

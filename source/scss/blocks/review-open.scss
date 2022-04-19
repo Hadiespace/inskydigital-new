@@ -39,7 +39,7 @@
 
 	b {
 		position: relative;
-		transition: color .3s;
+		transition: color var(--theme-delay);
 
 		&::before {
 			@include adaptive("height", 1);
