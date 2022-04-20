@@ -21,6 +21,7 @@
 	display: grid;
 	align-self: start;
 	border-bottom: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	transition: border-bottom var(--theme-delay);
 }
 
 .home-process__step {
@@ -28,6 +29,7 @@
 	display: grid;
 	overflow: hidden;
 	border-top: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	transition: border-top var(--theme-delay);
 
 	&::before {
 		@include adaptive("top", 32);
@@ -74,11 +76,15 @@
 	overflow: hidden;
 	height: 0;
 	opacity: 0;
-	transition: height var(--theme-delay), opacity var(--theme-delay), margin-bottom var(--theme-delay);
+	transition:
+		height var(--theme-delay),
+		opacity var(--theme-delay),
+		margin-bottom var(--theme-delay);
 
 	p {
 		@include adaptive("line-height", 32);
 		margin: 0;
+		transition: color var(--theme-delay);
 	}
 }
 

@@ -13,11 +13,13 @@
 .home-services__text-first {
 	@include adaptive("max-width", 260);
 	@include adaptive("margin-top", 32);
+	transition: color var(--theme-delay);
 }
 
 .home-services__text-secondary {
 	@include adaptive("max-width", 260);
 	@include adaptive("margin-bottom", 48);
+	transition: color var(--theme-delay);
 }
 
 .home-services__modal-open {

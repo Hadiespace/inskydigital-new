@@ -1,13 +1,27 @@
-mixin button(text, isSecondary, isLink, linkHref)
-	if isSecondary && !isLink
+mixin button(text, isSecondary, isLink, linkHref, isSubmit)
+	if isSecondary && !isLink && !isSubmit
 		button.button.button--secondary(type="button")&attributes(attributes)!= text
 			span.button__line.button__line--top
 			span.button__line.button__line--top-right
 			span.button__line.button__line--bottom-right
 			span.button__line.button__line--left
 			span.button__line.button__line--bottom
-	if !isSecondary && !isLink
+	if !isSecondary && !isLink && !isSubmit
 		button.button.button--accent(type="button")&attributes(attributes)!= text
+			span.button__line.button__line--top
+			span.button__line.button__line--top-right
+			span.button__line.button__line--bottom-right
+			span.button__line.button__line--left
+			span.button__line.button__line--bottom
+	if isSecondary && isSubmit
+		button.button.button--secondary(type="submit")&attributes(attributes)!= text
+			span.button__line.button__line--top
+			span.button__line.button__line--top-right
+			span.button__line.button__line--bottom-right
+			span.button__line.button__line--left
+			span.button__line.button__line--bottom
+	if !isSecondary && isSubmit
+		button.button.button--accent(type="submit")&attributes(attributes)!= text
 			span.button__line.button__line--top
 			span.button__line.button__line--top-right
 			span.button__line.button__line--bottom-right

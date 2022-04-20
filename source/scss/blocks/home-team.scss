@@ -5,9 +5,11 @@
 }
 
 .home-team__wrapper {
+	@include adaptive("grid-row-gap", 20);
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 }
+
 .home-team__top-wrap {}
 
 .home-team__title {
@@ -17,13 +19,14 @@
 .home-team__description {
 	align-self: start;
 	margin: 0;
+	transition: color var(--theme-delay);
 }
 
 .home-team__text {
-	@include adaptive("padding-top", 40);
 	display: grid;
 	align-self: center;
-	margin: 0 0 calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280)));
+	margin: 0;
+	transition: color var(--theme-delay);
 
 	span {
 		@include adaptive("font-size", 48);

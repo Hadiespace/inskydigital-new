@@ -17,14 +17,14 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
     <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
-    <script src="js/theme.js?_v=20220419214602"></script>
+    <script src="js/theme.js"></script>
     <title>Insky.digital | Главная</title>
     <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220419214602">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220419214602" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
@@ -144,8 +144,7 @@
           <div class="home-preview__wrapper">
             <div class="home-preview__container container">
               <!-- заголовок секции-->
-              <h2 class="home-preview__title title">
-                Разработка сайтов, <br>
+              <h2 class="home-preview__title title">Разработка сайтов, <br>
                 мобильные приложения, <br>
                 продвижение и PR
               </h2>
@@ -591,8 +590,7 @@
           </div>
           <!-- Логотип--><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
           <!-- Копирайт-->
-          <p class="footer__copyright">
-            Нажимая кнопку «Отправить», вы соглашаетесь с <br>
+          <p class="footer__copyright">Нажимая кнопку «Отправить», вы соглашаетесь с <br>
             <a href="index.html">политикой конфиденциальности</a>
             и обработкой персональных данных. <br>
             2000-2021. Все права защищены.
@@ -600,9 +598,98 @@
         </div>
       </footer>
     </div>
-    <script src="js/bundle.min.js?_v=20220419214602"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220419214602"></script>
+    <div class="modal">
+      <div class="modal__container">
+        <!-- закрыть модальное окно-->
+        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span>
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#modal-close"></use>
+          </svg>
+        </button>
+        <!-- обратный звонок-->
+        <div class="modal__content modal-recall">
+          <p class="modal__title modal-recall__title">Оставьте ваши данные и мы свяжемся с вами</p>
+          <form class="modal-recall__form">
+                <div class="field modal-recall__name">
+                  <input class="field__input field__input--name" id="modal-recall-name" type="text" name="name" placeholder="Ваше имя">
+                  <label class="visually-hidden" for="modal-recall-name">Ваше имя</label><span class="field__error" aria-hidden="true">Ошибка</span>
+                </div>
+                <div class="field modal-recall__phone">
+                  <input class="field__input field__input--phone" id="modal-recall-phone" type="tel" name="phone" placeholder="Ваш телефон">
+                  <label class="visually-hidden" for="modal-recall-phone">Ваш телефон</label><span class="field__error" aria-hidden="true">Ошибка</span>
+                </div>
+            <div class="modal__wrapper modal-recall__wrapper">
+                  <div class="field field--consent modal__consent">
+                    <input class="visually-hidden" id="modal-recall-consent" type="checkbox" name="consent" checked>
+                    <label class="field__label field__label--consent" for="modal-recall-consent">Я согласен с обработкой личных данных <br>
+                      в соответствии с <a href="index.html">политикой конфиденциальности</a>.
+                    </label><span class="field__error" aria-hidden="true">Ошибка</span>
+                  </div>
+                  <button class="button button--accent modal__submit" type="submit">Перезвоните мне<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- проконсультироваться-->
+        <div class="modal__content modal__content--opened modal-advisory modal-advisory--opened">
+          <p class="modal__title modal-advisory__title">Проконсультироваться</p>
+          <form class="modal-advisory__form">
+                <div class="field modal-advisory__name">
+                  <input class="field__input field__input--name" id="modal-advisory-name" type="text" name="name" placeholder="Ваше имя">
+                  <label class="visually-hidden" for="modal-advisory-name">Ваше имя</label><span class="field__error" aria-hidden="true">Ошибка</span>
+                </div>
+                <div class="field modal-advisory__phone">
+                  <input class="field__input field__input--phone" id="modal-advisory-phone" type="tel" name="phone" placeholder="Ваш телефон">
+                  <label class="visually-hidden" for="modal-advisory-phone">Ваш телефон</label><span class="field__error" aria-hidden="true">Ошибка</span>
+                </div>
+                <div class="field modal-advisory__email">
+                  <input class="field__input field__input--email" id="modal-advisory-email" type="email" name="email" placeholder="Ваш e-mail">
+                  <label class="visually-hidden" for="modal-advisory-email">Ваш e-mail</label><span class="field__error" aria-hidden="true">Ошибка</span>
+                </div>
+                <div class="field modal-advisory__message">
+                  <textarea class="field__input field__input--message" id="modal-advisory-message" name="message" placeholder="Сообщение"></textarea>
+                  <label class="visually-hidden" for="modal-advisory-message">Ваш e-mail</label><span class="field__error" aria-hidden="true">Ошибка</span>
+                </div>
+                <div class="field field--file modal-advisory__file">
+                  <input class="visually-hidden" id="modal-advisory-file-0" type="file" name="file">
+                  <label class="field__label field__label--file" for="modal-advisory-file-0">Прикрепить ТЗ</label>
+                </div>
+            <div class="modal__files">
+              <div class="modal__file"><span class="modal__file-text" id="file-0">Техническое задание</span>
+                <button class="modal__file-close" type="button" aria-controls="file-0"><span class="visually-hidden">Закрыть</span><span class="modal__file-icon"></span></button>
+              </div>
+              <div class="modal__file"><span class="modal__file-text" id="file-0">Портфолио</span>
+                <button class="modal__file-close" type="button" aria-controls="file-0"><span class="visually-hidden">Закрыть</span><span class="modal__file-icon"></span></button>
+              </div>
+              <div class="modal__file"><span class="modal__file-text" id="file-0">Обсуждения</span>
+                <button class="modal__file-close" type="button" aria-controls="file-0"><span class="visually-hidden">Закрыть</span><span class="modal__file-icon"></span></button>
+              </div>
+              <div class="modal__file"><span class="modal__file-text" id="file-0">Техническое задание</span>
+                <button class="modal__file-close" type="button" aria-controls="file-0"><span class="visually-hidden">Закрыть</span><span class="modal__file-icon"></span></button>
+              </div>
+              <div class="modal__file"><span class="modal__file-text" id="file-0">Портфолио</span>
+                <button class="modal__file-close" type="button" aria-controls="file-0"><span class="visually-hidden">Закрыть</span><span class="modal__file-icon"></span></button>
+              </div>
+              <div class="modal__file"><span class="modal__file-text" id="file-0">Обсуждения</span>
+                <button class="modal__file-close" type="button" aria-controls="file-0"><span class="visually-hidden">Закрыть</span><span class="modal__file-icon"></span></button>
+              </div>
+            </div>
+            <div class="modal__wrapper modal-advisory__wrapper">
+                  <div class="field field--consent modal__consent">
+                    <input class="visually-hidden" id="modal-advisory-consent" type="checkbox" name="consent" checked>
+                    <label class="field__label field__label--consent" for="modal-advisory-consent">Я согласен с обработкой личных данных <br>
+                      в соответствии с <a href="index.html">политикой конфиденциальности</a>.
+                    </label><span class="field__error" aria-hidden="true">Ошибка</span>
+                  </div>
+                  <button class="button button--accent modal__submit" type="submit">Перезвоните мне<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+            </div>
+          </form>
+        </div>
+        <!-- успешная отправка-->
+      </div>
+    </div>
+    <script src="js/bundle.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
     <!-- навигация по страницам вёрстки во время разработки-->
-    <script src="js/switcher.js?_v=20220419214602"></script>
+    <script src="js/switcher.js"></script>
   </body>
 </html>

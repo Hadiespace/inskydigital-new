@@ -12,7 +12,8 @@
 	font-weight: 400;
 	font-style: normal;
 	color: var(--color-main);
-	background-color: var(--color-default-background);
+	background: var(--color-default-background);
+	transition: background var(--theme-delay);
 }
 
 .page__wrapper {

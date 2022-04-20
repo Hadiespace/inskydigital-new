@@ -4,5 +4,6 @@
 	display: flex;
 	flex-direction: column;
 	align-self: start;
-	height: calc(calc(var(--vh) * 100) - calc(132px + (132 * 3 - 132) * ((100vw - 1280px) / (3840 - 1280))));
+	height: 100%;
+	max-height: calc(calc(var(--vh) * 100) - calc(132px + (132 * 3 - 132) * ((100vw - 1280px) / (3840 - 1280))));
 }

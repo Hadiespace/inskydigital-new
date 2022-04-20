@@ -40,6 +40,7 @@
 	@include adaptive("margin-left", 8);
 	@include adaptive("padding-left", 16);
 	position: relative;
+	transition: color var(--theme-delay);
 
 	&::before {
 		@include adaptive("width", 8);

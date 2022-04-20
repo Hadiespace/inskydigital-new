@@ -3,4 +3,5 @@
 	@include adaptive("line-height", 56);
 	margin: 0;
 	font-weight: 600;
+	transition: color var(--theme-delay);
 }

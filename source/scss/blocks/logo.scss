@@ -12,6 +12,7 @@
 
 .logo__text {
 	font-weight: 500;
+	transition: color var(--theme-delay);
 	cursor: default;
 }
 

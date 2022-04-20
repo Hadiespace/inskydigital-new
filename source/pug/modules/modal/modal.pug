@@ -1,0 +1,16 @@
+include ../field
+include ../button
+
+div.modal
+	div.modal__container
+		// закрыть модальное окно
+		button.modal__close(type="button")
+			span.visually-hidden Закрыть модальное окно
+			svg(width="20", height="20", aria-hidden="true")
+				use(xlink:href="images/sprite.svg#modal-close")
+		// обратный звонок
+		include modal-recall
+		// проконсультироваться
+		include modal-advisory
+		// успешная отправка
+		//- include modal-success

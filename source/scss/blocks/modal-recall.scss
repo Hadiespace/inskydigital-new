@@ -1,0 +1,23 @@
+.modal-recall {}
+
+.modal-recall__title {
+	@include adaptive("margin-bottom", 60);
+}
+
+.modal-recall__form {
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.modal-recall__name {
+	@include adaptive("margin-bottom", 8);
+}
+
+.modal-recall__phone {
+	@include adaptive("margin-bottom", 8);
+}
+
+.modal-recall__wrapper {
+	@include adaptive("padding-top", 32);
+}

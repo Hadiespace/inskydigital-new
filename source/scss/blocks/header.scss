@@ -15,7 +15,7 @@
 		z-index: -1;
 		width: 100%;
 		background: var(--color-header-background);
-		transition: opacity var(--theme-delay);
+		transition: opacity var(--theme-delay), background var(--theme-delay);
 		pointer-events: none;
 	}
 

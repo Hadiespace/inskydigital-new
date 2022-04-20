@@ -1,0 +1,183 @@
+.field {
+	position: relative;
+	display: grid;
+
+	&::before {
+		@include adaptive("top", 40);
+		@include adaptive("height", 1);
+		@include adaptive("border-radius", 2);
+		content: "";
+		position: absolute;
+		width: 100%;
+		background: var(--color-field-line);
+		transition: background var(--theme-delay);
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			background: var(--color-alternate);
+		}
+	}
+}
+
+.field__input {
+	@include adaptive("margin-bottom", 8);
+	@include adaptive("padding-top", 8);
+	@include adaptive("padding-bottom", 8);
+	@include adaptive("padding-left", 0);
+	@include adaptive("padding-right", 0);
+	@include adaptive("font-size", 16);
+	@include adaptive("height", 40);
+	@include adaptive("line-height", 24);
+	display: flex;
+	outline: none;
+	border: none;
+	color: var(--color-alternate);
+	caret-color: var(--color-accent);
+	background: transparent;
+	transition:
+		color var(--theme-delay),
+		caret-color var(--theme-delay);
+
+	&::placeholder {
+		color: var(--color-field-placeholder);
+	}
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		-webkit-text-fill-color: var(--color-alternate) !important;
+		transition: background-color 5000s ease-in-out 0s;
+	}
+}
+
+.field__label {
+	&--consent {
+		@include adaptive("padding-left", 40);
+		@include adaptive("font-size", 12);
+		@include adaptive("line-height", 20);
+		position: relative;
+		color: var(--color-field-placeholder);
+		cursor: pointer;
+
+		&::before {
+			@include adaptive("width", 24);
+			@include adaptive("height", 24);
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			background: var(--color-field-line);
+		}
+
+		&::after {
+			@include adaptive("width", 16);
+			@include adaptive("height", 16);
+			@include adaptive("top", 4);
+			@include adaptive("left", 4);
+			content: "";
+			position: absolute;
+			background-image: url("../images/common/icon-field-check.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0;
+			transition: opacity var(--theme-delay);
+		}
+
+		a {
+			position: relative;
+
+			&::before {
+				@include adaptive("height", 1);
+				@include adaptive("bottom", -2);
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				background: var(--color-field-placeholder);
+				opacity: .6;
+				transition: opacity var(--theme-delay);
+			}
+
+			&:hover,
+			&:focus {
+				&::before {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&--file {
+		@include adaptive("padding", 6);
+		@include adaptive("font-size", 12);
+		@include adaptive("line-height", 20);
+		@include adaptive("border-radius", 20);
+		text-align: center;
+		color: var(--color-caption);
+		background: var(--color-field-line);
+		transition: background var(--theme-delay);
+		cursor: pointer;
+	}
+}
+
+.field__error {
+	@include adaptive("font-size", 10);
+	@include adaptive("line-height", 16);
+	color: var(--color-accent);
+}
+
+.field--consent {
+	&::before {
+		display: none;
+	}
+
+	.field__error {
+		@include adaptive("bottom", -20);
+		position: absolute;
+	}
+}
+
+.field input:checked ~ .field__label::after {
+	opacity: 1;
+}
+
+.field--file {
+	@include adaptive("padding-top", 8);
+	align-self: start;
+
+	&::before {
+		display: none;
+	}
+
+	&:hover,
+	&:focus {
+		.field__label {
+			background: var(--color-form-button-background);
+		}
+	}
+}
+
+.field input:checked ~ .field__label::after {
+	opacity: 1;
+}
+
+.field--error {
+	&::before {
+		background: var(--color-accent);
+	}
+
+	.field__input {
+		color: var(--color-accent);
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			background: var(--color-accent);
+		}
+	}
+}

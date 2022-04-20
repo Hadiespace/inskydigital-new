@@ -1,0 +1,8 @@
+div.modal__content.modal-recall
+	p.modal__title.modal-recall__title Оставьте ваши данные и мы свяжемся с вами
+	form.modal-recall__form
+		+fieldName('modal-recall').modal-recall__name
+		+fieldPhone('modal-recall').modal-recall__phone
+		div.modal__wrapper.modal-recall__wrapper
+			+fieldConsent('modal-recall').modal__consent
+			+button('Перезвоните мне', false, false, false, true).modal__submit

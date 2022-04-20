@@ -31,6 +31,7 @@
 	@include adaptive("padding-top", 40);
 	align-items: end;
 	background: var(--color-background);
+	transition: background var(--theme-delay);
 
 	img {
 		@include adaptive("width", 336);
@@ -39,6 +40,7 @@
 }
 
 .team-slider__info-wrap {
+	@include adaptive("grid-row-gap", 20);
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 }
@@ -51,20 +53,23 @@
 .team-slider__title {
 	@include adaptive("padding-top", 12);
 	@include adaptive("margin-bottom", 36);
+	transition: color var(--theme-delay);
 }
 
 .team-slider__status {
 	@include adaptive("margin-bottom", 8);
+	transition: color var(--theme-delay);
 }
 
 .team-slider__city {
 	color: var(--color-secondary);
+	transition: color var(--theme-delay);
 }
 
 .team-slider__specialization {
-	@include adaptive("padding-top", 40);
 	align-self: center;
-	margin: 0 0 calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280)));
+	margin: 0;
+	transition: color var(--theme-delay);
 }
 
 .team-slider__navigation {
