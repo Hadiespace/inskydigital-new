@@ -30,4 +30,15 @@
 			color: var(--color-accent-secondary-state);
 		}
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("padding-top", 7);
+		@include adaptive_2("padding-right", 11);
+		@include adaptive_2("padding-bottom", 7);
+		@include adaptive_2("padding-left", 11);
+		@include adaptive_2("font-size", 12);
+		@include adaptive_2("line-height", 20);
+		@include adaptive_2("border-radius", 2);
+		border: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	}
 }

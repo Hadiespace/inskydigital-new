@@ -1,18 +1,18 @@
 mixin fieldName(parent)
 	div.field&attributes(attributes)
-		input.field__input.field__input--name(id=`${parent}-name`, type="text", name="name", placeholder="Ваше имя")
+		input.field__input.field__input--name.validate-name.required(id=`${parent}-name`, type="text", name="name", placeholder="Ваше имя")
 		label.visually-hidden(for=`${parent}-name`) Ваше имя
 		span.field__error(aria-hidden="true") Ошибка
 
 mixin fieldPhone(parent)
 	div.field&attributes(attributes)
-		input.field__input.field__input--phone(id=`${parent}-phone`, type="tel", name="phone", placeholder="Ваш телефон")
+		input.field__input.field__input--phone.validate-phone.required(id=`${parent}-phone`, type="tel", name="phone", placeholder="Ваш телефон")
 		label.visually-hidden(for=`${parent}-phone`) Ваш телефон
 		span.field__error(aria-hidden="true") Ошибка
 
 mixin fieldEmail(parent)
 	div.field&attributes(attributes)
-		input.field__input.field__input--email(id=`${parent}-email`, type="email", name="email", placeholder="Ваш e-mail")
+		input.field__input.field__input--email.validate-email.required(id=`${parent}-email`, type="email", name="email", placeholder="Ваш e-mail")
 		label.visually-hidden(for=`${parent}-email`) Ваш e-mail
 		span.field__error(aria-hidden="true") Ошибка
 
@@ -24,13 +24,13 @@ mixin fieldMessage(parent)
 
 mixin fieldConsent(parent)
 	div.field.field--consent&attributes(attributes)
-		input.visually-hidden(id=`${parent}-consent`, type="checkbox", name="consent", checked)
+		input.visually-hidden.required(id=`${parent}-consent`, type="checkbox", name="consent", checked)
 		label.field__label.field__label--consent(for=`${parent}-consent`)
 			| Я согласен с обработкой личных данных #[br]
 			| в соответствии с #[a(href="index.html") политикой конфиденциальности].
 		span.field__error(aria-hidden="true") Ошибка
 
 mixin fieldFile(parent, id)
-	div.field.field--file&attributes(attributes)
-		input.visually-hidden(id=`${parent}-file-${id}`, type="file", name="file")
+	div.field.field--file.field--no-line&attributes(attributes)
+		input.visually-hidden(id=`${parent}-file-${id}`, type="file", name=`file-${id}`)
 		label.field__label.field__label--file(for=`${parent}-file-${id}`) Прикрепить ТЗ

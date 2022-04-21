@@ -7,6 +7,10 @@
 	@include adaptive("margin", -8);
 	display: flex;
 	flex-wrap: wrap;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("margin", -8);
+	}
 }
 
 .main-nav__item {
@@ -16,6 +20,10 @@
 
 	&--menu-small {
 		position: relative;
+	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("margin", 8);
 	}
 }
 

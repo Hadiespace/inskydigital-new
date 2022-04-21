@@ -25,4 +25,15 @@
 		background-repeat: no-repeat;
 		transform: translateX(-50%);
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("height", 739);
+
+		&::before {
+			@include adaptive_2("width", 1902);
+			@include adaptive_2("height", 739);
+			@include adaptive_2("margin-left", -100);
+			@include adaptive_2("top", -60);
+		}
+	}
 }

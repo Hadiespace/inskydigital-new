@@ -3,11 +3,20 @@
 	display: grid;
 	align-items: center;
 	grid-template-columns: repeat(2, max-content);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("grid-column-gap", 20);
+	}
 }
 
 .logo__image {
 	@include adaptive("width", 84);
 	@include adaptive("height", 84);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("width", 84);
+		@include adaptive_2("height", 84);
+	}
 }
 
 .logo__text {

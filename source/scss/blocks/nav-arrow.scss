@@ -12,4 +12,13 @@
 		stroke: var(--color-main);
 		transition: stroke var(--theme-delay), transform var(--theme-delay);
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("height", 16);
+
+		svg {
+			@include adaptive_2("width", 16);
+			@include adaptive_2("height", 16);
+		}
+	}
 }

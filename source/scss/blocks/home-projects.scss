@@ -2,29 +2,50 @@
 
 .home-projects__container {
 	@include grid;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include grid_2;
+	}
 }
 
 .home-projects__aside {}
 
 .home-projects__title {
 	@include adaptive("margin-bottom", 32);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("margin-bottom", 32);
+	}
 }
 
 .home-projects__types {
 	@include adaptive("margin", -4);
+	@include adaptive_2("margin-bottom", 20);
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: auto;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("margin", -4);
+		@include adaptive_2("margin-bottom", 20);
+	}
 }
 
 .home-projects__type {
 	@include adaptive("margin", 4);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("margin", 4);
+	}
 }
 
 .home-projects__portfolio-open {
-	@include adaptive("margin-top", 24);
 	@include adaptive("min-width", 260);
 	align-self: start;
+	margin-top: auto;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("min-width", 260);
+	}
 }
 
 .home-projects__cards {
@@ -32,6 +53,10 @@
 	display: grid;
 	align-self: start;
 	grid-template-columns: repeat(3, 1fr);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("grid-gap", 20);
+	}
 }
 
 .home-projects__card {

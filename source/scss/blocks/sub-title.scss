@@ -3,4 +3,9 @@
 	@include adaptive("line-height", 32);
 	margin: 0;
 	font-weight: 600;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("font-size", 24);
+		@include adaptive_2("line-height", 32);
+	}
 }

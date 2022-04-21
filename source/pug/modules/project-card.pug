@@ -9,8 +9,16 @@ mixin projectCard(props)
 				each addon in addons
 					span.project-card__addon + #{addon}
 		picture.project-card__logo
+			source(media="(min-width: 2600px)", srcset=`images/content/${logo}@3x.webp`, type="image/webp")
+			source(media="(min-width: 1300px)", srcset=`images/content/${logo}@2x.webp`, type="image/webp")
+			source(media="(min-width: 2600px)", srcset=`images/content/${logo}@3x.png`)
+			source(media="(min-width: 1300px)", srcset=`images/content/${logo}@2x.png`)
 			source(srcset=`images/content/${logo}.webp`, type="image/webp")
 			img(src=`images/content/${logo}.png`, alt="Логотип")
 		picture.project-card__background(aria-hidden="true")
+			source(media="(min-width: 2600px)", srcset=`images/content/${background}@3x.webp`, type="image/webp")
+			source(media="(min-width: 1300px)", srcset=`images/content/${background}@2x.webp`, type="image/webp")
+			source(media="(min-width: 2600px)", srcset=`images/content/${background}@3x.jpg`)
+			source(media="(min-width: 1300px)", srcset=`images/content/${background}@2x.jpg`)
 			source(srcset=`images/content/${background}.webp`, type="image/webp")
 			img(src=`images/content/${background}.jpg`, alt="Фон")

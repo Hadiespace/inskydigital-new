@@ -13,6 +13,13 @@
 	&:focus {
 		background: var(--color-switcher-background-state);
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("padding", 2);
+		@include adaptive_2("width", 32);
+		@include adaptive_2("height", 16);
+		@include adaptive_2("border-radius", 8);
+	}
 }
 
 .theme-switcher__icon {
@@ -27,6 +34,12 @@
 	transition:
 		margin-left var(--theme-delay),
 		background var(--theme-delay);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("width", 12);
+		@include adaptive_2("height", 12);
+		@include adaptive_2("top", 2);
+	}
 }
 
 .theme-switcher__check {
@@ -39,6 +52,12 @@
 	background: var(--color-alternate);
 	transform: translateX(-50%);
 	transition: margin-left var(--theme-delay);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("width", 12);
+		@include adaptive_2("height", 12);
+		@include adaptive_2("top", 2);
+	}
 }
 
 .theme-switcher--light {
@@ -50,6 +69,17 @@
 	.theme-switcher__check {
 		@include adaptive("margin-left", 8);
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		.theme-switcher__icon {
+			@include adaptive_2("margin-left", -8);
+			background-image: url("../images/common/icon-moon.svg");
+		}
+
+		.theme-switcher__check {
+			@include adaptive_2("margin-left", 8);
+		}
+	}
 }
 
 .theme-switcher--dark {
@@ -60,5 +90,15 @@
 
 	.theme-switcher__check {
 		@include adaptive("margin-left", -8);
+	}
+
+	@media (min-aspect-ratio: 20/9) {
+		.theme-switcher__icon {
+			@include adaptive_2("margin-left", 8);
+		}
+
+		.theme-switcher__check {
+			@include adaptive_2("margin-left", -8);
+		}
 	}
 }

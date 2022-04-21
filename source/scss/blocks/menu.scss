@@ -23,6 +23,15 @@
 			width: 100%;
 		}
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		&--opened {
+			&::before {
+				@include adaptive_2("height", 30);
+				@include adaptive_2("top", -30);
+			}
+		}
+	}
 }
 
 .menu__container {

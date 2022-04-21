@@ -4,4 +4,9 @@
 	margin: 0;
 	font-weight: 600;
 	transition: color var(--theme-delay);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("font-size", 47.96);
+		@include adaptive_2("line-height", 56);
+	}
 }

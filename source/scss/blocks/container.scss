@@ -4,4 +4,10 @@
 	@include adaptive("padding-right", 20);
 	margin: 0 auto;
 	width: 100%;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("max-width", 1268);
+		@include adaptive_2("padding-left", 20);
+		@include adaptive_2("padding-right", 20);
+	}
 }

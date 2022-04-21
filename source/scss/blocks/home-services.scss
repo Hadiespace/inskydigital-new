@@ -2,6 +2,10 @@
 
 .home-services__container {
 	@include grid;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include grid_2;
+	}
 }
 
 .home-services__aside {}
@@ -14,17 +18,31 @@
 	@include adaptive("max-width", 260);
 	@include adaptive("margin-top", 32);
 	transition: color var(--theme-delay);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("max-width", 260);
+		@include adaptive_2("margin-top", 32);
+	}
 }
 
 .home-services__text-secondary {
 	@include adaptive("max-width", 260);
 	@include adaptive("margin-bottom", 48);
 	transition: color var(--theme-delay);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("max-width", 260);
+		@include adaptive_2("margin-bottom", 48);
+	}
 }
 
 .home-services__modal-open {
 	@include adaptive("min-width", 260);
 	align-self: start;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("min-width", 260);
+	}
 }
 
 .home-services__cards {
@@ -33,6 +51,10 @@
 	display: grid;
 	align-self: start;
 	grid-template-columns: repeat(6, 1fr);
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("grid-gap", 20);
+	}
 }
 
 .home-services__card {

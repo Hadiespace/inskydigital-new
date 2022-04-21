@@ -4,7 +4,12 @@
 
 .home-process__container {
 	@include grid;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include grid_2;
+	}
 }
+
 .home-process__aside {}
 
 .home-process__title {
@@ -14,21 +19,29 @@
 .home-process__modal-open {
 	@include adaptive("min-width", 260);
 	align-self: start;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("min-width", 260);
+	}
 }
 
 .home-process__steps {
 	counter-reset: cards;
 	display: grid;
 	align-self: start;
-	border-bottom: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	border-bottom: calc(1px + (1 * 3 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
 	transition: border-bottom var(--theme-delay);
+
+	@media (min-aspect-ratio: 20/9) {
+		border-bottom: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	}
 }
 
 .home-process__step {
 	position: relative;
 	display: grid;
 	overflow: hidden;
-	border-top: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	border-top: calc(1px + (1 * 3 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
 	transition: border-top var(--theme-delay);
 
 	&::before {
@@ -43,6 +56,18 @@
 		color: var(--color-secondary);
 		transition: transform var(--theme-delay), color var(--theme-delay);
 		pointer-events: none;
+	}
+
+	@media (min-aspect-ratio: 20/9) {
+		border-top: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+
+		&::before {
+			@include adaptive_2("top", 32);
+			@include adaptive_2("left", 8);
+			@include adaptive_2("width", 40);
+			@include adaptive_2("font-size", 24);
+			@include adaptive_2("line-height", 32);
+		}
 	}
 }
 
@@ -70,6 +95,21 @@
 		stroke: var(--color-decor);
 		transition: transform var(--theme-delay), stroke var(--theme-delay);
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("padding", 32);
+
+		span {
+			@include adaptive_2("padding-left", 24);
+			@include adaptive_2("font-size", 24);
+			@include adaptive_2("line-height", 32);
+		}
+
+		svg {
+			@include adaptive_2("width", 32);
+			@include adaptive_2("height", 32);
+		}
+	}
 }
 
 .home-process__text {
@@ -85,6 +125,12 @@
 		@include adaptive("line-height", 32);
 		margin: 0;
 		transition: color var(--theme-delay);
+	}
+
+	@media (min-aspect-ratio: 20/9) {
+		p {
+			@include adaptive_2("line-height", 32);
+		}
 	}
 }
 
@@ -108,6 +154,12 @@
 		@include adaptive("margin-bottom", 32);
 		height: inherit;
 		opacity: 1;
+	}
+
+	@media (min-aspect-ratio: 20/9) {
+		.home-process__text {
+			@include adaptive_2("margin-bottom", 32);
+		}
 	}
 }
 

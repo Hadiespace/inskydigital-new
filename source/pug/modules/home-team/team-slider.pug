@@ -7,6 +7,10 @@ div.home-team__slider.team-slider
 				li.team-slider__slide.swiper-slide
 					// изображение
 					picture.team-slider__picture
+						source(media="(min-width: 2600px)", srcset=`images/content/${slide.image}@3x.webp`, type="image/webp")
+						source(media="(min-width: 1300px)", srcset=`images/content/${slide.image}@2x.webp`, type="image/webp")
+						source(media="(min-width: 2600px)", srcset=`images/content/${slide.image}@3x.png`)
+						source(media="(min-width: 1300px)", srcset=`images/content/${slide.image}@2x.png`)
 						source(srcset=`images/content/${slide.image}.webp`, type="image/webp")
 						img(src=`images/content/${slide.image}.jpg`, alt=slide.name)
 					// информация
@@ -31,4 +35,4 @@ div.home-team__slider.team-slider
 				svg(width="48", height="48", aria-hidden="true")
 					use(xlink:href="images/sprite.svg#arrow-swiper-next")
 		// открыть модальное окно "проконсультироваться"
-		+button('Давайте встретимся!').team-slider__modal-open
+		+button('Давайте встретимся!').team-slider__modal-open.recall-open

@@ -30,6 +30,17 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("width", 84);
+		@include adaptive_2("height", 84);
+		@include adaptive_2("margin-right", 20);
+
+		&::after {
+			@include adaptive_2("width", 20);
+			@include adaptive_2("height", 20);
+		}
+	}
 }
 
 .review-open__text {
@@ -49,6 +60,14 @@
 			bottom: 0;
 			width: 100%;
 			background: var(--color-accent);
+		}
+	}
+
+	@media (min-aspect-ratio: 20/9) {
+		b {
+			&::before {
+				@include adaptive_2("height", 1);
+			}
 		}
 	}
 }

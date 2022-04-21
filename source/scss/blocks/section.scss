@@ -3,4 +3,10 @@
 	@include adaptive("padding-top", 24);
 	@include adaptive("padding-bottom", 24);
 	display: grid;
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("margin-bottom", 60);
+		@include adaptive_2("padding-top", 24);
+		@include adaptive_2("padding-bottom", 24);
+	}
 }

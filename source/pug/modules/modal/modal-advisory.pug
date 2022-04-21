@@ -1,42 +1,28 @@
-div.modal__content.modal__content--opened.modal-advisory.modal-advisory--opened
+div.modal__content.modal-advisory
 	p.modal__title.modal-advisory__title Проконсультироваться
-	form.modal-advisory__form
+	form.modal-advisory__form.form.form--files(action="send.php", novalidate)
 		+fieldName('modal-advisory').modal-advisory__name
 		+fieldPhone('modal-advisory').modal-advisory__phone
 		+fieldEmail('modal-advisory').modal-advisory__email
 		+fieldMessage('modal-advisory').modal-advisory__message
-		+fieldFile('modal-advisory', 0).modal-advisory__file
-		div.modal__files
-			div.modal__file
-				span.modal__file-text(id="file-0") Техническое задание
-				button.modal__file-close(type="button", aria-controls="file-0")
-					span.visually-hidden Закрыть
-					span.modal__file-icon
-			div.modal__file
-				span.modal__file-text(id="file-0") Портфолио
-				button.modal__file-close(type="button", aria-controls="file-0")
-					span.visually-hidden Закрыть
-					span.modal__file-icon
-			div.modal__file
-				span.modal__file-text(id="file-0") Обсуждения
-				button.modal__file-close(type="button", aria-controls="file-0")
-					span.visually-hidden Закрыть
-					span.modal__file-icon
-			div.modal__file
-				span.modal__file-text(id="file-0") Техническое задание
-				button.modal__file-close(type="button", aria-controls="file-0")
-					span.visually-hidden Закрыть
-					span.modal__file-icon
-			div.modal__file
-				span.modal__file-text(id="file-0") Портфолио
-				button.modal__file-close(type="button", aria-controls="file-0")
-					span.visually-hidden Закрыть
-					span.modal__file-icon
-			div.modal__file
-				span.modal__file-text(id="file-0") Обсуждения
-				button.modal__file-close(type="button", aria-controls="file-0")
-					span.visually-hidden Закрыть
-					span.modal__file-icon
+		div.modal-advisory__inputs-wrap
+			+fieldFile('modal-advisory', 11).modal-advisory__file
+			+fieldFile('modal-advisory', 10).modal-advisory__file
+			+fieldFile('modal-advisory', 9).modal-advisory__file
+			+fieldFile('modal-advisory', 8).modal-advisory__file
+			+fieldFile('modal-advisory', 7).modal-advisory__file
+			+fieldFile('modal-advisory', 6).modal-advisory__file
+			+fieldFile('modal-advisory', 5).modal-advisory__file
+			+fieldFile('modal-advisory', 4).modal-advisory__file
+			+fieldFile('modal-advisory', 3).modal-advisory__file
+			+fieldFile('modal-advisory', 2).modal-advisory__file
+			+fieldFile('modal-advisory', 1).modal-advisory__file
+			+fieldFile('modal-advisory', 0).modal-advisory__file
+		div.modal-advisory__files
+			//- div.modal__file.file
+			//- 	span.file__text(id="file-0") Какой-то файл
+			//- 	button.file__close(type="button", aria-controls="file-0")
+			//- 		span.visually-hidden Закрыть
 		div.modal__wrapper.modal-advisory__wrapper
 			+fieldConsent('modal-advisory').modal__consent
 			+button('Перезвоните мне', false, false, false, true).modal__submit

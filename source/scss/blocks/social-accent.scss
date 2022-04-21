@@ -31,4 +31,14 @@
 			background: var(--color-telegram-state);
 		}
 	}
+
+	@media (min-aspect-ratio: 20/9) {
+		@include adaptive_2("width", 24);
+		@include adaptive_2("height", 24);
+
+		svg {
+			@include adaptive_2("width", 12);
+			@include adaptive_2("height", 12);
+		}
+	}
 }
