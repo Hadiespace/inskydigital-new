@@ -13,7 +13,7 @@
 	@media (min-aspect-ratio: 20/9) {
 		@include adaptive_2("min-height", 84);
 		@include adaptive_2("padding", 12);
-		clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+		clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
 	}
 }
 
