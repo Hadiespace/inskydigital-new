@@ -3,9 +3,6 @@
 	display: grid;
 
 	&::before {
-		@include adaptive("top", 40);
-		@include adaptive("height", 1);
-		@include adaptive("border-radius", 2);
 		content: "";
 		position: absolute;
 		width: 100%;
@@ -20,24 +17,16 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		&::before {
-			@include adaptive_2("top", 40);
-			@include adaptive_2("height", 1);
-			@include adaptive_2("border-radius", 2);
+			@include adaptive("top", 40);
+			@include adaptive("height", 1);
+			@include adaptive("border-radius", 2);
 		}
 	}
 }
 
 .field__input {
-	@include adaptive("margin-bottom", 8);
-	@include adaptive("padding-top", 8);
-	@include adaptive("padding-bottom", 8);
-	@include adaptive("padding-left", 0);
-	@include adaptive("padding-right", 0);
-	@include adaptive("font-size", 16);
-	@include adaptive("height", 40);
-	@include adaptive("line-height", 24);
 	display: flex;
 	outline: none;
 	border: none;
@@ -61,30 +50,25 @@
 		transition: background-color 5000s ease-in-out 0s;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
-		@include adaptive_2("padding-top", 8);
-		@include adaptive_2("padding-bottom", 8);
-		@include adaptive_2("padding-left", 0);
-		@include adaptive_2("padding-right", 0);
-		@include adaptive_2("font-size", 16);
-		@include adaptive_2("height", 40);
-		@include adaptive_2("line-height", 24);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
+		@include adaptive("padding-top", 8);
+		@include adaptive("padding-bottom", 8);
+		@include adaptive("padding-left", 0);
+		@include adaptive("padding-right", 0);
+		@include adaptive("font-size", 16);
+		@include adaptive("height", 40);
+		@include adaptive("line-height", 24);
 	}
 }
 
 .field__label {
 	&--consent {
-		@include adaptive("padding-left", 40);
-		@include adaptive("font-size", 12);
-		@include adaptive("line-height", 20);
 		position: relative;
 		color: var(--color-field-placeholder);
 		cursor: pointer;
 
 		&::before {
-			@include adaptive("width", 24);
-			@include adaptive("height", 24);
 			content: "";
 			position: absolute;
 			left: 0;
@@ -94,10 +78,6 @@
 		}
 
 		&::after {
-			@include adaptive("width", 16);
-			@include adaptive("height", 16);
-			@include adaptive("top", 4);
-			@include adaptive("left", 4);
 			content: "";
 			position: absolute;
 			background-image: url("../images/common/icon-field-check.svg");
@@ -111,8 +91,6 @@
 			position: relative;
 
 			&::before {
-				@include adaptive("height", 1);
-				@include adaptive("bottom", -2);
 				content: "";
 				position: absolute;
 				left: 0;
@@ -132,10 +110,6 @@
 	}
 
 	&--file {
-		@include adaptive("padding", 6);
-		@include adaptive("font-size", 12);
-		@include adaptive("line-height", 20);
-		@include adaptive("border-radius", 20);
 		text-align: center;
 		color: var(--color-caption);
 		background: var(--color-field-line);
@@ -143,52 +117,50 @@
 		cursor: pointer;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		&--consent {
-			@include adaptive_2("padding-left", 40);
-			@include adaptive_2("font-size", 12);
-			@include adaptive_2("line-height", 20);
+			@include adaptive("padding-left", 40);
+			@include adaptive("font-size", 12);
+			@include adaptive("line-height", 20);
 
 			&::before {
-				@include adaptive_2("width", 24);
-				@include adaptive_2("height", 24);
+				@include adaptive("width", 24);
+				@include adaptive("height", 24);
 			}
 
 			&::after {
-				@include adaptive_2("width", 16);
-				@include adaptive_2("height", 16);
-				@include adaptive_2("top", 4);
-				@include adaptive_2("left", 4);
+				@include adaptive("width", 16);
+				@include adaptive("height", 16);
+				@include adaptive("top", 4);
+				@include adaptive("left", 4);
 			}
 
 			a {
 				&::before {
-					@include adaptive_2("height", 1);
-					@include adaptive_2("bottom", -2);
+					@include adaptive("height", 1);
+					@include adaptive("bottom", -2);
 				}
 			}
 		}
 
 		&--file {
-			@include adaptive_2("padding", 6);
-			@include adaptive_2("font-size", 12);
-			@include adaptive_2("line-height", 20);
-			@include adaptive_2("border-radius", 20);
+			@include adaptive("padding", 6);
+			@include adaptive("font-size", 12);
+			@include adaptive("line-height", 20);
+			@include adaptive("border-radius", 20);
 		}
 	}
 }
 
 .field__error {
-	@include adaptive("font-size", 10);
-	@include adaptive("line-height", 16);
 	color: var(--color-accent);
 	opacity: 0;
 	transition: opacity var(--theme-delay);
 	pointer-events: none;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("font-size", 10);
-		@include adaptive_2("line-height", 16);
+	@media (min-width: 1200px) {
+		@include adaptive("font-size", 10);
+		@include adaptive("line-height", 16);
 	}
 }
 
@@ -198,13 +170,12 @@
 	}
 
 	.field__error {
-		@include adaptive("bottom", -20);
 		position: absolute;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		.field__error {
-			@include adaptive_2("bottom", -20);
+			@include adaptive("bottom", -20);
 		}
 	}
 }
@@ -214,7 +185,6 @@
 }
 
 .field--no-line {
-	@include adaptive("padding-top", 8);
 	align-self: start;
 
 	&::before {
@@ -228,8 +198,8 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding-top", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 8);
 	}
 }
 

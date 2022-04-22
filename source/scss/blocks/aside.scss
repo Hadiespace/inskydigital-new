@@ -1,14 +1,23 @@
 .aside {
-	@include adaptive("top", 108);
-	position: sticky;
 	display: flex;
 	flex-direction: column;
 	align-self: start;
-	height: 100%;
-	max-height: calc(calc(var(--vh) * 100) - calc(132px + (132 * 3 - 132) * ((100vw - 1280px) / (3840 - 1280))));
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("top", 108);
-		max-height: calc(calc(var(--vh) * 100) - calc(132px + (132 * 2 - 132) * ((100vw - 1280px) / (3840 - 1280))));
+	@media (min-width: 1200px) {
+		@include adaptive("top", 108);
+		max-height: calc(calc(var(--vh) * 100) - calc(132px + (132 * 3 - 132) * ((100vw - 1280px) / (3840 - 1280))));
+
+		@media (min-aspect-ratio: 20/9) {
+			max-height: calc(calc(var(--vh) * 100) - calc(132px + (132 * 2 - 132) * ((100vw - 1280px) / (3840 - 1280))));
+		}
+	}
+
+	@media (min-width: 992px) {
+		position: sticky;
+		height: 100%;
+	}
+
+	@media (min-width: 992px) and (max-width: 1199px) {
+		max-height: calc(calc(var(--vh) * 100) - 132px);
 	}
 }

@@ -17,14 +17,14 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
     <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
-    <script src="js/theme.js?_v=20220421211426"></script>
+    <script src="js/theme.js?_v=20220422212540"></script>
     <title>Insky.digital | Главная</title>
     <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220421211426">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220422212540">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220421211426" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220422212540" rel="stylesheet">
   </head>
   <body class="page__body">
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
@@ -208,7 +208,7 @@
                           <button class="tab-filter" type="button" aria-expanded="false">Лендинги</button>
                 </li>
               </ul>
-              <!-- открыть страницу портфолио--><a class="button button--accent home-projects__portfolio-open" href="index.html">Показать еще проекты<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
+              <!-- открыть страницу портфолио--><a class="button button--accent home-projects__portfolio-open home-projects__portfolio-open--main" href="index.html">Показать еще проекты<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
             </div>
             <!-- проекты в портфолио-->
             <ul class="home-projects__cards">
@@ -339,7 +339,7 @@
                         </div>
               </li>
             </ul>
-            <!-- открыть страницу портфолио (для мобильной версии)--><a class="button button--accent home-projects__mobile-portfolio-open" href="index.html">Показать еще проекты<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
+            <!-- открыть страницу портфолио (для мобильной версии)--><a class="button button--accent home-projects__portfolio-open home-projects__portfolio-open--secondary" href="index.html">Показать еще проекты<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
           </div>
         </section>
         <!-- услуги-->
@@ -350,10 +350,10 @@
               <!-- заголовок секции-->
               <h2 class="home-services__title title">Услуги</h2>
               <!-- информация-->
-              <p class="home-services__text-first"><b>У вас уже есть описание <br> или техническое задание?</b></p>
-              <p class="home-services__text-secondary">Мы оценим в течение 1 рабочего дня и сообщим стоимость.</p>
+              <p class="home-services__text-first home-services__text-first--main"><b>У вас уже есть описание <br> или техническое задание?</b></p>
+              <p class="home-services__text-secondary home-services__text-secondary--main">Мы оценим в течение 1 рабочего дня и сообщим стоимость.</p>
               <!-- открыть модальное окно "проконсультироваться"-->
-                      <button class="button button--accent home-services__modal-open advisory-open" type="button">Прислать ТЗ<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+                      <button class="button button--accent home-services__modal-open home-services__modal-open--main advisory-open" type="button">Прислать ТЗ<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
             <!-- услуги-->
             <ul class="home-services__cards">
@@ -464,6 +464,13 @@
                         </div>
               </li>
             </ul>
+            <div class="home-services__bottom-wrap">
+              <!-- информация-->
+              <p class="home-services__text-first home-services__text-first--secondary"><b>У вас уже есть описание <br> или техническое задание?</b></p>
+              <p class="home-services__text-secondary home-services__text-secondary--secondary">Мы оценим в течение 1 рабочего дня и сообщим стоимость.</p>
+              <!-- открыть модальное окно "проконсультироваться"-->
+                      <button class="button button--accent home-services__modal-open home-services__modal-open--secondary advisory-open" type="button">Прислать ТЗ<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+            </div>
           </div>
         </section>
         <!-- процесс-->
@@ -474,7 +481,7 @@
               <!-- заголовок секции-->
               <h2 class="home-process__title title">Процесс</h2>
               <!-- открыть модальное окно "проконсультироваться"-->
-                      <button class="button button--accent home-process__modal-open advisory-open" type="button">Начать проект<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+                      <button class="button button--accent home-process__modal-open home-process__modal-open--main advisory-open" type="button">Начать проект<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
             <!-- шаги процесса-->
             <ul class="home-process__steps">
@@ -545,6 +552,8 @@
         совершать действия, необходимые вам по их доброй воле.</p></div>
               </li>
             </ul>
+            <!-- открыть модальное окно "проконсультироваться" (мобильная версия)-->
+                    <button class="button button--accent home-process__modal-open home-process__modal-open--secondary advisory-open" type="button">Начать проект<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
           </div>
         </section>
         <!-- команда-->
@@ -562,7 +571,7 @@
               <!-- информация-->
               <p class="home-team__text"><span>50+</span>профессионалов в Москве, <br> Минске, Риге и Томске.</p>
               <!-- контакты-->
-              <div class="home-team__socials"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+              <div class="home-team__socials home-team__socials--main"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#facebook"></use>
                           </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
@@ -638,9 +647,45 @@
                     </svg>
                   </button>
                 </div>
-                <!-- открыть модальное окно "проконсультироваться"-->
-                        <button class="button button--accent team-slider__modal-open recall-open" type="button">Давайте встретимся!<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+                <div class="team-slider__contacts">
+                  <!-- контакты-->
+                  <div class="home-team__socials home-team__socials--secondary"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+                              <svg width="20" height="20" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#facebook"></use>
+                              </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                              <svg width="20" height="20" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#instagram"></use>
+                              </svg></a><a class="social social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
+                              <svg width="20" height="20" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#vkontakte"></use>
+                              </svg></a><a class="social social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                              <svg width="20" height="20" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#telegram"></use>
+                              </svg></a>
+                  </div>
+                  <!-- открыть модальное окно "проконсультироваться"-->
+                          <button class="button button--accent team-slider__modal-open team-slider__modal-open recall-open" type="button">Давайте встретимся!<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
+                </div>
               </div>
+            </div>
+            <div class="home-team__mobile-contacts">
+              <!-- контакты-->
+              <div class="home-team__socials home-team__socials--third"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#facebook"></use>
+                          </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#instagram"></use>
+                          </svg></a><a class="social social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#vkontakte"></use>
+                          </svg></a><a class="social social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#telegram"></use>
+                          </svg></a>
+              </div>
+              <!-- открыть модальное окно "проконсультироваться"-->
+                      <button class="button button--accent home-team__modal-open recall-open" type="button">Давайте встретимся!<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
           </div>
         </section>
@@ -814,9 +859,9 @@
         </div>
       </div>
     </div>
-    <script src="js/bundle.min.js?_v=20220421211426"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220421211426"></script>
+    <script src="js/bundle.min.js?_v=20220422212540"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220422212540"></script>
     <!-- навигация по страницам вёрстки во время разработки-->
-    <script src="js/switcher.js?_v=20220421211426"></script>
+    <script src="js/switcher.js?_v=20220422212540"></script>
   </body>
 </html>

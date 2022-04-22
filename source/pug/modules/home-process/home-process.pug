@@ -7,6 +7,8 @@ section.home-process.section
 			// заголовок секции
 			h2.home-process__title.title Процесс
 			// открыть модальное окно "проконсультироваться"
-			+button('Начать проект').home-process__modal-open.advisory-open
+			+button('Начать проект').home-process__modal-open.home-process__modal-open--main.advisory-open
 		// шаги процесса
 		include home-process-steps
+		// открыть модальное окно "проконсультироваться" (мобильная версия)
+		+button('Начать проект').home-process__modal-open.home-process__modal-open--secondary.advisory-open

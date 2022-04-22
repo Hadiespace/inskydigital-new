@@ -1,44 +1,44 @@
 .menu-small {
-	@include adaptive("top", 54);
-	@include adaptive("border-radius", 2);
+	@media (min-width: 1200px) {
+		@include adaptive("top", 54);
+		@include adaptive("border-radius", 2);
 
-	&.menu--opened {
-		box-shadow:
-			0
-			calc(22px + (22 * 3 - 22) * ((100vw - 1280px) / (3840 - 1280)))
-			calc(30px + (30 * 3 - 30) * ((100vw - 1280px) / (3840 - 1280)))
-			rgba(0, 0, 0, .06);
+		@media (min-aspect-ratio: 20/9) {
+			&.menu--opened {
+				box-shadow:
+					0
+					calc(22px + (22 * 2 - 22) * ((100vw - 1280px) / (3840 - 1280)))
+					calc(30px + (30 * 2 - 30) * ((100vw - 1280px) / (3840 - 1280)))
+					rgb(0 0 0 / .06);
+			}
+		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("top", 54);
-		@include adaptive_2("border-radius", 2);
+	@media (max-width: 1199px) {
+		top: 54px;
+		border-radius: 2px;
 
 		&.menu--opened {
-			box-shadow:
-				0
-				calc(22px + (22 * 2 - 22) * ((100vw - 1280px) / (3840 - 1280)))
-				calc(30px + (30 * 2 - 30) * ((100vw - 1280px) / (3840 - 1280)))
-				rgba(0, 0, 0, .06);
+			box-shadow: 0 22px 30px rgb(0 0 0 / .06);
 		}
 	}
 }
 
 .menu-small__list {
-	@include adaptive("padding", 24);
-	@include adaptive("grid-row-gap", 24);
+	@media (min-width: 1200px) {
+		@include adaptive("padding", 24);
+		@include adaptive("grid-row-gap", 24);
+	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding", 24);
-		@include adaptive_2("grid-row-gap", 24);
+	@media (max-width: 1199px) {
+		grid-row-gap: 24px;
+		padding: 24px;
 	}
 }
 
 .menu-small__item {}
 
 .menu-small__link {
-	@include adaptive("line-height", 20);
-	@include adaptive("font-size", 12);
 	font-weight: 500;
 	transition: color var(--theme-delay2);
 
@@ -47,8 +47,13 @@
 		color: var(--color-accent);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("line-height", 20);
-		@include adaptive_2("font-size", 12);
+	@media (min-width: 1200px) {
+		@include adaptive("line-height", 20);
+		@include adaptive("font-size", 12);
+	}
+
+	@media (max-width: 1199px) {
+		font-size: 12px;
+		line-height: 20px;
 	}
 }

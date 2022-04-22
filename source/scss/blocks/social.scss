@@ -1,16 +1,13 @@
 .social {
-	@include adaptive("width", 48);
-	@include adaptive("height", 48);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
 	background: var(--color-background);
 	transition: background var(--theme-delay);
+	pointer-events: visible;
 
 	svg {
-		@include adaptive("width", 20);
-		@include adaptive("height", 20);
 		fill: var(--color-main);
 		transition: fill var(--theme-delay);
 	}
@@ -24,13 +21,23 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("width", 48);
-		@include adaptive_2("height", 48);
+	@media (min-width: 1200px) {
+		@include adaptive("width", 48);
+		@include adaptive("height", 48);
 
 		svg {
-			@include adaptive_2("width", 20);
-			@include adaptive_2("height", 20);
+			@include adaptive("width", 20);
+			@include adaptive("height", 20);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		width: 48px;
+		height: 48px;
+
+		svg {
+			width: 20px;
+			height: 20px;
 		}
 	}
 }

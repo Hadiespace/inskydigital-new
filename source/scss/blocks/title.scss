@@ -1,12 +1,30 @@
 .title {
-	@include adaptive("font-size", 48);
-	@include adaptive("line-height", 56);
 	margin: 0;
 	font-weight: 600;
 	transition: color var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("font-size", 47.96);
-		@include adaptive_2("line-height", 56);
+	@media (min-width: 1200px) {
+		@include adaptive("font-size", 47.96);
+		@include adaptive("line-height", 56);
+	}
+
+	@media (max-width: 1199px) {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	@media (max-width: 599px) {
+		font-size: 40px;
+		line-height: 48px;
+	}
+
+	@media (max-width: 479px) {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	@media (max-width: 359px) {
+		font-size: 24px;
+		line-height: 32px;
 	}
 }

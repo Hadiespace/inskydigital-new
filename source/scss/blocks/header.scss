@@ -7,7 +7,6 @@
 	transition: background var(--theme-delay);
 
 	&::before {
-		@include adaptive("height", 160);
 		content: "";
 		position: absolute;
 		left: 0;
@@ -27,19 +26,32 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		&::before {
-			@include adaptive_2("height", 160);
+			@include adaptive("height", 160);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		display: none;
+
+		&::before {
+			height: 160px;
 		}
 	}
 }
 
 .header__container {
-	@include grid;
 	align-items: center;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include grid_2;
+	@media (min-width: 1200px) {
+		@include grid;
+	}
+
+	@media (max-width: 1199px) {
+		display: grid;
+		grid-column-gap: 20px;
+		grid-template-columns: 292px 1fr;
 	}
 }
 
@@ -53,10 +65,12 @@
 }
 
 .header__logo {
-	@include adaptive("margin-right", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-right", 20);
+	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-right", 20);
+	@media (max-width: 1199px) {
+		margin-right: 20px;
 	}
 }
 
@@ -67,41 +81,48 @@
 }
 
 .header__left-wrap {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
 	align-items: center;
 	grid-template-columns: 1fr max-content max-content;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("grid-column-gap", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
+	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
 	}
 }
 
 .header__nav-wrap {}
 
 .header__contacts {
-	@include adaptive("margin", -4);
-	@include adaptive("margin-right", 16);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin", -4);
-		@include adaptive_2("margin-right", 16);
+	@media (min-width: 1200px) {
+		@include adaptive("margin", -4);
+		@include adaptive("margin-right", 16);
+	}
+
+	@media (max-width: 1199px) {
+		margin: -4px;
+		margin-right: 16px;
 	}
 }
 
 .header__social {
-	@include adaptive("margin", 4);
+	@media (min-width: 1200px) {
+		@include adaptive("margin", 4);
+	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin", 4);
+	@media (max-width: 1199px) {
+		margin: 4px;
 	}
 }
 
 .header__phone {
-	@include adaptive("margin-left", 16);
 	font-weight: 600;
 	transition: color var(--theme-delay);
 
@@ -110,15 +131,21 @@
 		color: var(--color-accent);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-left", 16);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-left", 16);
+	}
+
+	@media (max-width: 1199px) {
+		margin-left: 16px;
 	}
 }
 
 .header__modal-open {
-	@include adaptive("min-width", 200);
+	@media (min-width: 1200px) {
+		@include adaptive("min-width", 200);
+	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("min-width", 200);
+	@media (max-width: 1199px) {
+		min-width: 200px;
 	}
 }

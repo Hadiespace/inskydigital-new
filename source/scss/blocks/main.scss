@@ -3,7 +3,6 @@
 }
 
 .main__background {
-	@include adaptive("height", 739);
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -12,10 +11,6 @@
 	width: 100%;
 
 	&::before {
-		@include adaptive("width", 1902);
-		@include adaptive("height", 739);
-		@include adaptive("margin-left", -100);
-		@include adaptive("top", -60);
 		content: "";
 		position: absolute;
 		left: 50%;
@@ -26,14 +21,25 @@
 		transform: translateX(-50%);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("height", 739);
+	@media (min-width: 1200px) {
+		@include adaptive("height", 739);
 
 		&::before {
-			@include adaptive_2("width", 1902);
-			@include adaptive_2("height", 739);
-			@include adaptive_2("margin-left", -100);
-			@include adaptive_2("top", -60);
+			@include adaptive("width", 1902);
+			@include adaptive("height", 739);
+			@include adaptive("margin-left", -100);
+			@include adaptive("top", -60);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		height: 739px;
+
+		&::before {
+			top: -60px;
+			margin-left: -100px;
+			width: 1902px;
+			height: 739px;
 		}
 	}
 }

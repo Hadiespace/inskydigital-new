@@ -1,12 +1,18 @@
-.home-process {
-
-}
+.home-process {}
 
 .home-process__container {
-	@include grid;
+	@media (min-width: 1200px) {
+		@include grid;
+	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include grid_2;
+	@media (max-width: 1199px) {
+		display: grid;
+		grid-column-gap: 20px;
+		grid-template-columns: 292px 1fr;
+	}
+
+	@media (max-width: 991px) {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -14,14 +20,33 @@
 
 .home-process__title {
 	margin: 0 0 auto;
+
+	@media (max-width: 991px) {
+		margin: 0 0 40px;
+	}
 }
 
 .home-process__modal-open {
-	@include adaptive("min-width", 260);
 	align-self: start;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("min-width", 260);
+	@media (min-width: 1200px) {
+		@include adaptive("min-width", 260);
+	}
+
+	@media (max-width: 1199px) {
+		min-width: 260px;
+	}
+
+	@media (min-width: 992px) {
+		&--secondary {
+			display: none;
+		}
+	}
+
+	@media (max-width: 991px) {
+		&--main {
+			display: none;
+		}
 	}
 }
 
@@ -29,11 +54,22 @@
 	counter-reset: cards;
 	display: grid;
 	align-self: start;
-	border-bottom: calc(1px + (1 * 3 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
 	transition: border-bottom var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		border-bottom: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	@media (min-width: 1200px) {
+		border-bottom: calc(1px + (1 * 3 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+
+		@media (min-aspect-ratio: 20/9) {
+			border-bottom: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		border-bottom: 1px solid var(--color-decor);
+	}
+
+	@media (max-width: 991px) {
+		margin: 0 0 40px;
 	}
 }
 
@@ -41,15 +77,9 @@
 	position: relative;
 	display: grid;
 	overflow: hidden;
-	border-top: calc(1px + (1 * 3 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
 	transition: border-top var(--theme-delay);
 
 	&::before {
-		@include adaptive("top", 32);
-		@include adaptive("left", 8);
-		@include adaptive("width", 40);
-		@include adaptive("font-size", 24);
-		@include adaptive("line-height", 32);
 		counter-increment: cards;
 		content: counters(cards, "") ".";
 		position: absolute;
@@ -58,21 +88,50 @@
 		pointer-events: none;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		border-top: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+	@media (min-width: 1200px) {
+		border-top: calc(1px + (1 * 3 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
 
 		&::before {
-			@include adaptive_2("top", 32);
-			@include adaptive_2("left", 8);
-			@include adaptive_2("width", 40);
-			@include adaptive_2("font-size", 24);
-			@include adaptive_2("line-height", 32);
+			@include adaptive("top", 32);
+			@include adaptive("left", 8);
+			@include adaptive("width", 40);
+			@include adaptive("font-size", 24);
+			@include adaptive("line-height", 32);
+		}
+
+		@media (min-aspect-ratio: 20/9) {
+			border-top: calc(1px + (1 * 2 - 1) * ((100vw - 1280px) / (3840 - 1280))) solid var(--color-decor);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		border-top: 1px solid var(--color-decor);
+
+		&::before {
+			left: 8px;
+			top: 32px;
+			width: 40px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+
+	@media (max-width: 719px) {
+		&::before {
+			top: 24px;
+		}
+	}
+
+	@media (max-width: 599px) {
+		&::before {
+			top: 24px;
+			font-size: 16px;
+			line-height: 24px;
 		}
 	}
 }
 
 .home-process__toggle {
-	@include adaptive("padding", 32);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -80,34 +139,63 @@
 	background: transparent;
 
 	span {
-		@include adaptive("padding-left", 24);
-		@include adaptive("font-size", 24);
-		@include adaptive("line-height", 32);
 		color: var(--color-secondary);
 		transition: color var(--theme-delay);
 		pointer-events: none;
 	}
 
 	svg {
-		@include adaptive("width", 32);
-		@include adaptive("height", 32);
 		fill: none;
 		stroke: var(--color-decor);
 		transition: transform var(--theme-delay), stroke var(--theme-delay);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding", 32);
+	@media (min-width: 1200px) {
+		@include adaptive("padding", 32);
 
 		span {
-			@include adaptive_2("padding-left", 24);
-			@include adaptive_2("font-size", 24);
-			@include adaptive_2("line-height", 32);
+			@include adaptive("padding-left", 24);
+			@include adaptive("font-size", 24);
+			@include adaptive("line-height", 32);
 		}
 
 		svg {
-			@include adaptive_2("width", 32);
-			@include adaptive_2("height", 32);
+			@include adaptive("width", 32);
+			@include adaptive("height", 32);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		padding: 32px;
+
+		span {
+			padding-left: 24px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	@media (max-width: 719px) {
+		padding: 24px 20px;
+	}
+
+	@media (max-width: 599px) {
+		padding: 24px 0 24px 16px;
+
+		span {
+			padding-left: 16px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
 		}
 	}
 }
@@ -122,14 +210,40 @@
 		margin-bottom var(--theme-delay);
 
 	p {
-		@include adaptive("line-height", 32);
 		margin: 0;
 		transition: color var(--theme-delay);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
+		@include adaptive("padding-left", 56);
+		@include adaptive("padding-right", 64);
+
 		p {
-			@include adaptive_2("line-height", 32);
+			@include adaptive("line-height", 32);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		padding-right: 64px;
+		padding-left: 56px;
+
+		p {
+			line-height: 32px;
+		}
+	}
+
+	@media (max-width: 719px) {
+		padding-right: 52px;
+		padding-left: 44px;
+	}
+
+	@media (max-width: 599px) {
+		padding-right: 0;
+		padding-left: 0;
+
+		p {
+			font-size: 12px;
+			line-height: 28px;
 		}
 	}
 }
@@ -151,14 +265,25 @@
 	}
 
 	.home-process__text {
-		@include adaptive("margin-bottom", 32);
 		height: inherit;
 		opacity: 1;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		.home-process__text {
-			@include adaptive_2("margin-bottom", 32);
+			@include adaptive("margin-bottom", 32);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		.home-process__text {
+			margin-bottom: 32px;
+		}
+	}
+
+	@media (max-width: 719px) {
+		.home-process__text {
+			margin-bottom: 24px;
 		}
 	}
 }

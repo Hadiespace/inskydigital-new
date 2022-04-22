@@ -1,12 +1,23 @@
 .section {
-	@include adaptive("margin-bottom", 60);
-	@include adaptive("padding-top", 24);
-	@include adaptive("padding-bottom", 24);
 	display: grid;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 60);
-		@include adaptive_2("padding-top", 24);
-		@include adaptive_2("padding-bottom", 24);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
+		@include adaptive("padding-top", 24);
+		@include adaptive("padding-bottom", 24);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 60px;
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+	@media (max-width: 991px) {
+		margin-bottom: 36px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 16px;
 	}
 }

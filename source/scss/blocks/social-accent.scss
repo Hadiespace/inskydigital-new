@@ -1,16 +1,9 @@
 .social-accent {
-	@include adaptive("width", 24);
-	@include adaptive("height", 24);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
 	transition: background var(--theme-delay);
-
-	svg {
-		@include adaptive("width", 12);
-		@include adaptive("height", 12);
-	}
 
 	&--whatsapp {
 		fill: var(--color-alternate);
@@ -32,13 +25,23 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("width", 24);
-		@include adaptive_2("height", 24);
+	@media (min-width: 1200px) {
+		@include adaptive("width", 24);
+		@include adaptive("height", 24);
 
 		svg {
-			@include adaptive_2("width", 12);
-			@include adaptive_2("height", 12);
+			@include adaptive("width", 12);
+			@include adaptive("height", 12);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		width: 24px;
+		height: 24px;
+
+		svg {
+			width: 12px;
+			height: 12px;
 		}
 	}
 }

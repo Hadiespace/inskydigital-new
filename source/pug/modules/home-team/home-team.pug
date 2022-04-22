@@ -14,10 +14,19 @@ section.home-team.section
 				span 50+
 				| профессионалов в Москве, #[br] Минске, Риге и Томске.
 			// контакты
-			div.home-team__socials
+			div.home-team__socials.home-team__socials--main
 				+social('facebook').home-team__social
 				+social('instagram').home-team__social
 				+social('vkontakte').home-team__social
 				+social('telegram').home-team__social
 		// слайдер
 		include team-slider
+		div.home-team__mobile-contacts
+			// контакты
+			div.home-team__socials.home-team__socials--third
+				+social('facebook').home-team__social
+				+social('instagram').home-team__social
+				+social('vkontakte').home-team__social
+				+social('telegram').home-team__social
+			// открыть модальное окно "проконсультироваться"
+			+button('Давайте встретимся!').home-team__modal-open.recall-open

@@ -1,21 +1,26 @@
 .logo {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
 	align-items: center;
 	grid-template-columns: repeat(2, max-content);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("grid-column-gap", 20);
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
 	}
 }
 
 .logo__image {
-	@include adaptive("width", 84);
-	@include adaptive("height", 84);
+	@media (max-width: 1199px) {
+		width: 84px;
+		height: 84px;
+	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("width", 84);
-		@include adaptive_2("height", 84);
+	@media (min-width: 1200px) {
+		@include adaptive("width", 84);
+		@include adaptive("height", 84);
 	}
 }
 

@@ -15,8 +15,6 @@
 		transition: background .15s, box-shadow .15s, transform .15s, opacity .15s, z-index .6s;
 
 		&::before {
-			@include adaptive("height", 30);
-			@include adaptive("top", -30);
 			content: "";
 			position: absolute;
 			left: 0;
@@ -24,11 +22,20 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		&--opened {
 			&::before {
-				@include adaptive_2("height", 30);
-				@include adaptive_2("top", -30);
+				@include adaptive("height", 30);
+				@include adaptive("top", -30);
+			}
+		}
+	}
+
+	@media (max-width: 1199px) {
+		&--opened {
+			&::before {
+				top: -30px;
+				height: 30px;
 			}
 		}
 	}

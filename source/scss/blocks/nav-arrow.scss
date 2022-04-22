@@ -1,24 +1,30 @@
 .nav-arrow {
-	@include adaptive("height", 16);
 	border: none;
 	padding: 0;
 	width: 100%;
 	background: transparent;
 
 	svg {
-		@include adaptive("width", 16);
-		@include adaptive("height", 16);
 		fill: none;
 		stroke: var(--color-main);
 		transition: stroke var(--theme-delay), transform var(--theme-delay);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("height", 16);
+	@media (min-width: 1200px) {
+		@include adaptive("height", 16);
 
 		svg {
-			@include adaptive_2("width", 16);
-			@include adaptive_2("height", 16);
+			@include adaptive("width", 16);
+			@include adaptive("height", 16);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		height: 16px;
+
+		svg {
+			width: 16px;
+			height: 16px;
 		}
 	}
 }

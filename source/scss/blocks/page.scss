@@ -1,14 +1,10 @@
 .page {
-	@include adaptive("scroll-padding-top", 84);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("scroll-padding-top", 84);
+	@media (min-width: 1200px) {
+		@include adaptive("scroll-padding-top", 84);
 	}
 }
 
 .page__body {
-	@include adaptive("font-size", 16);
-	@include adaptive("line-height", 24);
 	overflow-anchor: none;
 	min-width: 320px;
 	min-height: calc(var(--vh) * 100);
@@ -19,9 +15,14 @@
 	background: var(--color-default-background);
 	transition: background var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("font-size", 16);
-		@include adaptive_2("line-height", 24);
+	@media (min-width: 1200px) {
+		@include adaptive("font-size", 16);
+		@include adaptive("line-height", 24);
+	}
+
+	@media (max-width: 1199px) {
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 

@@ -1,8 +1,4 @@
 .theme-switcher {
-	@include adaptive("padding", 2);
-	@include adaptive("width", 32);
-	@include adaptive("height", 16);
-	@include adaptive("border-radius", 8);
 	position: relative;
 	display: flex;
 	border: none;
@@ -14,18 +10,22 @@
 		background: var(--color-switcher-background-state);
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding", 2);
-		@include adaptive_2("width", 32);
-		@include adaptive_2("height", 16);
-		@include adaptive_2("border-radius", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("padding", 2);
+		@include adaptive("width", 32);
+		@include adaptive("height", 16);
+		@include adaptive("border-radius", 8);
+	}
+
+	@media (max-width: 1199px) {
+		border-radius: 8px;
+		padding: 2px;
+		width: 32px;
+		height: 16px;
 	}
 }
 
 .theme-switcher__icon {
-	@include adaptive("width", 12);
-	@include adaptive("height", 12);
-	@include adaptive("top", 2);
 	position: absolute;
 	left: 50%;
 	background-size: cover;
@@ -35,17 +35,20 @@
 		margin-left var(--theme-delay),
 		background var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("width", 12);
-		@include adaptive_2("height", 12);
-		@include adaptive_2("top", 2);
+	@media (min-width: 1200px) {
+		@include adaptive("width", 12);
+		@include adaptive("height", 12);
+		@include adaptive("top", 2);
+	}
+
+	@media (max-width: 1199px) {
+		top: 2px;
+		width: 12px;
+		height: 12px;
 	}
 }
 
 .theme-switcher__check {
-	@include adaptive("width", 12);
-	@include adaptive("height", 12);
-	@include adaptive("top", 2);
 	position: absolute;
 	left: 50%;
 	border-radius: 50%;
@@ -53,52 +56,68 @@
 	transform: translateX(-50%);
 	transition: margin-left var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("width", 12);
-		@include adaptive_2("height", 12);
-		@include adaptive_2("top", 2);
+	@media (min-width: 1200px) {
+		@include adaptive("width", 12);
+		@include adaptive("height", 12);
+		@include adaptive("top", 2);
+	}
+
+	@media (max-width: 1199px) {
+		top: 2px;
+		width: 12px;
+		height: 12px;
 	}
 }
 
 .theme-switcher--light {
 	.theme-switcher__icon {
-		@include adaptive("margin-left", -8);
 		background-image: url("../images/common/icon-moon.svg");
 	}
 
-	.theme-switcher__check {
-		@include adaptive("margin-left", 8);
-	}
-
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		.theme-switcher__icon {
-			@include adaptive_2("margin-left", -8);
+			@include adaptive("margin-left", -8);
 			background-image: url("../images/common/icon-moon.svg");
 		}
 
 		.theme-switcher__check {
-			@include adaptive_2("margin-left", 8);
+			@include adaptive("margin-left", 8);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		.theme-switcher__icon {
+			margin-left: -8px;
+		}
+
+		.theme-switcher__check {
+			margin-left: 8px;
 		}
 	}
 }
 
 .theme-switcher--dark {
 	.theme-switcher__icon {
-		@include adaptive("margin-left", 8);
 		background-image: url("../images/common/icon-sun.svg");
 	}
 
-	.theme-switcher__check {
-		@include adaptive("margin-left", -8);
-	}
-
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		.theme-switcher__icon {
-			@include adaptive_2("margin-left", 8);
+			@include adaptive("margin-left", 8);
 		}
 
 		.theme-switcher__check {
-			@include adaptive_2("margin-left", -8);
+			@include adaptive("margin-left", -8);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		.theme-switcher__icon {
+			margin-left: 8px;
+		}
+
+		.theme-switcher__check {
+			margin-left: -8px;
 		}
 	}
 }

@@ -16,7 +16,6 @@
 }
 
 .team-slider__slide {
-	@include grid3;
 	position: relative;
 	left: 0;
 	top: 0;
@@ -26,39 +25,68 @@
 		opacity: 1 !important;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include grid3_2;
+	@media (min-width: 1200px) {
+		@include grid3;
+	}
+
+	@media (max-width: 1199px) {
+		display: grid;
+		grid-column-gap: 20px;
+		grid-template-columns: 1fr 292px;
+	}
+
+	@media (max-width: 719px) {
+		align-content: start;
+		grid-template-columns: 1fr;
 	}
 }
 
 .team-slider__picture {
-	@include adaptive("padding-top", 40);
 	align-items: end;
 	background: var(--color-background);
 	transition: background var(--theme-delay);
 
-	img {
-		@include adaptive("width", 336);
-		@include adaptive("height", 448);
-	}
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding-top", 40);
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 40);
+		@include adaptive("padding-left", 20);
+		@include adaptive("padding-right", 20);
 
 		img {
-			@include adaptive_2("width", 336);
-			@include adaptive_2("height", 448);
+			@include adaptive("width", 336);
+			@include adaptive("height", 448);
 		}
+	}
+
+	@media (max-width: 1199px) {
+		padding: 40px 20px 0;
+
+		img {
+			width: 100%;
+			max-width: 336px;
+		}
+	}
+
+	@media (max-width: 719px) {
+		margin-bottom: 40px;
+		padding: 40px 40px 0;
 	}
 }
 
 .team-slider__info-wrap {
-	@include adaptive("grid-row-gap", 20);
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("grid-row-gap", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("grid-row-gap", 20);
+	}
+
+	@media (max-width: 1199px) {
+		grid-row-gap: 20px;
+	}
+
+	@media (max-width: 991px) {
+		align-content: start;
+		grid-template-rows: initial;
 	}
 }
 
@@ -68,22 +96,33 @@
 }
 
 .team-slider__title {
-	@include adaptive("padding-top", 12);
-	@include adaptive("margin-bottom", 36);
 	transition: color var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding-top", 12);
-		@include adaptive_2("margin-bottom", 36);
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 12);
+		@include adaptive("margin-bottom", 36);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 36px;
+		padding-top: 12px;
+	}
+
+	@media (max-width: 719px) {
+		margin: 0 0 16px;
+		padding-top: 0;
 	}
 }
 
 .team-slider__status {
-	@include adaptive("margin-bottom", 8);
 	transition: color var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 8px;
 	}
 }
 
@@ -99,27 +138,43 @@
 }
 
 .team-slider__navigation {
-	@include grid3;
 	position: relative;
 	z-index: 1;
 	grid-column: 1/2;
 	grid-row: 1/2;
 	pointer-events: none;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include grid3_2;
+	@media (min-width: 1200px) {
+		@include grid3;
+	}
+
+	@media (max-width: 1199px) {
+		display: grid;
+		grid-column-gap: 20px;
+		grid-template-columns: 1fr 292px;
+	}
+
+	@media (max-width: 719px) {
+		grid-template-columns: 1fr;
 	}
 }
 
 .team-slider__buttons {
-	@include adaptive("padding", 20);
 	display: grid;
 	align-self: center;
 	justify-content: space-between;
 	grid-template-columns: repeat(2, max-content);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("padding", 20);
+	}
+
+	@media (max-width: 1199px) {
+		padding: 20px;
+	}
+
+	@media (max-width: 719px) {
+		padding: 8px;
 	}
 }
 
@@ -133,8 +188,6 @@
 	pointer-events: visible;
 
 	svg {
-		@include adaptive("width", 48);
-		@include adaptive("height", 48);
 		fill: var(--color-decor);
 		transition: fill var(--theme-delay);
 	}
@@ -146,15 +199,32 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		svg {
-			@include adaptive_2("width", 48);
-			@include adaptive_2("height", 48);
+			@include adaptive("width", 48);
+			@include adaptive("height", 48);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		svg {
+			width: 48px;
+			height: 48px;
 		}
 	}
 }
 
-.team-slider__modal-open {
+.team-slider__contacts {
+	display: grid;
 	align-self: end;
-	pointer-events: visible;
+}
+
+.team-slider__modal-open {
+	@media (min-width: 720px) {
+		pointer-events: visible;
+	}
+
+	@media (max-width: 719px) {
+		display: none;
+	}
 }

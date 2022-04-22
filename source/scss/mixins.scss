@@ -6,59 +6,57 @@ $max-width: 3840;
 @mixin adaptive($property, $size) {
 	$add-size: calc($size * 3) - $size;
 	#{$property}: calc(#{$size + px} + #{$add-size} * ((100vw - 1280px) / #{$max-width - 1280}));
-}
 
-@mixin adaptive_2($property, $size) {
-	$add-size: calc($size * 2) - $size;
-	#{$property}: calc(#{$size + px} + #{$add-size} * ((100vw - 1280px) / #{$max-width - 1280}));
+	@media (min-aspect-ratio: 20/9) {
+		$add-size: calc($size * 2) - $size;
+		#{$property}: calc(#{$size + px} + #{$add-size} * ((100vw - 1280px) / #{$max-width - 1280}));
+	}
 }
 
 @mixin grid {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
+	grid-column-gap: calc(20px + (20 * 3 - 20) * ((100vw - 1280px) / (3840 - 1280)));
 	grid-template-columns:
 		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)))
 		1fr;
-}
 
-@mixin grid_2 {
-	@include adaptive("grid-column-gap", 20);
-	display: grid;
-	grid-template-columns:
-		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)))
-		1fr;
-}
-
-@mixin grid3 {
-	@include adaptive("grid-column-gap", 20);
-	display: grid;
-	grid-template-columns:
-		1fr
-		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+	@media (min-aspect-ratio: 20/9) {
+		grid-column-gap: calc(20px + (20 * 2 - 20) * ((100vw - 1280px) / (3840 - 1280)));
+		grid-template-columns:
+			calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)))
+			1fr;
+	}
 }
 
 @mixin grid2 {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
+	grid-column-gap: calc(20px + (20 * 3 - 20) * ((100vw - 1280px) / (3840 - 1280)));
 	grid-template-columns:
 		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)))
 		1fr
 		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+
+	@media (min-aspect-ratio: 20/9) {
+		grid-column-gap: calc(20px + (20 * 2 - 20) * ((100vw - 1280px) / (3840 - 1280)));
+		grid-template-columns:
+			calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)))
+			1fr
+			calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+	}
 }
 
-@mixin grid2_2 {
-	@include adaptive("grid-column-gap", 20);
+@mixin grid3 {
 	display: grid;
+	grid-column-gap: calc(20px + (20 * 3 - 20) * ((100vw - 1280px) / (3840 - 1280)));
 	grid-template-columns:
-		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)))
 		1fr
-		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)));
-}
+		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)));
 
-@mixin grid3_2 {
-	@include adaptive("grid-column-gap", 20);
-	display: grid;
-	grid-template-columns:
-		1fr
-		calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+	@media (min-aspect-ratio: 20/9) {
+		display: grid;
+		grid-column-gap: calc(20px + (20 * 2 - 20) * ((100vw - 1280px) / (3840 - 1280)));
+		grid-template-columns:
+			1fr
+			calc(292px + (292 * 2 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+	}
 }

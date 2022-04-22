@@ -1,5 +1,4 @@
 .modal {
-	@include adaptive("padding", 40);
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -21,13 +20,12 @@
 		pointer-events: visible;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding", 40);
+	@media (min-width: 1200px) {
+		@include adaptive("padding", 40);
 	}
 }
 
 .modal__container {
-	@include adaptive("max-width", 1200);
 	position: relative;
 	display: grid;
 	align-items: center;
@@ -36,14 +34,12 @@
 	min-height: 100%;
 	background: var(--color-form-background);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("max-width", 1200);
+	@media (min-width: 1200px) {
+		@include adaptive("max-width", 1200);
 	}
 }
 
 .modal__close {
-	@include adaptive("width", 84);
-	@include adaptive("height", 84);
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -56,8 +52,6 @@
 	transition: background var(--theme-delay);
 
 	svg {
-		@include adaptive("width", 20);
-		@include adaptive("height", 20);
 		stroke: var(--color-alternate);
 		transition: stroke var(--theme-delay);
 	}
@@ -71,20 +65,18 @@
 		}
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("width", 84);
-		@include adaptive_2("height", 84);
+	@media (min-width: 1200px) {
+		@include adaptive("width", 84);
+		@include adaptive("height", 84);
 
 		svg {
-			@include adaptive_2("width", 20);
-			@include adaptive_2("height", 20);
+			@include adaptive("width", 20);
+			@include adaptive("height", 20);
 		}
 	}
 }
 
 .modal__content {
-	@include adaptive("max-width", 840);
-	@include adaptive("padding", 40);
 	position: absolute;
 	z-index: -100;
 	display: grid;
@@ -102,45 +94,41 @@
 		pointer-events: visible;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("max-width", 840);
-		@include adaptive_2("padding", 40);
+	@media (min-width: 1200px) {
+		@include adaptive("max-width", 840);
+		@include adaptive("padding", 40);
 	}
 }
 
 .modal__title {
-	@include adaptive("font-size", 48);
-	@include adaptive("line-height", 56);
 	margin: 0;
 	font-weight: 600;
 	text-align: center;
 	color: var(--color-alternate);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("font-size", 48);
-		@include adaptive_2("line-height", 56);
+	@media (min-width: 1200px) {
+		@include adaptive("font-size", 48);
+		@include adaptive("line-height", 56);
 	}
 }
 
 .modal__wrapper {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
 	align-items: center;
 	grid-column: 1/-1;
 	grid-template-columns: 1fr 1fr;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("grid-column-gap", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
 	}
 }
 
 .modal__consent {}
 
 .modal__submit {
-	@include adaptive("min-width", 240);
 	justify-self: end;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("min-width", 240);
+	@media (min-width: 1200px) {
+		@include adaptive("min-width", 240);
 	}
 }

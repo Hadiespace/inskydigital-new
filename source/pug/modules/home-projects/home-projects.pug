@@ -15,11 +15,11 @@ section.home-projects.section
 					li.home-projects__type
 						+tabFilter(item)
 			// открыть страницу портфолио
-			+button('Показать еще проекты', false, true, 'index.html').home-projects__portfolio-open
+			+button('Показать еще проекты', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--main
 		// проекты в портфолио
 		ul.home-projects__cards
 			each card in projectsCards
 				li.home-projects__card
 					+projectCard(card)
 		// открыть страницу портфолио (для мобильной версии)
-		+button('Показать еще проекты', false, true, 'index.html').home-projects__mobile-portfolio-open
+		+button('Показать еще проекты', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--secondary

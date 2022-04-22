@@ -34,5 +34,12 @@ div.home-team__slider.team-slider
 				span.visually-hidden Следующий слайд
 				svg(width="48", height="48", aria-hidden="true")
 					use(xlink:href="images/sprite.svg#arrow-swiper-next")
-		// открыть модальное окно "проконсультироваться"
-		+button('Давайте встретимся!').team-slider__modal-open.recall-open
+		div.team-slider__contacts
+			// контакты
+			div.home-team__socials.home-team__socials--secondary
+				+social('facebook').home-team__social
+				+social('instagram').home-team__social
+				+social('vkontakte').home-team__social
+				+social('telegram').home-team__social
+			// открыть модальное окно "проконсультироваться"
+			+button('Давайте встретимся!').team-slider__modal-open.team-slider__modal-open.recall-open

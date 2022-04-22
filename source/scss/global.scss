@@ -11,10 +11,12 @@
 
 ::-webkit-scrollbar {
 	width: 8px;
+	height: 8px;
 	background-color: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
+	width: 8px;
 	height: 8px;
 	background-color: var(--color-accent);
 }

@@ -1,43 +1,34 @@
 .modal-recall {}
 
 .modal-recall__title {
-	@include adaptive("margin-bottom", 60);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 60);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
 	}
 }
 
 .modal-recall__form {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("grid-column-gap", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
 	}
 }
 
 .modal-recall__name {
-	@include adaptive("margin-bottom", 8);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
 	}
 }
 
 .modal-recall__phone {
-	@include adaptive("margin-bottom", 8);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
 	}
 }
 
 .modal-recall__wrapper {
-	@include adaptive("padding-top", 32);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding-top", 32);
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 32);
 	}
 }

@@ -1,19 +1,26 @@
 .button {
-	@include adaptive("min-height", 84);
-	@include adaptive("padding", 12);
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
 	border: none;
 	font-weight: 500;
 	transition: background var(--theme-delay), color var(--theme-delay);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("min-height", 84);
-		@include adaptive_2("padding", 12);
-		clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+	@media (min-width: 1200px) {
+		@include adaptive("min-height", 84);
+		@include adaptive("padding", 12);
+		clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+
+		@media (min-aspect-ratio: 20/9) {
+			clip-path: polygon(100% 0, 100% calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))), calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)))) 100%, 0 100%, 0 0);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		clip-path: polygon(100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 0);
+		padding: 12px;
+		min-height: 84px;
 	}
 }
 
@@ -22,65 +29,92 @@
 	transition: background var(--theme-delay);
 
 	&--top {
-		@include adaptive("height", 2);
 		left: 0;
 		top: 0;
 		width: 100%;
 	}
 
 	&--top-right {
-		@include adaptive("width", 2);
 		right: 0;
 		top: 0;
-		height: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 	}
 
 	&--bottom-right {
-		@include adaptive("height", 2);
-		@include adaptive("right", -4);
-		@include adaptive("bottom", 12);
-		@include adaptive("width", 34);
 		transform: rotate(-45deg);
 	}
 
 	&--bottom {
-		@include adaptive("height", 2);
 		left: 0;
 		bottom: 0;
-		width: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 	}
 
 	&--left {
-		@include adaptive("width", 2);
 		left: 0;
 		top: 0;
 		height: 100%;
 	}
 
-	@media (min-aspect-ratio: 20/9) {
+	@media (min-width: 1200px) {
 		&--top {
-			@include adaptive_2("height", 2);
+			@include adaptive("height", 2);
 		}
 
 		&--top-right {
-			@include adaptive_2("width", 2);
-			height: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+			@include adaptive("width", 2);
+			height: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 		}
 
 		&--bottom-right {
-			@include adaptive_2("height", 2);
-			@include adaptive_2("right", -4);
-			@include adaptive_2("bottom", 12);
-			@include adaptive_2("width", 34);
+			@include adaptive("height", 2);
+			@include adaptive("right", -4);
+			@include adaptive("bottom", 12);
+			@include adaptive("width", 34);
 		}
 
 		&--bottom {
-			@include adaptive_2("height", 2);
-			width: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+			@include adaptive("height", 2);
+			width: calc(100% - (24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280))));
 		}
 
 		&--left {
-			@include adaptive_2("width", 2);
+			@include adaptive("width", 2);
+		}
+
+		@media (min-aspect-ratio: 20/9) {
+			&--top-right {
+				height: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+			}
+
+			&--bottom {
+				width: calc(100% - (24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280))));
+			}
+		}
+	}
+
+	@media (max-width: 1199px) {
+		&--top {
+			height: 2px;
+		}
+
+		&--top-right {
+			width: 2px;
+			height: calc(100% - 24px);
+		}
+
+		&--bottom-right {
+			right: -4px;
+			bottom: 12px;
+			width: 34px;
+			height: 2px;
+		}
+
+		&--bottom {
+			width: calc(100% - 24px);
+			height: 2px;
+		}
+
+		&--left {
+			width: 2px;
 		}
 	}
 }

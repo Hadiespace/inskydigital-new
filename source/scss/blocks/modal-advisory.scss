@@ -1,74 +1,58 @@
 .modal-advisory {}
 
 .modal-advisory__title {
-	@include adaptive("margin-bottom", 60);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 60);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
 	}
 }
 
 .modal-advisory__form {
-	@include adaptive("grid-column-gap", 20);
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("grid-column-gap", 20);
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
 	}
 }
 
 .modal-advisory__name {
-	@include adaptive("margin-bottom", 8);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
 	}
 }
 
 .modal-advisory__phone {
-	@include adaptive("margin-bottom", 8);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
 	}
 }
 
 .modal-advisory__email {
-	@include adaptive("margin-bottom", 8);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
 	}
 }
 
 .modal-advisory__message {
-	@include adaptive("margin-bottom", 8);
 	grid-column: 1/3;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("margin-bottom", 8);
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 8);
 	}
 }
 
 .modal-advisory__files {
-	@include adaptive("padding-top", 8);
-	@include adaptive("padding-bottom", 8);
-	@include adaptive("margin-top", -4);
-	@include adaptive("margin-left", -10);
-	@include adaptive("margin-bottom", -4);
-	@include adaptive("margin-right", -10);
 	display: flex;
 	flex-wrap: wrap;
 	grid-column: 1/-1;
 
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding-top", 8);
-		@include adaptive_2("padding-bottom", 8);
-		@include adaptive_2("margin-top", -4);
-		@include adaptive_2("margin-left", -10);
-		@include adaptive_2("margin-bottom", -4);
-		@include adaptive_2("margin-right", -10);
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 8);
+		@include adaptive("padding-bottom", 8);
+		@include adaptive("margin-top", -4);
+		@include adaptive("margin-left", -10);
+		@include adaptive("margin-bottom", -4);
+		@include adaptive("margin-right", -10);
 	}
 }
 
@@ -82,9 +66,7 @@
 }
 
 .modal-advisory__wrapper {
-	@include adaptive("padding-top", 32);
-
-	@media (min-aspect-ratio: 20/9) {
-		@include adaptive_2("padding-top", 32);
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 32);
 	}
 }

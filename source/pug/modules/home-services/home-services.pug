@@ -8,13 +8,20 @@ section.home-services.section
 			// заголовок секции
 			h2.home-services__title.title Услуги
 			// информация
-			p.home-services__text-first
+			p.home-services__text-first.home-services__text-first--main
 				b У вас уже есть описание #[br] или техническое задание?
-			p.home-services__text-secondary Мы оценим в течение 1 рабочего дня и сообщим стоимость.
+			p.home-services__text-secondary.home-services__text-secondary--main Мы оценим в течение 1 рабочего дня и сообщим стоимость.
 			// открыть модальное окно "проконсультироваться"
-			+button('Прислать ТЗ').home-services__modal-open.advisory-open
+			+button('Прислать ТЗ').home-services__modal-open.home-services__modal-open--main.advisory-open
 		// услуги
 		ul.home-services__cards
 			each card in servicesCards
 				li.home-services__card
 					+serviceCard(card).service-card--number
+		div.home-services__bottom-wrap
+			// информация
+			p.home-services__text-first.home-services__text-first--secondary
+				b У вас уже есть описание #[br] или техническое задание?
+			p.home-services__text-secondary.home-services__text-secondary--secondary Мы оценим в течение 1 рабочего дня и сообщим стоимость.
+			// открыть модальное окно "проконсультироваться"
+			+button('Прислать ТЗ').home-services__modal-open.home-services__modal-open--secondary.advisory-open
