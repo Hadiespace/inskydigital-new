@@ -21,8 +21,9 @@ nav.header__nav.main-nav#main-nav
 			include menu-small
 	// контакты
 	div.main-nav__contacts
-		+socialAccent('whatsapp').main-nav__social
-		+socialAccent('telegram').main-nav__social
 		a.main-nav__phone(href=`tel:${phoneHref}`)!= phoneName
+		div.main-nav__socials
+			+socialAccent('whatsapp').main-nav__social
+			+socialAccent('telegram').main-nav__social
 	// открыть модальное окно "проконсультироваться"
-	+button('Обратный звонок').main-nav__modal-open
+	+button('Обратный звонок').main-nav__modal-open.advisory-open

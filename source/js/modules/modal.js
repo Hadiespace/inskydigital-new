@@ -2,10 +2,13 @@ import {
 	isEscEvent,
 	enablePageInert,
 	disablePageInert,
+	enableHeaderInert,
+	disableHeaderInert,
 	hideScroll,
 	showScroll,
 } from './util.js';
 
+const header = document.querySelector('.header');
 const modal = document.querySelector('.modal');
 const modalClose = modal.querySelector('.modal__close');
 const modalContent = modal.querySelectorAll('.modal__content');
@@ -22,9 +25,15 @@ const openModal = () => {
 
 		document.addEventListener('keydown', onModalCloseKeyDown);
 
-		enablePageInert();
-		hideScroll();
+		if (header.classList.contains('header--menu-opened')
+			&& document.body.clientWidth < 1200) {
+			disableHeaderInert();
+			enablePageInert();
+		} else {
+			hideScroll();
+		}
 
+		enablePageInert();
 	}
 };
 
@@ -63,8 +72,14 @@ const closeModal = () => {
 	document.removeEventListener('keydown', onModalCloseKeyDown);
 
 	disablePageInert();
-	showScroll();
 	closeModalContent();
+
+	if (header.classList.contains('header--menu-opened')
+		&& document.body.clientWidth < 1200) {
+		enableHeaderInert();
+	} else {
+		showScroll();
+	}
 };
 
 const openModalContent = (content) => {
@@ -102,7 +117,7 @@ const onModalCloseClick = (evt) => {
 };
 
 function onModalCloseKeyDown(evt) {
-	if ((isEscEvent(evt))) {
+	if (isEscEvent(evt)) {
 		closeModal();
 	}
 }

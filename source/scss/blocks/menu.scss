@@ -1,49 +1,46 @@
 .menu {
-	position: absolute;
-	left: 0;
-	z-index: -2;
-	display: grid;
-	background: var(--color-default-background);
-	opacity: 0;
-	transform: translateY(-100%);
-	transition: background .15s, box-shadow .15s, transform .15s, opacity .15s;
-
-	&--opened {
-		z-index: 0;
-		opacity: 1;
-		transform: translateY(0%);
-		transition: background .15s, box-shadow .15s, transform .15s, opacity .15s, z-index .6s;
-
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			width: 100%;
-		}
-	}
-
 	@media (min-width: 1200px) {
+		position: absolute;
+		left: 0;
+		z-index: -2;
+		display: grid;
+		background: var(--color-default-background);
+		opacity: 0;
+		transform: translateY(-100%);
+		transition: background .15s, box-shadow .15s, transform .15s, opacity .15s;
+
 		&--opened {
+			z-index: 0;
+			opacity: 1;
+			transform: translateY(0%);
+			transition: background .15s, box-shadow .15s, transform .15s, opacity .15s, z-index .6s;
+
 			&::before {
 				@include adaptive("height", 30);
 				@include adaptive("top", -30);
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
 			}
 		}
 	}
 
 	@media (max-width: 1199px) {
+		display: none;
+
 		&--opened {
-			&::before {
-				top: -30px;
-				height: 30px;
-			}
+			position: relative;
+			display: grid;
+			grid-column: 1/-1;
+			grid-row: 2/3;
 		}
 	}
 }
 
 .menu__container {
 	display: grid;
-	opacity: 0;
+	// opacity: 0;
 	transition: opacity .15s;
 
 	&--visible {

@@ -18,6 +18,7 @@
 	}
 
 	@media (min-width: 992px) and (max-width: 1199px) {
+		top: 108px;
 		max-height: calc(calc(var(--vh) * 100) - 132px);
 	}
 }

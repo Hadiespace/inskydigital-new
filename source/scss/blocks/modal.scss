@@ -12,6 +12,20 @@
 	transform: translateY(10%);
 	pointer-events: none;
 
+	&::-webkit-scrollbar {
+		@media (max-width: 1199px) {
+			width: 0;
+			height: 0;
+		}
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@media (max-width: 1199px) {
+			width: 0;
+			height: 0;
+		}
+	}
+
 	&--opened {
 		z-index: 50;
 		opacity: 1;
@@ -22,6 +36,15 @@
 
 	@media (min-width: 1200px) {
 		@include adaptive("padding", 40);
+	}
+
+	@media (max-width: 1199px) {
+		padding: 40px;
+	}
+
+	@media (max-width: 599px) {
+		padding: 0;
+		transform: translateY(0);
 	}
 }
 
@@ -36,6 +59,11 @@
 
 	@media (min-width: 1200px) {
 		@include adaptive("max-width", 1200);
+	}
+
+	@media (max-width: 1199px) {
+		padding-top: 40px;
+		max-width: 1200px;
 	}
 }
 
@@ -74,12 +102,22 @@
 			@include adaptive("height", 20);
 		}
 	}
+
+	@media (max-width: 1199px) {
+		width: 40px;
+		height: 40px;
+
+		svg {
+			width: 12px;
+			height: 12px;
+		}
+	}
 }
 
 .modal__content {
 	position: absolute;
 	z-index: -100;
-	display: grid;
+	display: none;
 	grid-column: 1/2;
 	grid-row: 1/2;
 	width: 100%;
@@ -90,6 +128,7 @@
 	&--opened {
 		position: relative;
 		z-index: 0;
+		display: grid;
 		opacity: 1;
 		pointer-events: visible;
 	}
@@ -97,6 +136,15 @@
 	@media (min-width: 1200px) {
 		@include adaptive("max-width", 840);
 		@include adaptive("padding", 40);
+	}
+
+	@media (max-width: 1199px) {
+		padding: 40px;
+		max-width: 840px;
+	}
+
+	@media (max-width: 599px) {
+		padding: 20px;
 	}
 }
 
@@ -110,6 +158,26 @@
 		@include adaptive("font-size", 48);
 		@include adaptive("line-height", 56);
 	}
+
+	@media (max-width: 1199px) {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	@media (max-width: 991px) {
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	@media (max-width: 719px) {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	@media (max-width: 599px) {
+		font-size: 24px;
+		line-height: 32px;
+	}
 }
 
 .modal__wrapper {
@@ -121,14 +189,32 @@
 	@media (min-width: 1200px) {
 		@include adaptive("grid-column-gap", 20);
 	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+	}
 }
 
-.modal__consent {}
+.modal__consent {
+	@media (max-width: 719px) {
+		grid-column: 1/-1;
+		margin: 0 0 40px;
+	}
+}
 
 .modal__submit {
 	justify-self: end;
 
 	@media (min-width: 1200px) {
 		@include adaptive("min-width", 240);
+	}
+
+	@media (max-width: 1199px) {
+		min-width: 240px;
+	}
+
+	@media (max-width: 719px) {
+		grid-column: 1/-1;
+		width: 100%;
 	}
 }

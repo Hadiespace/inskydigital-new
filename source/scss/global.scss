@@ -69,6 +69,11 @@ button {
 a {
 	text-decoration: none;
 	color: unset;
+
+	&[href^="tel:"],
+	&[href^="mailto:"] {
+		white-space: nowrap;
+	}
 }
 
 b,

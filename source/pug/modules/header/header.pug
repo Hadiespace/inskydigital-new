@@ -19,12 +19,11 @@ header.header
 			// номер телефона
 			a.header__phone-icon(href=`tel:${phoneHref}`)
 				span.visually-hidden!= phoneName
-				svg(width="12", height="20", aria-hidden="true")
-					use(xlink:href="images/sprite.svg#")
+				svg(width="24", height="24", aria-hidden="true")
+					use(xlink:href="images/sprite.svg#phone")
 		div.header__left-wrap
 			// главная навигация по страницам
-			div.header__nav-wrap
-				include main-nav
+			include main-nav
 			// контакты
 			div.header__contacts
 				+socialAccent('whatsapp').header__social

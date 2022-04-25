@@ -24,12 +24,21 @@
 			@include adaptive("border-radius", 2);
 		}
 	}
+
+	@media (max-width: 1199px) {
+		&::before {
+			top: 40px;
+			border-radius: 2px;
+			height: 1px;
+		}
+	}
 }
 
 .field__input {
 	display: flex;
 	outline: none;
 	border: none;
+	width: 100%;
 	color: var(--color-alternate);
 	caret-color: var(--color-accent);
 	background: transparent;
@@ -60,6 +69,14 @@
 		@include adaptive("height", 40);
 		@include adaptive("line-height", 24);
 	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 8px;
+		padding: 8px 0;
+		height: 40px;
+		font-size: 16px;
+		line-height: 24px;
+	}
 }
 
 .field__label {
@@ -89,6 +106,7 @@
 
 		a {
 			position: relative;
+			display: inline-block;
 
 			&::before {
 				content: "";
@@ -150,6 +168,40 @@
 			@include adaptive("border-radius", 20);
 		}
 	}
+
+	@media (max-width: 1199px) {
+		&--consent {
+			padding-left: 40px;
+			font-size: 12px;
+			line-height: 20px;
+
+			&::before {
+				width: 24px;
+				height: 24px;
+			}
+
+			&::after {
+				left: 4px;
+				top: 4px;
+				width: 16px;
+				height: 16px;
+			}
+
+			a {
+				&::before {
+					bottom: -2px;
+					height: 1px;
+				}
+			}
+		}
+
+		&--file {
+			border-radius: 20px;
+			padding: 6px;
+			font-size: 12px;
+			line-height: 20px;
+		}
+	}
 }
 
 .field__error {
@@ -161,6 +213,11 @@
 	@media (min-width: 1200px) {
 		@include adaptive("font-size", 10);
 		@include adaptive("line-height", 16);
+	}
+
+	@media (max-width: 1199px) {
+		font-size: 10px;
+		line-height: 16px;
 	}
 }
 
@@ -176,6 +233,12 @@
 	@media (min-width: 1200px) {
 		.field__error {
 			@include adaptive("bottom", -20);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		.field__error {
+			bottom: -20px;
 		}
 	}
 }
@@ -200,6 +263,10 @@
 
 	@media (min-width: 1200px) {
 		@include adaptive("padding-top", 8);
+	}
+
+	@media (max-width: 1199px) {
+		padding-top: 8px;
 	}
 }
 

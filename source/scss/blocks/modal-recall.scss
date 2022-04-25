@@ -4,6 +4,14 @@
 	@media (min-width: 1200px) {
 		@include adaptive("margin-bottom", 60);
 	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 40px;
+	}
 }
 
 .modal-recall__form {
@@ -13,11 +21,23 @@
 	@media (min-width: 1200px) {
 		@include adaptive("grid-column-gap", 20);
 	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+	}
+
+	@media (max-width: 599px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .modal-recall__name {
 	@media (min-width: 1200px) {
 		@include adaptive("margin-bottom", 8);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 8px;
 	}
 }
 
@@ -25,10 +45,18 @@
 	@media (min-width: 1200px) {
 		@include adaptive("margin-bottom", 8);
 	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 8px;
+	}
 }
 
 .modal-recall__wrapper {
 	@media (min-width: 1200px) {
 		@include adaptive("padding-top", 32);
+	}
+
+	@media (max-width: 1199px) {
+		padding-top: 32px;
 	}
 }

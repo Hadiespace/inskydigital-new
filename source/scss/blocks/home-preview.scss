@@ -1,6 +1,7 @@
 .home-preview {
 	position: relative;
 	overflow: hidden;
+	transition: min-height var(--theme-delay), height var(--theme-delay);
 
 	@media (min-width: 1200px) {
 		@include adaptive("padding-top", 84);
@@ -22,10 +23,11 @@
 
 .home-preview__wrapper {
 	@media (max-width: 991px) {
-		padding-top: 108px;
+		padding-top: 104px;
 		padding-bottom: 24px;
 		height: 100%;
 		min-height: calc(var(--vh) * 100);
+		transition: min-height var(--theme-delay), height var(--theme-delay);
 	}
 }
 
