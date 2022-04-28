@@ -1,0 +1,42 @@
+include ../crumb
+
+mixin case-preview(props)
+	- const { title, crumb, logo, email, date, background } = props;
+
+	div.case-preview
+		div.case-preview__container.container
+			div.case-preview__wrapper
+				//- хлебные крошки
+				div.case-preview__crumbs.crumbs.crumbs--alternate
+					+crumb('Главная', 'index.html')
+					+crumb('Портфолио', 'index.html')
+					+crumb(crumb)
+				//- заголовок страницы
+				h1.case-preview__title.title!= title
+				//- превью проекта
+				div.case-preview__project-info
+					//- логотип
+					picture.case-preview__logo
+						source(media="(min-width: 2500px)", srcset=`images/content/${logo}@3x.webp`, type="image/webp")
+						source(media="(min-width: 2500px)", srcset=`images/content/${logo}@3x.jpg`)
+						source(media="(min-width: 1300px)", srcset=`images/content/${logo}@2x.webp`, type="image/webp")
+						source(media="(min-width: 1300px)", srcset=`images/content/${logo}@2x.jpg`)
+						source(srcset=`images/content/${logo}.webp`, type="image/webp")
+						img(src=`images/content/${logo}.jpg`, alt="Фон")
+					//- почта
+					a.case-preview__email(href=`mailto:${email}`)!= email
+					//- дата
+					time.case-preview__date(datetime=date)!= date
+					//- фоновое изображение
+					picture.case-preview__background(aria-hidden="true")
+						source(media="(min-width: 2500px)", srcset=`images/content/${background}@3x.webp`, type="image/webp")
+						source(media="(min-width: 2500px)", srcset=`images/content/${background}@3x.jpg`)
+						source(media="(min-width: 1300px)", srcset=`images/content/${background}@2x.webp`, type="image/webp")
+						source(media="(min-width: 1300px)", srcset=`images/content/${background}@2x.jpg`)
+						source(srcset=`images/content/${background}.webp`, type="image/webp")
+						img(src=`images/content/${background}.jpg`, alt="Фон")
+				//- переход на задачу
+				a.case-preview__go-task(href="#case-task")
+					span.visually-hidden Перейти к задаче
+					svg(width="40", height="40", aria-hidden="true")
+						use(xlink:href="images/sprite.svg#case-preview-arrow")

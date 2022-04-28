@@ -1,0 +1,8 @@
+div.menu-small.menu
+	ul.menu-small__list.menu__container
+		each link in languages
+			li.menu-small__item
+				if link.isCurrent
+					a.menu-small__link.menu-small__link--current(href=link.href)!= link.name
+				else
+					a.menu-small__link(href=link.href)!= link.name

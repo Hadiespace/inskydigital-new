@@ -1,8 +1,9 @@
 div.modal__content.modal-recall
-	p.modal__title.modal-recall__title Оставьте ваши данные и мы свяжемся с вами
+	p.modal__title.modal-recall__title
+		| Let’s talk. We’ll get back to you within a business day.
 	form.modal-recall__form.form(action="send.php", novalidate)
 		+fieldName('modal-recall').modal-recall__name
 		+fieldPhone('modal-recall').modal-recall__phone
 		div.modal__wrapper.modal-recall__wrapper
 			+fieldConsent('modal-recall').modal__consent
-			+button('Перезвоните мне', false, false, false, true).modal__submit
+			+button('Agree & send', false, false, false, true).modal__submit

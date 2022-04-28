@@ -6,29 +6,29 @@ include ../button
 header.header
 	div.header__container.container
 		div.header__right-wrap
-			// открыть/закрыть меню
+			//- открыть/закрыть меню
 			button.header__main-nav-toggle(type="button", aria-expanded="false", aria-controls="main-nav")
 				span.visually-hidden Открыть меню
 				span
 				span
 				span
-			// логотип
+			//- логотип
 			+logo(isHome).header__logo
-			// переключение темы
+			//- переключение темы
 			+themeSwitcher.header__theme-switcher
-			// номер телефона
+			//- номер телефона
 			a.header__phone-icon(href=`tel:${phoneHref}`)
 				span.visually-hidden!= phoneName
 				svg(width="24", height="24", aria-hidden="true")
 					use(xlink:href="images/sprite.svg#phone")
 		div.header__left-wrap
-			// главная навигация по страницам
+			//- главная навигация по страницам
 			include main-nav
-			// контакты
+			//- контакты
 			div.header__contacts
 				+socialAccent('whatsapp').header__social
 				+socialAccent('telegram').header__social
 				a.header__phone(href=`tel:${phoneHref}`)!= phoneName
-			// открыть модальное окно "обратный звонок"
-			+button('Обратный звонок').header__modal-open.recall-open
+			//- открыть модальное окно "обратный звонок"
+			+button('Contact us').header__modal-open.recall-open
 

@@ -6,6 +6,7 @@
 
 .page__body {
 	overflow-anchor: none;
+	height: 100%;
 	min-width: 320px;
 	min-height: calc(var(--vh) * 100);
 	font-family: "GraphikLCG", arial, sans-serif;
@@ -29,4 +30,5 @@
 .page__wrapper {
 	display: flex;
 	flex-direction: column;
+	min-height: 100%;
 }

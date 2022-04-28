@@ -59,7 +59,6 @@
 	@media (min-width: 1200px) {
 		@include adaptive("font-size", 12);
 		@include adaptive("line-height", 20);
-		@include adaptive("min-height", 40);
 		margin: 0 0 calc(20px + (20 * 3 - 20) * ((100vw - 1280px) / (3840 - 1280)));
 
 		@media (min-aspect-ratio: 20/9) {

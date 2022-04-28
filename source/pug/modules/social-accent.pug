@@ -1,6 +1,5 @@
 mixin socialAccent(icon)
 	a(class=`social-accent social-accent--${icon}`, href="index.html")&attributes(attributes)
-		//- img(src="images/icon-whatsapp", alt="")
 		span.visually-hidden Мы в #{icon}
 		svg(width="12", height="12", aria-hidden="true")
 			use(xlink:href=`images/sprite.svg#${icon}`)

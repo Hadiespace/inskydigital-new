@@ -156,7 +156,7 @@
 			a {
 				&::before {
 					@include adaptive("height", 1);
-					@include adaptive("bottom", -2);
+					@include adaptive("bottom", 2);
 				}
 			}
 		}
@@ -189,7 +189,7 @@
 
 			a {
 				&::before {
-					bottom: -2px;
+					bottom: 2px;
 					height: 1px;
 				}
 			}

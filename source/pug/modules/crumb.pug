@@ -1,0 +1,5 @@
+mixin crumb(text, href)
+	if (href)
+		a.crumb(href=href)!= text
+	else
+		span.crumb.crumb--current!= text

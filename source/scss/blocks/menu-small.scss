@@ -3,6 +3,14 @@
 		@include adaptive("top", 54);
 		@include adaptive("border-radius", 2);
 
+		&.menu--opened {
+			box-shadow:
+				0
+				calc(22px + (22 * 3 - 22) * ((100vw - 1280px) / (3840 - 1280)))
+				calc(30px + (30 * 3 - 30) * ((100vw - 1280px) / (3840 - 1280)))
+				rgb(0 0 0 / .06);
+		}
+
 		@media (min-aspect-ratio: 20/9) {
 			&.menu--opened {
 				box-shadow:
@@ -12,9 +20,6 @@
 					rgb(0 0 0 / .06);
 			}
 		}
-	}
-
-	@media (max-width: 1199px) {
 	}
 }
 
@@ -40,6 +45,16 @@
 	&:hover,
 	&:focus {
 		color: var(--color-accent);
+	}
+
+	&--current {
+		color: var(--color-secondary);
+		pointer-events: none;
+
+		&:hover,
+		&:focus {
+			color: var(--color-secondary);
+		}
 	}
 
 	@media (min-width: 1200px) {

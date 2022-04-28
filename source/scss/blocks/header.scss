@@ -12,7 +12,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		z-index: -1;
+		z-index: -2;
 		width: 100%;
 		background: var(--color-header-background);
 		transition: opacity var(--theme-delay), background var(--theme-delay);
@@ -242,7 +242,7 @@
 
 	@media (min-width: 1200px) {
 		@include adaptive("margin", -4);
-		@include adaptive("margin-right", 16);
+		@include adaptive("margin-right", 4);
 	}
 
 	@media (max-width: 1199px) {

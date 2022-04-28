@@ -1,33 +1,26 @@
 .home-preview {
 	position: relative;
+	display: grid;
 	overflow: hidden;
+	min-height: calc(var(--vh) * 100);
+	max-height: 100%;
 	transition: min-height var(--theme-delay), height var(--theme-delay);
 
 	@media (min-width: 1200px) {
-		@include adaptive("padding-top", 84);
+		@include adaptive("padding-top", 108);
 	}
 
-	@media (min-width: 992px) and (max-width: 1199px) {
-		padding-top: 84px;
+	@media (max-width: 1199px) {
+		padding-top: 108px;
+		// max-height: 600px;
 	}
 
-	@media (min-width: 992px) {
-		height: 100%;
+	@media (max-width: 1199px) and (min-height: 600px) {
+		min-height: 700px;
+	}
+
+	@media (max-width: 599px) {
 		min-height: calc(var(--vh) * 100);
-	}
-
-	@media (max-width: 991px) {
-		padding: 0;
-	}
-}
-
-.home-preview__wrapper {
-	@media (max-width: 991px) {
-		padding-top: 104px;
-		padding-bottom: 24px;
-		height: 100%;
-		min-height: calc(var(--vh) * 100);
-		transition: min-height var(--theme-delay), height var(--theme-delay);
 	}
 }
 
@@ -87,8 +80,12 @@
 		flex-direction: column;
 		grid-column: 1/2;
 		grid-row: 2/3;
-		margin: -4px -8px;
-		margin-bottom: 16px;
+		grid-row-gap: 8px;
+		margin: 0 0 40px;
+	}
+
+	@media (max-width: 599px) {
+		margin: 0 0 20px;
 	}
 }
 
@@ -100,11 +97,9 @@
 		content: "";
 		position: absolute;
 		left: 0;
-		top: 50%;
 		background-image: url("../images/common/icon-check.svg");
 		background-size: cover;
 		background-repeat: no-repeat;
-		transform: translateY(-50%);
 	}
 
 	@media (min-width: 1200px) {
@@ -117,14 +112,15 @@
 		&::before {
 			@include adaptive("width", 8);
 			@include adaptive("height", 6);
+			@include adaptive("top", 8);
 		}
 	}
 
 	@media (max-width: 1199px) {
-		margin: 4px 8px;
 		padding-left: 16px;
 
 		&::before {
+			top: 8px;
 			width: 8px;
 			height: 6px;
 		}
@@ -167,19 +163,18 @@
 	}
 
 	@media (max-width: 599px) {
+		grid-row: 4/5;
 		width: 100%;
 	}
 }
 
-.home-preview__review-container {
+.home-preview__mobile-review-open {
 	@media (min-width: 600px) {
 		display: none;
 	}
 
 	@media (max-width: 599px) {
-		display: grid;
+		grid-row: 3/4;
+		margin: 0 0 20px;
 	}
-}
-
-.home-preview__mobile-review-open {
 }

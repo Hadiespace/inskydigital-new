@@ -3,21 +3,20 @@ include ../review-open
 include ../button
 
 section.home-preview.section
-	div.home-preview__wrapper
-		div.home-preview__container.container
-			// заголовок секции
-			h2.home-preview__title.title
-				| Разработка сайтов, #[br]
-				| мобильные приложения, #[br]
-				| продвижение и PR
-			// преимущества
-			ul.home-preview__list
-				each item in previewList
-					li.home-preview__item!= item
-			// открыть видео-отзывы
-			+reviewOpen.home-preview__review-open
-			// открыть модальное окно "проконсультироваться"
-			+button('Получить оценку', true).home-preview__modal-open.advisory-open
-	// открыть видео-отзывы (для мобильной версии)
-	div.home-preview__review-container.container
+	div.home-preview__container.container
+		//- заголовок секции
+		h2.home-preview__title.title
+			| Web/Mobile #[br]
+			| Development Company
+			//- | Разработка сайтов, #[br]
+			//- | мобильные приложения, #[br]
+			//- | продвижение и PR
+		//- преимущества
+		ul.home-preview__list
+			each item in previewList
+				li.home-preview__item!= item
+		//- открыть видео-отзывы
+		+reviewOpen.home-preview__review-open
+		//- открыть модальное окно "проконсультироваться"
+		+button('Get a Quote', true).home-preview__modal-open.advisory-open
 		+reviewOpen.home-preview__mobile-review-open

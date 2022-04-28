@@ -9,7 +9,7 @@ export const images = () => app.gulp.src(app.path.source.images)
 		}),
 	))
 	.pipe(app.plugins.newer(app.path.build.images))
-	.pipe(webp())
+	.pipe(webp({ quality: 100 }))
 	.pipe(app.gulp.dest(app.path.build.images))
 	.pipe(app.gulp.src(app.path.source.images))
 	.pipe(app.plugins.newer(app.path.build.images))
@@ -17,7 +17,7 @@ export const images = () => app.gulp.src(app.path.source.images)
 		app.plugins.gulpIf(
 			app.isProd,
 			imagemin([
-				mozjpeg({ quality: 80, progressive: true }),
+				mozjpeg({ quality: 100, progressive: true }),
 				optipng({ optimizationLevel: 5 }),
 				svgo({
 					plugins: [

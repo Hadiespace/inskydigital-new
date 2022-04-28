@@ -1,0 +1,32 @@
+extends layout/layout
+include modules/case/case-preview
+include modules/case/case-task
+include modules/case/case-step
+include modules/case/case-thanks
+include modules/case/case-another
+
+block const
+	include modules/case/case-data
+
+block meta
+	title Insky.digital | #{case01.preview.title}
+	meta(name="description", content=case01.preview.title)
+block content
+	//- превью
+	+case-preview(case01.preview)
+	//- задача
+	+case-task(case01.task)
+	//- шаги
+	section.case-steps
+		div.case-steps__container.container
+			h2.visually-hidden описание проекта
+			ul.case-steps__list
+				+step-v1(case01.step01)
+				+step-v2(case01.step02)
+				+step-v3(case01.step03)
+				+step-v4(case01.step04)
+	//- благодарность
+	+case-thanks(case01.thanks)
+	//- другие кейсы
+	+case-another(case01.another)
+block prepend page-bottom

@@ -35,40 +35,40 @@ export const validateForm = (form) => {
 		if (input.classList.contains('validate-name')) {
 			const errorText = input.parentElement.querySelector('.field__error');
 			if (/[0-9]/.test(input.value)) {
-				errorText.textContent = 'Имя не может содержать цифры';
+				errorText.textContent = 'Name cannot contain numbers';
 				addError(input);
 				error++;
 			} else if (input.value.trim() === '') {
-				errorText.textContent = 'Это поле обязательно к заполнению';
+				errorText.textContent = 'This field is required';
 				addError(input);
 				error++;
 			}
 		} else if (input.classList.contains('validate-phone')) {
 			const errorText = input.parentElement.querySelector('.field__error');
 			if (/[_]/.test(input.value)) {
-				errorText.textContent = 'Неверный формат';
+				errorText.textContent = 'Wrong format';
 				addError(input);
 				error++;
 			} else if (input.value.trim() === '') {
-				errorText.textContent = 'Это поле обязательно к заполнению';
+				errorText.textContent = 'This field is required';
 				addError(input);
 				error++;
 			}
 		} else if (input.classList.contains('validate-email')) {
 			const errorText = input.parentElement.querySelector('.field__error');
 			if (input.value.trim() === '') {
-				errorText.textContent = 'Это поле обязательно к заполнению';
+				errorText.textContent = 'This field is required';
 				addError(input);
 				error++;
 			} else if (emailText(input)) {
-				errorText.textContent = 'Некорректный e-mail';
+				errorText.textContent = 'Wrong format';
 				addError(input);
 				error++;
 			}
 		} else if (input.getAttribute('type') === 'checkbox' && !input.checked) {
 			const errorText = input.parentElement.querySelector('.field__error');
 			addError(input);
-			errorText.textContent = 'Это поле обязательно';
+			errorText.textContent = 'This field is required';
 			error++;
 		} else {
 			if (input.value.trim() === '') {

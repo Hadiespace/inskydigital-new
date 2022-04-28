@@ -7,13 +7,13 @@
 		background: var(--color-default-background);
 		opacity: 0;
 		transform: translateY(-100%);
-		transition: background .15s, box-shadow .15s, transform .15s, opacity .15s;
+		transition: background var(--theme-delay), box-shadow var(--theme-delay), transform var(--theme-delay), opacity var(--theme-delay);
 
 		&--opened {
 			z-index: 0;
 			opacity: 1;
 			transform: translateY(0%);
-			transition: background .15s, box-shadow .15s, transform .15s, opacity .15s, z-index .6s;
+			transition: background var(--theme-delay), box-shadow var(--theme-delay), transform var(--theme-delay), opacity var(--theme-delay), z-index .6s;
 
 			&::before {
 				@include adaptive("height", 30);
@@ -39,11 +39,14 @@
 }
 
 .menu__container {
-	display: grid;
-	// opacity: 0;
-	transition: opacity .15s;
+	@media (min-width: 1200px) {
+		display: grid;
+		opacity: 0;
 
-	&--visible {
-		opacity: 1;
+		&--visible {
+			opacity: 1;
+			transition: opacity var(--theme-delay);
+			transition-delay: .1s;
+		}
 	}
 }

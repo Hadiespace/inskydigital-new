@@ -1,5 +1,6 @@
 div.modal__content.modal-advisory
-	p.modal__title.modal-advisory__title Проконсультироваться
+	p.modal__title.modal-advisory__title
+		| Drop us a line and we’ll get back to you within a business day.
 	form.modal-advisory__form.form.form--files(action="send.php", novalidate)
 		+fieldName('modal-advisory').modal-advisory__name
 		+fieldPhone('modal-advisory').modal-advisory__phone
@@ -19,10 +20,6 @@ div.modal__content.modal-advisory
 			+fieldFile('modal-advisory', 1).modal-advisory__file
 			+fieldFile('modal-advisory', 0).modal-advisory__file
 		div.modal-advisory__files
-			//- div.modal__file.file
-			//- 	span.file__text(id="file-0") Какой-то файл
-			//- 	button.file__close(type="button", aria-controls="file-0")
-			//- 		span.visually-hidden Закрыть
 		div.modal__wrapper.modal-advisory__wrapper
 			+fieldConsent('modal-advisory').modal__consent
-			+button('Перезвоните мне', false, false, false, true).modal__submit
+			+button('Agree & send', false, false, false, true).modal__submit

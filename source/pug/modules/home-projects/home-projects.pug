@@ -5,21 +5,21 @@ include ../project-card
 
 section.home-projects.section
 	div.home-projects__container.container
-		// боковая панель
+		//- боковая панель
 		div.home-projects__aside.aside
-			// заголовок секции
-			h2.home-projects__title.title Наши проекты
-			// типы проектов
-			ul.home-projects__types
-				each item in projectsTypes
-					li.home-projects__type
-						+tabFilter(item)
-			// открыть страницу портфолио
-			+button('Показать еще проекты', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--main
-		// проекты в портфолио
+			//- заголовок секции
+			h2.home-projects__title.title Cases
+			//- типы проектов
+			//- ul.home-projects__types
+			//- 	each item in projectsTypes
+			//- 		li.home-projects__type
+			//- 			+tabFilter(item)
+			//- открыть страницу портфолио
+			+button('More cases', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--main
+		//- проекты в портфолио
 		ul.home-projects__cards
 			each card in projectsCards
 				li.home-projects__card
 					+projectCard(card)
-		// открыть страницу портфолио (для мобильной версии)
-		+button('Показать еще проекты', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--secondary
+		//- открыть страницу портфолио (для мобильной версии)
+		+button('More cases', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--secondary

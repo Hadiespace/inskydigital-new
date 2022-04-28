@@ -1,0 +1,13 @@
+mixin case-thanks(props)
+	- const { title, description, text, email } = props;
+
+	section.case-thanks
+		div.case-thanks__container.container
+			div.case-thanks__wrapper
+				div.case-thanks__info-wrap
+					h3.case-thanks__title.title!= title
+					div.case-thanks__description!= description
+				div.case-thanks__aside
+					p.case-thanks__text!= text
+					a.case-thanks__email(href=`mailto:${email}`) email
+					+button('Я тоже хочу такой сайт!').header__modal-open.recall-open

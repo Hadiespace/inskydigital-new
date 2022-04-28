@@ -1,36 +1,37 @@
 mixin fieldName(parent)
 	div.field&attributes(attributes)
-		input.field__input.field__input--name.validate-name.required(id=`${parent}-name`, type="text", name="name", placeholder="Ваше имя")
-		label.visually-hidden(for=`${parent}-name`) Ваше имя
-		span.field__error(aria-hidden="true") Ошибка
+		input.field__input.field__input--name.validate-name.required(id=`${parent}-name`, type="text", name="name", placeholder="Your name")
+		label.visually-hidden(for=`${parent}-name`) Your name
+		span.field__error(aria-hidden="true")
 
 mixin fieldPhone(parent)
 	div.field&attributes(attributes)
-		input.field__input.field__input--phone.validate-phone.required(id=`${parent}-phone`, type="tel", name="phone", placeholder="Ваш телефон")
-		label.visually-hidden(for=`${parent}-phone`) Ваш телефон
-		span.field__error(aria-hidden="true") Ошибка
+		input.field__input.field__input--phone.validate-phone.required(id=`${parent}-phone`, type="tel", name="phone", placeholder="Your phone number")
+		label.visually-hidden(for=`${parent}-phone`) Your phone number
+		span.field__error(aria-hidden="true")
 
 mixin fieldEmail(parent)
 	div.field&attributes(attributes)
-		input.field__input.field__input--email.validate-email.required(id=`${parent}-email`, type="email", name="email", placeholder="Ваш e-mail")
-		label.visually-hidden(for=`${parent}-email`) Ваш e-mail
-		span.field__error(aria-hidden="true") Ошибка
+		input.field__input.field__input--email.validate-email.required(id=`${parent}-email`, type="email", name="email", placeholder="Your e-mail")
+		label.visually-hidden(for=`${parent}-email`) Your e-mail
+		span.field__error(aria-hidden="true")
 
 mixin fieldMessage(parent)
 	div.field&attributes(attributes)
-		textarea.field__input.field__input--message(id=`${parent}-message`, name="message", placeholder="Сообщение")
-		label.visually-hidden(for=`${parent}-message`) Ваш e-mail
-		span.field__error(aria-hidden="true") Ошибка
+		textarea.field__input.field__input--message(id=`${parent}-message`, name="message", placeholder="Your message")
+		label.visually-hidden(for=`${parent}-message`) Your message
+		span.field__error(aria-hidden="true")
 
 mixin fieldConsent(parent)
 	div.field.field--consent&attributes(attributes)
 		input.visually-hidden.required(id=`${parent}-consent`, type="checkbox", name="consent", checked)
 		label.field__label.field__label--consent(for=`${parent}-consent`)
-			| Я согласен с обработкой личных данных #[br]
-			| в соответствии с #[a(href="index.html") политикой конфиденциальности].
-		span.field__error(aria-hidden="true") Ошибка
+			| By clicking ‘Agree & send’ you give consent to have your personal data
+			| processed by Insky to handle your request in accordance with our
+			| #[a(href="index.html") Privacy Policy].
+		span.field__error(aria-hidden="true")
 
 mixin fieldFile(parent, id)
 	div.field.field--file.field--no-line&attributes(attributes)
 		input.visually-hidden(id=`${parent}-file-${id}`, type="file", name=`file-${id}`)
-		label.field__label.field__label--file(for=`${parent}-file-${id}`) Прикрепить ТЗ
+		label.field__label.field__label--file(for=`${parent}-file-${id}`) Attach files

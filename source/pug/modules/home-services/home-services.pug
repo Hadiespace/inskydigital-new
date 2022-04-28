@@ -6,13 +6,14 @@ section.home-services.section
 		// боковая панель
 		div.home-services__aside.aside
 			// заголовок секции
-			h2.home-services__title.title Услуги
+			h2.home-services__title.title Services & Technology
 			// информация
 			p.home-services__text-first.home-services__text-first--main
-				b У вас уже есть описание #[br] или техническое задание?
-			p.home-services__text-secondary.home-services__text-secondary--main Мы оценим в течение 1 рабочего дня и сообщим стоимость.
+				b Get your MVP (Minimum Viable Product) in short terms
+			p.home-services__text-secondary.home-services__text-secondary--main
+				| Full-stack services - from assisting with initial UX research to building amazing web & mobile apps
 			// открыть модальное окно "проконсультироваться"
-			+button('Прислать ТЗ').home-services__modal-open.home-services__modal-open--main.advisory-open
+			+button('Get a quote').home-services__modal-open.home-services__modal-open--main.advisory-open
 		// услуги
 		ul.home-services__cards
 			each card in servicesCards
@@ -21,7 +22,8 @@ section.home-services.section
 		div.home-services__bottom-wrap
 			// информация
 			p.home-services__text-first.home-services__text-first--secondary
-				b У вас уже есть описание #[br] или техническое задание?
-			p.home-services__text-secondary.home-services__text-secondary--secondary Мы оценим в течение 1 рабочего дня и сообщим стоимость.
+				b Get your MVP (Minimum Viable Product) in short terms
+			p.home-services__text-secondary.home-services__text-secondary--secondary
+				| Full-stack services - from assisting with initial UX research to building amazing web & mobile apps
 			// открыть модальное окно "проконсультироваться"
-			+button('Прислать ТЗ').home-services__modal-open.home-services__modal-open--secondary.advisory-open
+			+button('Get a quote').home-services__modal-open.home-services__modal-open--secondary.advisory-open

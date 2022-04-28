@@ -3,30 +3,30 @@ include ../social
 section.home-team.section
 	div.home-team__container.container
 		div.home-team__wrapper
-			// заголовок и описание
+			//- заголовок и описание
 			div.home-team__top-wrap
-				h2.home-team__title.title Команда
+				h2.home-team__title.title Team
 				p.home-team__description
-					| Мы развиваемся вместе с нашими клиентами.
-					| Усердно трудимся, отдыхая на любимой работе.
-			// информация
+					| At Insky, we are problem solvers above all and we love
+					| new challenges. We evolve together with our clients and partners.
+			//- информация
 			p.home-team__text
 				span 50+
-				| профессионалов в Москве, #[br] Минске, Риге и Томске.
-			// контакты
+				| professionals in Riga, #[br] Amsterdam and Valencia
+			//- контакты
 			div.home-team__socials.home-team__socials--main
 				+social('facebook').home-team__social
 				+social('instagram').home-team__social
 				+social('vkontakte').home-team__social
 				+social('telegram').home-team__social
-		// слайдер
+		//- слайдер
 		include team-slider
 		div.home-team__mobile-contacts
-			// контакты
+			//- контакты
 			div.home-team__socials.home-team__socials--third
 				+social('facebook').home-team__social
 				+social('instagram').home-team__social
 				+social('vkontakte').home-team__social
 				+social('telegram').home-team__social
-			// открыть модальное окно "проконсультироваться"
-			+button('Давайте встретимся!').home-team__modal-open.recall-open
+			//- открыть модальное окно "проконсультироваться"
+			+button('Let\'s meet!').home-team__modal-open.recall-open
