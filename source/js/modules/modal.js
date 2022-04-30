@@ -14,8 +14,19 @@ const modalClose = modal.querySelector('.modal__close');
 const modalContent = modal.querySelectorAll('.modal__content');
 
 let isOpen = false;
+let isScroll = null;
 
 modalContent.forEach((content) => (content.inert = true));
+
+const toggleHeaderGradient = () => {
+	setTimeout(() => {
+		if (isScroll) {
+			header.classList.add('header--scroll');
+		} else {
+			header.classList.remove('header--scroll');
+		}
+	}, 0);
+};
 
 const openModal = () => {
 	if (!isOpen) {
@@ -23,14 +34,22 @@ const openModal = () => {
 		modal.inert = false;
 		isOpen = true;
 
+		if (window.pageYOffset >= 24) {
+			isScroll = true;
+		} else {
+			isScroll = false;
+		}
+
 		document.addEventListener('keydown', onModalCloseKeyDown);
 
 		if (header.classList.contains('header--menu-opened')
 			&& document.body.clientWidth < 1200) {
 			disableHeaderInert();
 			enablePageInert();
+			toggleHeaderGradient();
 		} else {
 			hideScroll();
+			toggleHeaderGradient();
 		}
 
 		enablePageInert();

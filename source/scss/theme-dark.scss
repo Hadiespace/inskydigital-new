@@ -2,6 +2,7 @@
 :root {
 	--color-default-background: rgb(45 48 53);
 	--color-main: rgb(255 255 255);
+	--color-crumb: rgb(255 255 255 / 40%);
 	--color-decor: rgb(255 255 255 / 30%);
 	--color-secondary: rgb(255 255 255 / 40%);
 	--color-background: rgb(49 52 56);
@@ -11,4 +12,5 @@
 	--color-switcher-background-state: rgb(238 62 75);
 	--color-header-background: linear-gradient(180deg, rgb(45 48 53) 0%, rgb(45 48 53 / 95%) 33%, rgb(45 48 53 / 60%) 56%, rgb(45 48 53 / 0%) 100%);
 	--color-swiper-button-state: rgb(255 255 255);
+	--color-step-decor: rgb(255 255 255 / 25%);
 }

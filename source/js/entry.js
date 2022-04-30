@@ -11,8 +11,10 @@ import { sendForm } from './modules/send.js';
 import { toggleModal } from './modules/modal.js';
 import { initScroll } from './modules/scroll.js';
 import { changeVH } from './modules/vh.js';
+import { createHeaderGradient } from './modules/header.js';
 
 changeVH();
+createHeaderGradient();
 changeTheme();
 initScroll();
 toggleStep();

@@ -7,7 +7,4 @@ mixin serviceCard(props)
 		p.service-card__description!= description
 		span.service-card__more!= more
 		picture.service-card__background(aria-hidden="true")
-			source(media="(min-width: 2500px)", srcset=`images/content/${background}@3x.webp`, type="image/webp")
-			source(media="(min-width: 2500px)", srcset=`images/content/${background}@3x.jpg`)
-			source(srcset=`images/content/${background}@2x.webp`, type="image/webp")
-			img(src=`images/content/${background}@2x.jpg`, alt="Фон")
+			img(src=`images/common/${background}.svg`, alt="")

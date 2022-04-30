@@ -1,7 +1,6 @@
 .menu-small {
 	@media (min-width: 1200px) {
 		@include adaptive("top", 54);
-		@include adaptive("border-radius", 2);
 
 		&.menu--opened {
 			box-shadow:

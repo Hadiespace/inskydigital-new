@@ -42,9 +42,20 @@
 }
 
 .team-slider__picture {
+	position: relative;
 	align-items: end;
 	background: var(--color-background);
 	transition: background var(--theme-delay);
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/common/home-team-background.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 
 	@media (min-width: 1200px) {
 		@include adaptive("padding-top", 40);

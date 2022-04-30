@@ -10,6 +10,9 @@ const createDarkTheme = () => {
 		'beforeend',
 		'<link id="theme-dark" rel="stylesheet" href="css/theme-dark.min.css" media="all">',
 	);
+
+	document.documentElement.classList.add('page--dark');
+	document.documentElement.classList.remove('page--light');
 };
 
 const createLightTheme = () => {
@@ -22,6 +25,9 @@ const createLightTheme = () => {
 		'beforeend',
 		'<link id="theme-light" rel="stylesheet" href="css/theme-light.min.css" media="all">',
 	);
+
+	document.documentElement.classList.add('page--light');
+	document.documentElement.classList.remove('page--dark');
 };
 
 if (localStorage.getItem('color-scheme') === 'dark') {

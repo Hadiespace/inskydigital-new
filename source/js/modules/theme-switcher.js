@@ -34,6 +34,9 @@ const onThemeClick = () => {
 
 		switcher.classList.remove('theme-switcher--light');
 		switcher.classList.add('theme-switcher--dark');
+
+		document.documentElement.classList.add('page--dark');
+		document.documentElement.classList.remove('page--light');
 	} else {
 		localStorage.setItem('color-scheme', 'light');
 		metaLight.media = 'all';
@@ -44,6 +47,9 @@ const onThemeClick = () => {
 
 		switcher.classList.remove('theme-switcher--dark');
 		switcher.classList.add('theme-switcher--light');
+
+		document.documentElement.classList.add('page--light');
+		document.documentElement.classList.remove('page--dark');
 	}
 };
 

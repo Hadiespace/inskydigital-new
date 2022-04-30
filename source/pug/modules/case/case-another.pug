@@ -1,5 +1,5 @@
 mixin case-another(slider)
-	section.case-another
+	section.case-another.section
 		h3.visually-hidden Другие наши кейсы
 		div.case-another__slider
 			div.case-another__swiper.swiper
@@ -13,24 +13,24 @@ mixin case-another(slider)
 								source(media="(min-width: 2500px)", srcset=`images/content/${slide.logo}@3x.png`)
 								source(media="(min-width: 1300px)", srcset=`images/content/${slide.logo}@2x.webp`, type="image/webp")
 								source(media="(min-width: 1300px)", srcset=`images/content/${slide.logo}@2x.png`)
-								source(srcset=`images/content/${slide.image}.webp`, type="image/webp")
-								img(src=`images/content/${slide.image}.png`, alt=slide.name)
+								source(srcset=`images/content/${slide.logo}.webp`, type="image/webp")
+								img(src=`images/content/${slide.logo}.png`, alt=slide.name)
 							picture.case-another__background(aria-hidden="true")
 								source(media="(min-width: 2500px)", srcset=`images/content/${slide.background}@3x.webp`, type="image/webp")
 								source(media="(min-width: 2500px)", srcset=`images/content/${slide.background}@3x.jpg`)
 								source(media="(min-width: 1300px)", srcset=`images/content/${slide.background}@2x.webp`, type="image/webp")
 								source(media="(min-width: 1300px)", srcset=`images/content/${slide.background}@2x.jpg`)
-								source(srcset=`images/content/${slide.image}.webp`, type="image/webp")
-								img(src=`images/content/${slide.image}.jpg`, alt=slide.name)
+								source(srcset=`images/content/${slide.background}.webp`, type="image/webp")
+								img(src=`images/content/${slide.background}.jpg`, alt=slide.name)
 							span.case-another__more Смотреть следующий кейс
-		div.case-another__buttons
-			//- перейти на предыдущий слайд
-			button.case-another__button.case-another__button--prev(type="button")
-				span.visually-hidden Предыдущий слайд
-				svg(width="48", height="48", aria-hidden="true")
-					use(xlink:href="images/sprite.svg#arrow-swiper-prev")
-			//- перейти на следующий слайд
-			button.case-another__button.case-another__button--next(type="button")
-				span.visually-hidden Следующий слайд
-				svg(width="48", height="48", aria-hidden="true")
-					use(xlink:href="images/sprite.svg#arrow-swiper-next")
+			div.case-another__buttons
+				//- перейти на предыдущий слайд
+				button.case-another__button.case-another__button--prev(type="button")
+					span.visually-hidden Предыдущий слайд
+					svg(width="48", height="48", aria-hidden="true")
+						use(xlink:href="images/sprite.svg#arrow-swiper-prev")
+				//- перейти на следующий слайд
+				button.case-another__button.case-another__button--next(type="button")
+					span.visually-hidden Следующий слайд
+					svg(width="48", height="48", aria-hidden="true")
+						use(xlink:href="images/sprite.svg#arrow-swiper-next")

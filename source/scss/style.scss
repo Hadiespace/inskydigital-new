@@ -17,6 +17,8 @@
 @import "blocks/field";
 @import "blocks/social-accent";
 @import "blocks/social";
+@import "blocks/crumbs";
+@import "blocks/crumb";
 @import "blocks/theme-switcher";
 @import "blocks/project-card";
 @import "blocks/service-card";
@@ -41,3 +43,8 @@
 @import "blocks/modal-advisory";
 @import "blocks/modal-success";
 @import "blocks/case-preview";
+@import "blocks/case-task";
+@import "blocks/case-steps";
+@import "blocks/case-step";
+@import "blocks/case-thanks";
+@import "blocks/case-another";

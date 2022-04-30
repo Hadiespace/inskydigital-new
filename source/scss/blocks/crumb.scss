@@ -1,0 +1,62 @@
+.crumb {
+	@include adaptive("margin-right", 24);
+	@include adaptive("font-size", 16);
+	@include adaptive("line-height", 32);
+	position: relative;
+	display: flex;
+	color: var(--color-crumb);
+	transition: color var(--theme-delay);
+
+	&::before {
+		@include adaptive("width", 12);
+		@include adaptive("height", 1.2);
+		@include adaptive("right", -18);
+		content: "";
+		position: absolute;
+		top: 50%;
+		background: var(--color-crumb);
+		transform: translateY(-50%);
+		transition: background var(--theme-delay);
+		pointer-events: none;
+	}
+
+	&:hover,
+	&:focus {
+		color: var(--color-main);
+	}
+
+	&--current {
+		margin: 0;
+
+		&::before {
+			display: none;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--color-crumb);
+		}
+	}
+}
+
+.crumbs--alternate {
+	.crumb {
+		color: var(--color-crumb-alternate);
+
+		&::before {
+			background: var(--color-crumb-alternate);
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--color-accent);
+		}
+
+		&--current {
+			&:hover,
+			&:focus {
+				color: var(--color-crumb-alternate);
+			}
+		}
+	}
+}

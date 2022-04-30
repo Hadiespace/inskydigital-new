@@ -1,11 +1,10 @@
 mixin case-task(props)
 	- const { description, items } = props;
 
-	section.case-task#case-task
+	section.case-task.section#case-task
 		div.case-task__container.container
-			div.case-task__wrapper
-				h2.case-task__title.title Задача
-				div.case-task__description!= description
-				ul.case-task__list
-					each item in items
-						li.case-task__item!= item
+			h2.case-task__title.title Задача
+			div.case-task__description!= description
+			ul.case-task__list
+				each item in items
+					li.case-task__item!= item

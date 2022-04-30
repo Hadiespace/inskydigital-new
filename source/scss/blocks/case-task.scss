@@ -1,0 +1,75 @@
+.case-task {
+	display: grid;
+	min-height: calc((var(--vh) * 100) - calc(84px + (84 * 3 - 84) * ((100vw - 1280px) / (3840 - 1280))));
+}
+
+.case-task__container {
+	position: relative;
+	display: grid;
+	align-content: center;
+	align-items: start;
+	grid-column-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	max-height: 100%;
+
+	&::before {
+		@include adaptive("left", 20);
+		@include adaptive("top", -24);
+		content: "";
+		position: absolute;
+		z-index: -1;
+		width: calc(100% - calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280))));
+		height: calc(100% + calc(48px + (48 * 3 - 48) * ((100vw - 1280px) / (3840 - 1280))));
+		background: var(--color-background);
+		transition: background var(--theme-delay);
+	}
+}
+
+.case-task__title {
+	@include adaptive("padding-left", 104);
+	@include adaptive("margin-bottom", 40);
+	@include adaptive("max-width", 500);
+	grid-column: 1/-1;
+}
+
+.case-task__description {
+	@include adaptive("padding-left", 104);
+	@include adaptive("max-width", 500);
+	@include adaptive("grid-row-gap", 20);
+	display: grid;
+	grid-column: 1/2;
+	grid-row: 2/3;
+
+	p {
+		margin: 0;
+		transition: color var(--theme-delay);
+	}
+
+	strong {
+		font-weight: 500;
+	}
+}
+
+.case-task__list {
+	@include adaptive("padding-right", 40);
+	@include adaptive("grid-row-gap", 32);
+	display: grid;
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.case-task__item {
+	@include adaptive("padding-left", 28);
+	position: relative;
+
+	&::before {
+		@include adaptive("top", 10);
+		@include adaptive("width", 4);
+		@include adaptive("height", 4);
+		content: "";
+		position: absolute;
+		left: 0;
+		border-radius: 50%;
+		background: var(--color-accent);
+	}
+}

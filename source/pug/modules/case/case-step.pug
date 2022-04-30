@@ -2,52 +2,58 @@ mixin step-v1(props)
 	- const { title, description, image } = props;
 
 	li.case-step.case-step--v1
-		h3.case-step__title.case-step__title--v1!= title
-		div.case-step__description.case-step__description--v1!= description
-		picture.case-preview__logo.case-step__logo--v1
+		div.case-step__wrapper
+			h3.case-step__title!= title
+			div.case-step__description.case-step__description--v1!= description
+		picture.case-step__image
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.webp`, type="image/webp")
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.png`)
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@2x.webp`, type="image/webp")
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@2x.png`)
 			source(srcset=`images/content/${image}.webp`, type="image/webp")
-			img(src=`images/content/${image}.png`, alt="Фон")
+			img(src=`images/content/${image}.png`, alt="Site pages")
 
 mixin step-v2(props)
 	- const { title, description, image } = props;
 
 	li.case-step.case-step--v2
-		h3.case-step__title.case-step__title--v2!= title
-		div.case-step__description.case-step__description--v2!= description
-		picture.case-preview__logo.case-step__logo--v2
+		div.case-step__wrapper
+			h3.case-step__title!= title
+			div.case-step__description!= description
+		picture.case-step__image
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.webp`, type="image/webp")
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.png`)
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@2x.webp`, type="image/webp")
 			source(media="(min-width: 2500px)", srcset=`images/content/${image}@2x.png`)
 			source(srcset=`images/content/${image}.webp`, type="image/webp")
-			img(src=`images/content/${image}.png`, alt="Фон")
+			img(src=`images/content/${image}.png`, alt="Site pages")
 
 mixin step-v3(props)
 	- const { title, description, image } = props;
 
-	h3.case-step__title.case-step__title--v3!= title
-	div.case-step__description.case-step__description--v3!= description
-	picture.case-preview__logo.case-step__logo--v3
-		source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.webp`, type="image/webp")
-		source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.png`)
-		source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.webp`, type="image/webp")
-		source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.png`)
-		source(srcset=`images/content/${image}@x.webp`, type="image/webp")
-		img(src=`images/content/${image}@x.png`, alt="Фон")
+	li.case-step.case-step--v3
+		div.case-step__wrapper
+			h3.case-step__title!= title
+			div.case-step__description!= description
+		picture.case-step__image
+			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.webp`, type="image/webp")
+			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.png`)
+			source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.webp`, type="image/webp")
+			source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.png`)
+			source(srcset=`images/content/${image}.webp`, type="image/webp")
+			img(src=`images/content/${image}.png`, alt="Site pages")
 
 mixin step-v4(props)
 	- const { title, description, image } = props;
 
-	h3.case-step__title.case-step__title--v4!= title
-	div.case-step__description.case-step__description--v4!= description
-	picture.case-preview__logo.case-step__logo--v4
-		source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.webp`, type="image/webp")
-		source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.png`)
-		source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.webp`, type="image/webp")
-		source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.png`)
-		source(srcset=`images/content/${image}@x.webp`, type="image/webp")
-		img(src=`images/content/${image}@x.png`, alt="Фон")
+	li.case-step.case-step--v4
+		div.case-step__wrapper
+			h3.case-step__title!= title
+			div.case-step__description!= description
+		picture.case-step__image
+			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.webp`, type="image/webp")
+			source(media="(min-width: 2500px)", srcset=`images/content/${image}@3x.png`)
+			source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.webp`, type="image/webp")
+			source(media="(min-width: 1300px)", srcset=`images/content/${image}@2x.png`)
+			source(srcset=`images/content/${image}.webp`, type="image/webp")
+			img(src=`images/content/${image}.png`, alt="Site pages")

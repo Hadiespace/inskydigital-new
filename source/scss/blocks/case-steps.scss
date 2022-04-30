@@ -1,0 +1,13 @@
+.case-steps {
+	padding: 0;
+}
+
+.case-steps__container {
+	display: grid;
+}
+
+.case-steps__list {
+	@include adaptive("grid-row-gap", 60);
+	counter-reset: steps;
+	display: grid;
+}

@@ -1,0 +1,78 @@
+.case-thanks {}
+
+.case-thanks__container {
+	display: grid;
+}
+
+.case-thanks__wrapper {
+	@include adaptive("max-width", 812);
+	@include adaptive("grid-column-gap", 20);
+	display: grid;
+	justify-content: space-between;
+	justify-self: center;
+	grid-template-columns:
+		calc(396px + (396 * 3 - 396) * ((100vw - 1280px) / (3840 - 1280)))
+		calc(292px + (292 * 3 - 292) * ((100vw - 1280px) / (3840 - 1280)));
+	width: 100%;
+}
+
+.case-thanks__info-wrap {
+	display: grid;
+}
+
+.case-thanks__title {
+	@include adaptive("margin-bottom", 40);
+}
+
+.case-thanks__description {
+	@include adaptive("grid-row-gap", 32);
+	display: grid;
+
+	p {
+		margin: 0;
+	}
+}
+
+.case-thanks__aside {
+	display: grid;
+	grid-template-rows:
+		max-content
+		1fr
+		max-content;
+}
+
+.case-thanks__text {
+	@include adaptive("font-size", 22);
+	@include adaptive("line-height", 32);
+	@include adaptive("min-height", 112);
+	margin: 0 0 calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280)));
+}
+
+.case-thanks__email {
+	position: relative;
+	align-self: start;
+	justify-self: start;
+	color: var(--color-accent);
+
+	&::before {
+		@include adaptive("height", 1);
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: var(--color-accent);
+		transition: opacity var(--theme-delay);
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			opacity: 0;
+		}
+	}
+}
+
+.case-thanks__modal-open {
+	// @include adaptive
+}
