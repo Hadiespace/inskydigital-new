@@ -1,6 +1,31 @@
 .case-task {
 	display: grid;
-	min-height: calc((var(--vh) * 100) - calc(84px + (84 * 3 - 84) * ((100vw - 1280px) / (3840 - 1280))));
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 60);
+		@include adaptive("padding-bottom", 60);
+		min-height: calc((var(--vh) * 100) - calc(84px + (84 * 3 - 84) * ((100vw - 1280px) / (3840 - 1280))));
+
+		@media (min-aspect-ratio: 20/9) {
+			min-height: calc((var(--vh) * 100) - calc(84px + (84 * 2 - 84) * ((100vw - 1280px) / (3840 - 1280))));
+		}
+	}
+
+	@media (max-width: 1199px) {
+		padding: 60px 0;
+	}
+
+	@media (max-width: 1199px) and (min-height: 600px) {
+		min-height: 700px;
+	}
+
+	@media (max-width: 991px) {
+		padding: 36px 0;
+	}
+
+	@media (max-width: 599px) {
+		min-height: calc((var(--vh) * 100) - 84px);
+	}
 }
 
 .case-task__container {
@@ -8,37 +33,95 @@
 	display: grid;
 	align-content: center;
 	align-items: start;
-	grid-column-gap: 20px;
-	grid-template-columns: 1fr 1fr;
 	max-height: 100%;
 
 	&::before {
-		@include adaptive("left", 20);
-		@include adaptive("top", -24);
 		content: "";
 		position: absolute;
 		z-index: -1;
-		width: calc(100% - calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280))));
-		height: calc(100% + calc(48px + (48 * 3 - 48) * ((100vw - 1280px) / (3840 - 1280))));
 		background: var(--color-background);
 		transition: background var(--theme-delay);
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
+
+		&::before {
+			@include adaptive("left", 20);
+			@include adaptive("top", -60);
+			width: calc(100% - calc(40px + (40 * 3 - 40) * ((100vw - 1280px) / (3840 - 1280))));
+			height: calc(100% + calc(120px + (120 * 3 - 120) * ((100vw - 1280px) / (3840 - 1280))));
+
+			@media (min-aspect-ratio: 20/9) {
+				width: calc(100% - calc(40px + (40 * 2 - 40) * ((100vw - 1280px) / (3840 - 1280))));
+				height: calc(100% + calc(120px + (120 * 2 - 120) * ((100vw - 1280px) / (3840 - 1280))));
+			}
+		}
+	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+
+		&::before {
+			left: 20px;
+			top: -60px;
+			width: calc(100% - 40px);
+			height: calc(100% + 120px);
+		}
+	}
+
+	@media (min-width: 992px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 991px) {
+		grid-template-columns: 1fr;
+
+		&::before {
+			top: -36px;
+			height: calc(100% + 72px);
+		}
+	}
+
+	@media (max-width: 767px) {
+		&::before {
+			left: 0;
+			width: 100%;
+		}
 	}
 }
 
 .case-task__title {
-	@include adaptive("padding-left", 104);
-	@include adaptive("margin-bottom", 40);
-	@include adaptive("max-width", 500);
-	grid-column: 1/-1;
+	@media (min-width: 1200px) {
+		@include adaptive("padding-left", 104);
+		@include adaptive("margin-bottom", 40);
+		@include adaptive("max-width", 500);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 40px;
+		padding: 0 64px;
+		max-width: 500px;
+	}
+
+	@media (min-width: 992px) {
+		grid-column: 1/-1;
+	}
+
+	@media (max-width: 991px) {
+		margin-bottom: 32px;
+		padding: 0 40px;
+		max-width: 100%;
+	}
+
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
+		padding: 0;
+	}
 }
 
 .case-task__description {
-	@include adaptive("padding-left", 104);
-	@include adaptive("max-width", 500);
-	@include adaptive("grid-row-gap", 20);
 	display: grid;
-	grid-column: 1/2;
-	grid-row: 2/3;
 
 	p {
 		margin: 0;
@@ -48,28 +131,102 @@
 	strong {
 		font-weight: 500;
 	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding-left", 104);
+		@include adaptive("max-width", 500);
+		@include adaptive("grid-row-gap", 20);
+	}
+
+	@media (max-width: 1199px) {
+		grid-row-gap: 20px;
+		padding-left: 64px;
+		max-width: 500px;
+	}
+
+	@media (min-width: 992px) {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	@media (max-width: 991px) {
+		margin: 0 0 40px;
+		padding: 0 40px;
+		max-width: 100%;
+	}
+
+	@media (max-width: 767px) {
+		padding: 0;
+	}
 }
 
 .case-task__list {
-	@include adaptive("padding-right", 40);
-	@include adaptive("grid-row-gap", 32);
 	display: grid;
-	grid-column: 2/3;
-	grid-row: 2/3;
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding-right", 40);
+		@include adaptive("grid-row-gap", 32);
+	}
+
+	@media (max-width: 1199px) {
+		grid-row-gap: 32px;
+		padding-right: 40px;
+	}
+
+	@media (min-width: 992px) {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+
+	@media (max-width: 991px) {
+		padding: 0 40px;
+	}
+
+	@media (max-width: 767px) {
+		grid-row-gap: 24px;
+		padding: 0;
+	}
 }
 
 .case-task__item {
-	@include adaptive("padding-left", 28);
 	position: relative;
+	color: var(--color-third);
+	transition: color var(--theme-delay);
 
 	&::before {
-		@include adaptive("top", 10);
-		@include adaptive("width", 4);
-		@include adaptive("height", 4);
 		content: "";
 		position: absolute;
 		left: 0;
 		border-radius: 50%;
 		background: var(--color-accent);
+	}
+
+	strong {
+		color: var(--color-main);
+		transition: color var(--theme-delay);
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding-left", 28);
+
+		&::before {
+			@include adaptive("top", 10);
+			@include adaptive("width", 4);
+			@include adaptive("height", 4);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		padding-left: 28px;
+
+		&::before {
+			top: 10px;
+			width: 4px;
+			height: 4px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding-left: 20px;
 	}
 }

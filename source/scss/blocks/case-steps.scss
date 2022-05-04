@@ -7,7 +7,18 @@
 }
 
 .case-steps__list {
-	@include adaptive("grid-row-gap", 60);
 	counter-reset: steps;
 	display: grid;
+
+	@media (min-width: 1200px) {
+		@include adaptive("grid-row-gap", 60);
+	}
+
+	@media (max-width: 1199px) {
+		grid-row-gap: 60px;
+	}
+
+	@media (max-width: 767px) {
+		grid-row-gap: 24px;
+	}
 }

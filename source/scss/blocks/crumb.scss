@@ -1,16 +1,10 @@
 .crumb {
-	@include adaptive("margin-right", 24);
-	@include adaptive("font-size", 16);
-	@include adaptive("line-height", 32);
 	position: relative;
 	display: flex;
 	color: var(--color-crumb);
 	transition: color var(--theme-delay);
 
 	&::before {
-		@include adaptive("width", 12);
-		@include adaptive("height", 1.2);
-		@include adaptive("right", -18);
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -35,6 +29,30 @@
 		&:hover,
 		&:focus {
 			color: var(--color-crumb);
+		}
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("margin-right", 24);
+		@include adaptive("font-size", 16);
+		@include adaptive("line-height", 32);
+
+		&::before {
+			@include adaptive("width", 12);
+			@include adaptive("height", 1.2);
+			@include adaptive("right", -18);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		margin-right: 24px;
+		font-size: 16px;
+		line-height: 32px;
+
+		&::before {
+			right: -18px;
+			width: 12px;
+			height: 1.2px;
 		}
 	}
 }

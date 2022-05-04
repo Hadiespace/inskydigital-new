@@ -5,19 +5,40 @@
 }
 
 .case-another__slider {
-	// @include adaptive("max-width", 812);
 	display: grid;
 	justify-self: center;
 	width: 100%;
 }
 
 .case-another__swiper {
-	@include adaptive("width", 728);
-	@include adaptive("height", 536);
 	display: grid;
 	justify-self: center;
 	grid-column: 1/2;
 	grid-row: 1/2;
+
+	@media (min-width: 1200px) {
+		@include adaptive("width", 728);
+		@include adaptive("height", 536);
+	}
+
+	@media (max-width: 1199px) {
+		width: 728px;
+		height: auto;
+	}
+
+	@media (max-width: 991px) {
+		width: 540px;
+	}
+
+	@media (max-width: 767px) {
+		width: 440px;
+		min-height: 400px;
+	}
+
+	@media (max-width: 599px) {
+		width: 260px;
+		min-height: 320px;
+	}
 }
 
 .case-another__wrapper {
@@ -26,10 +47,6 @@
 }
 
 .case-another__slide {
-	@include adaptive("padding-left", 62);
-	@include adaptive("padding-right", 62);
-	@include adaptive("width", 728);
-	@include adaptive("height", 536);
 	position: relative;
 	display: grid;
 	align-items: start;
@@ -41,41 +58,137 @@
 		opacity: .4 !important;
 		pointer-events: none;
 	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding-left", 62);
+		@include adaptive("padding-right", 62);
+	}
+
+	@media (max-width: 1199px) {
+		padding: 0 62px;
+	}
+
+	@media (max-width: 991px) {
+		padding: 0 20px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 0 10px;
+	}
 }
 
 .case-another__title {
-	@include adaptive("width", 564);
-	@include adaptive("font-size", 24);
-	@include adaptive("line-height", 40);
 	justify-self: center;
 	grid-column: 1/2;
 	grid-row: 2/3;
-	margin: 0 0 calc(24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)));
 	font-weight: 400;
 	text-align: center;
 	color: var(--color-alternate);
 
 	a {
 		&::before {
-			@include adaptive("left", 62);
 			content: "";
 			position: absolute;
 			top: 0;
 			z-index: 1;
-			width: calc(100% - (124px + (124 * 3 - 124) * ((100vw - 1280px) / (3840 - 1280))));
 			height: 100%;
 		}
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("width", 564);
+		@include adaptive("font-size", 24);
+		@include adaptive("line-height", 40);
+		margin: 0 0 calc(24px + (24 * 3 - 24) * ((100vw - 1280px) / (3840 - 1280)));
+
+		a {
+			&::before {
+				@include adaptive("left", 62);
+				width: calc(100% - (124px + (124 * 3 - 124) * ((100vw - 1280px) / (3840 - 1280))));
+			}
+		}
+
+		@media (min-aspect-ratio: 20/9) {
+			margin: 0 0 calc(24px + (24 * 2 - 24) * ((100vw - 1280px) / (3840 - 1280)));
+
+			a {
+				&::before {
+					width: calc(100% - (124px + (124 * 2 - 124) * ((100vw - 1280px) / (3840 - 1280))));
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1199px) {
+		margin: 0 0 24px;
+		padding: 0 8px;
+		width: 100%;
+		font-size: 24px;
+		line-height: 40px;
+
+		a {
+			&::before {
+				left: 62px;
+				width: calc(100% - 124px);
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		a {
+			&::before {
+				left: 20px;
+				width: calc(100% - 40px);
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		margin: 0 0 16px;
+		font-size: 16px;
+		line-height: 24px;
+
+		a {
+			&::before {
+				left: 10px;
+				width: calc(100% - 20px);
+			}
+		}
+	}
+
+	@media (max-width: 599px) {
+		font-size: 12px;
+		line-height: 20px;
 	}
 }
 
 .case-another__logo {
-	@include adaptive("padding-top", 20);
-	@include adaptive("margin-bottom", 12);
-	@include adaptive("height", 100);
-	@include adaptive("width", 564);
 	justify-self: center;
 	grid-column: 1/2;
 	grid-row: 1/2;
+
+	img {
+		max-height: 100%;
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding-top", 20);
+		@include adaptive("margin-bottom", 12);
+		@include adaptive("height", 100);
+		@include adaptive("width", 564);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 12px;
+		padding-top: 20px;
+		width: 100%;
+		height: 100px;
+	}
+
+	@media (max-width: 599px) {
+		padding-top: 12px;
+		height: 64px;
+	}
 }
 
 .case-another__background {
@@ -85,14 +198,18 @@
 	overflow: hidden;
 
 	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 		transition: transform 1s;
+	}
+
+	@media (max-width: 767px) {
+		height: 100%;
 	}
 }
 
 .case-another__more {
-	@include adaptive("font-size", 16);
-	@include adaptive("line-height", 24);
-	@include adaptive("max-width", 564);
 	position: relative;
 	justify-self: center;
 	grid-column: 1/2;
@@ -109,11 +226,39 @@
 		background: var(--color-alternate);
 		transition: opacity var(--theme-delay);
 	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("font-size", 16);
+		@include adaptive("line-height", 24);
+		@include adaptive("max-width", 564);
+
+		&::before {
+			@include adaptive("height", 1);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		max-width: 100%;
+		font-size: 16px;
+		line-height: 24px;
+
+		&::before {
+			height: 1px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	@media (max-width: 599px) {
+		font-size: 10px;
+		line-height: 16px;
+	}
 }
 
 .case-another__buttons {
-	@include adaptive("grid-column-gap", 20);
-	@include adaptive("max-width", 740);
 	position: relative;
 	z-index: 1;
 	display: grid;
@@ -126,15 +271,35 @@
 	width: 100%;
 	pointer-events: none;
 
-	svg {
-		@include adaptive("width", 40);
-		@include adaptive("height", 40);
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
+		@include adaptive("max-width", 740);
+
+		svg {
+			@include adaptive("width", 40);
+			@include adaptive("height", 40);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+		max-width: 740px;
+
+		svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	@media (max-width: 991px) {
+		justify-content: center;
+		grid-row: 2/3;
+		padding-top: 20px;
+		max-width: 100%;
 	}
 }
 
 .case-another__button {
-	@include adaptive("width", 48);
-	@include adaptive("height", 48);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -153,6 +318,16 @@
 		svg {
 			fill: var(--color-swiper-button-state);
 		}
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("width", 48);
+		@include adaptive("height", 48);
+	}
+
+	@media (max-width: 1199px) {
+		width: 48px;
+		height: 48px;
 	}
 }
 

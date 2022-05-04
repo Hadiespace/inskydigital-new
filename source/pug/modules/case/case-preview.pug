@@ -23,7 +23,7 @@ mixin case-preview(props)
 					source(srcset=`images/content/${logo}.webp`, type="image/webp")
 					img(src=`images/content/${logo}.jpg`, alt="Фон")
 				//- почта
-				a.case-preview__email(href=`mailto:${email}`)!= email
+				a.case-preview__email.case-preview__email--main(href=`mailto:${email}`)!= email
 				//- дата
 				time.case-preview__date(datetime=date)!= date
 				//- фоновое изображение
@@ -34,6 +34,8 @@ mixin case-preview(props)
 					source(media="(min-width: 1300px)", srcset=`images/content/${background}@2x.jpg`)
 					source(srcset=`images/content/${background}.webp`, type="image/webp")
 					img(src=`images/content/${background}.jpg`, alt="Фон")
+			//- почта
+			a.case-preview__email.case-preview__email--secondary(href=`mailto:${email}`)!= email
 			//- переход на задачу
 			a.case-preview__go-task(href="#case-task")
 				span.visually-hidden Перейти к задаче

@@ -2,6 +2,10 @@
 	@media (min-width: 1200px) {
 		@include adaptive("scroll-padding-top", 84);
 	}
+
+	@media (max-width: 1199px) {
+		scroll-padding-top: 80px;
+	}
 }
 
 .page__body {

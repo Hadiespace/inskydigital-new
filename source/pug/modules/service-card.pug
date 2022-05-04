@@ -7,4 +7,6 @@ mixin serviceCard(props)
 		p.service-card__description!= description
 		span.service-card__more!= more
 		picture.service-card__background(aria-hidden="true")
-			img(src=`images/common/${background}.svg`, alt="")
+			source(media="(min-width: 1200px)", srcset=`images/common/${background}-3.svg`)
+			source(media="(min-width: 600px)", srcset=`images/common/${background}-2.svg`)
+			img(src=`images/common/${background}-1.svg`, alt="")
