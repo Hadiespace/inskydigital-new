@@ -12,6 +12,7 @@ import { toggleModal } from './modules/modal.js';
 import { initScroll } from './modules/scroll.js';
 import { changeVH } from './modules/vh.js';
 import { createHeaderGradient } from './modules/header.js';
+import { toggleCities } from './modules/city.js';
 
 changeVH();
 createHeaderGradient();
@@ -25,3 +26,4 @@ openMenu();
 createFieldFiles();
 sendForm();
 toggleModal();
+toggleCities();

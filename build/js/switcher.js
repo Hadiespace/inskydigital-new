@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const pagesList = {
 		'01. Главная': 'index.html',
 		'02. Кейс (Mebelgroup)': 'case-mebelgroup.html',
+		'03. Контакты': 'contacts.html',
 	};
 
 	const link = '' +

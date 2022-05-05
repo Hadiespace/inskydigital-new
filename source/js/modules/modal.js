@@ -112,6 +112,8 @@ export const openModalSuccess = () => {
 
 	closeModalContent();
 
+	openModal();
+
 	setTimeout(() => {
 		modalSuccess.classList.add('modal__content--opened');
 		modalSuccess.inert = false;

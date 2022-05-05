@@ -1,0 +1,9 @@
+include crumb
+
+mixin pageHeader(title, crumb)
+	div.page-header
+		div.page-header__container.container
+			div.page-header__crumbs
+				+crumb('Главная', 'index.html')
+				+crumb(crumb)
+			h1.page-header__title.title!= title

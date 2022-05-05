@@ -1,0 +1,23 @@
+include contacts-data
+
+section.contacts-map.section
+	h2.visually-hidden Контакты и адреса городов на карте
+	div.contacts-map__container.container
+		div.contacts-map__buttons
+			each city, index in cities
+				div.contacts-map__button-wrap(data-lng=city.lat, data-lat=city.lng)
+					button.contacts-map__city-open(type="button", aria-controls=`city${index}`, aria-expanded="false")
+						span!= city.title
+		ul.contacts-map__list
+			each city, index in cities
+				li.contacts-map__item(data-lng=city.lat, data-lat=city.lng)
+					button.contacts-map__city-open.contacts-map__city-open--main(type="button", aria-controls=`city${index}`, aria-expanded="false")
+						span!= city.title
+					div.contacts-map__city-wrap(id=`city${index}`)
+						h3.contacts-map__title!= city.title
+						address.contacts-map__address!= city.address
+						div.contacts-map__links
+							each value, key in city.links
+								a.contacts-map__link(href=key)!= value
+		div.contacts-map__map-wrap
+			div.contacts-map__map#map

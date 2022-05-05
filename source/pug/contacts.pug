@@ -1,0 +1,19 @@
+extends layout/layout
+include modules/page-header
+
+block const
+
+block meta
+	title Insky.digital | Контакты
+	meta(name="description", content="Контакты")
+block content
+	//- шапка
+	+pageHeader('Контакты', 'Контакты')
+	//- карта
+	include modules/contacts/contacts-map
+	//- адреса и контакты
+	include modules/contacts/contacts-info
+	//- форма
+	include modules/contacts/contacts-form
+
+block prepend page-bottom

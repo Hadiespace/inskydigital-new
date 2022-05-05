@@ -213,9 +213,11 @@
 	@media (min-width: 1200px) {
 		@include adaptive("font-size", 10);
 		@include adaptive("line-height", 16);
+		@include adaptive("min-height", 16);
 	}
 
 	@media (max-width: 1199px) {
+		min-height: 16px;
 		font-size: 10px;
 		line-height: 16px;
 	}
