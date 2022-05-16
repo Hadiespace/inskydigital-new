@@ -61,6 +61,7 @@
 	"dependencies": {
 		"focus-visible": "5.2.0",
 		"inputmask": "5.0.7",
+		"leaflet": "^1.8.0",
 		"nouislider": "^15.5.1",
 		"swiper": "8.1.1",
 		"what-input": "5.2.10",

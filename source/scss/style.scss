@@ -3,6 +3,7 @@
 @import "variables";
 @import "mixins";
 @import "global";
+@import "leaflet";
 @import "blocks/visually-hidden";
 @import "blocks/hide-scroll";
 @import "blocks/container";
@@ -42,6 +43,7 @@
 @import "blocks/modal-recall";
 @import "blocks/modal-advisory";
 @import "blocks/modal-success";
+@import "blocks/modal-video";
 @import "blocks/case-preview";
 @import "blocks/case-task";
 @import "blocks/case-steps";
@@ -52,3 +54,11 @@
 @import "blocks/contacts-map";
 @import "blocks/contacts-info";
 @import "blocks/contacts-form";
+@import "blocks/service-preview";
+@import "blocks/service-advantages";
+@import "blocks/service-aside";
+@import "blocks/service-rates";
+@import "blocks/service-about";
+@import "blocks/service-offers";
+@import "blocks/service-form";
+@import "blocks/not-found";

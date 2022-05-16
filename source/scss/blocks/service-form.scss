@@ -1,0 +1,147 @@
+.service-form {}
+
+.service-form__container {
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+}
+
+.service-form__wrapper {
+	display: grid;
+	justify-items: center;
+	background: var(--color-dark-form-background);
+
+	@media (min-width: 1200px) {
+		@include adaptive("padding", 60);
+	}
+
+	@media (max-width: 1199px) {
+		padding: 60px;
+	}
+
+	@media (max-width: 991px) {
+		padding: 40px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 60px 20px;
+	}
+}
+
+.service-form__title {
+	text-align: center;
+	color: var(--color-alternate);
+
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
+		@include adaptive("max-width", 760);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 60px;
+		max-width: 760px;
+	}
+
+	@media (max-width: 991px) {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 40px;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: left;
+	}
+}
+
+.service-form__form {
+	display: grid;
+	justify-self: center;
+	grid-template-columns: repeat(3, 1fr);
+	width: 100%;
+
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
+		@include adaptive("max-width", 760);
+	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+		max-width: 760px;
+	}
+
+	@media (max-width: 599px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.service-form__name {
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 8px;
+	}
+}
+
+.service-form__phone {
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 8px;
+	}
+}
+
+.service-form__email {
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 60);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 32px;
+	}
+}
+
+.service-form__form-wrapper {
+	display: grid;
+	align-items: center;
+	grid-column: 1/-1;
+	grid-template-columns: repeat(2, 1fr);
+
+	@media (min-width: 1200px) {
+		@include adaptive("grid-column-gap", 20);
+	}
+
+	@media (max-width: 1199px) {
+		grid-column-gap: 20px;
+	}
+
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.service-form__consent {
+	@media (max-width: 767px) {
+		margin-bottom: 40px;
+	}
+}
+
+.service-form__submit {
+}

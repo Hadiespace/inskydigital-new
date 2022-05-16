@@ -14,6 +14,10 @@
 		min-height: 700px;
 	}
 
+	@media (max-width: 767px) {
+		padding: 88px 0 0;
+	}
+
 	@media (max-width: 599px) {
 		min-height: calc(var(--vh) * 100);
 	}

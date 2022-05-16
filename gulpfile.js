@@ -8,6 +8,7 @@ import { css } from './gulp/tasks/css.js';
 import { themeLight } from './gulp/tasks/theme-light.js';
 import { themeDark } from './gulp/tasks/theme-dark.js';
 import { js } from './gulp/tasks/js.js';
+import { leaflet } from './gulp/tasks/leaflet.js';
 import { switcher } from './gulp/tasks/switcher.js';
 import { theme } from './gulp/tasks/theme.js';
 import { images } from './gulp/tasks/images.js';
@@ -31,6 +32,7 @@ const watcher = () => {
 	gulp.watch(path.watch.css, themeLight);
 	gulp.watch(path.watch.css, themeDark);
 	gulp.watch(path.watch.js, js);
+	gulp.watch(path.watch.js, leaflet);
 	gulp.watch(path.watch.js, switcher);
 	gulp.watch(path.watch.js, theme);
 	gulp.watch(path.watch.images, images);
@@ -44,6 +46,7 @@ const mainTasks = gulp.parallel(
 	themeLight,
 	themeDark,
 	js,
+	leaflet,
 	switcher,
 	theme,
 	images,

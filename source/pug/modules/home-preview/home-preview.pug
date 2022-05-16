@@ -8,9 +8,6 @@ section.home-preview.section
 		h2.home-preview__title.title
 			| Web/Mobile #[br]
 			| Development Company
-			//- | Разработка сайтов, #[br]
-			//- | мобильные приложения, #[br]
-			//- | продвижение и PR
 		//- преимущества
 		ul.home-preview__list
 			each item in previewList
@@ -19,4 +16,4 @@ section.home-preview.section
 		+reviewOpen.home-preview__review-open
 		//- открыть модальное окно "проконсультироваться"
 		+button('Get a Quote', true).home-preview__modal-open.advisory-open
-		+reviewOpen.home-preview__mobile-review-open
+		+reviewOpen.home-preview__mobile-review-open.video-open

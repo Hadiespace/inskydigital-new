@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'01. Главная': 'index.html',
 		'02. Кейс (Mebelgroup)': 'case-mebelgroup.html',
 		'03. Контакты': 'contacts.html',
+		'04. Услуга (Поддержка сайтов)': 'service-support.html',
+		'05. 404 страница': '404.html',
 	};
 
 	const link = '' +

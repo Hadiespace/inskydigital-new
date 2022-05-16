@@ -1,0 +1,10 @@
+mixin serviceAside(props)
+	- const { bigText, text, image } = props;
+
+	div.service-aside.section
+		div.service-aside__container.container
+			div.service-aside__wrapper
+				strong.service-aside__big-text!=bigText
+				p.service-aside__text!=text
+				div.service-aside__image
+					img(src=image, alt="", aria-hidden="true")

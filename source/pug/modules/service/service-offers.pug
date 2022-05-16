@@ -1,0 +1,17 @@
+mixin serviceOffers(props)
+	- const { title, description, list } = props;
+
+	section.service-offers.section
+		div.service-offers__container.container
+			h2.service-offers__title.title!= title
+			p.service-offers__description!= description
+			ul.service-offers__list
+				each item in list
+					li.service-offers__item
+						h3.service-offers__item-title!= item.title
+						p.service-offers__item-description!= item.description
+						div.service-offers__item-wrapper
+							span.service-offers__item-cost!= item.cost
+							a.service-offers__item-link(href=item.href) Подробнее
+						div.service-offers__item-icon
+							img(src=`images/common/${item.icon}.svg`, alt="", aria-hidden="true")

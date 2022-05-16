@@ -1,5 +1,6 @@
 import 'wicg-inert';
 import 'what-input';
+import { testSupportWebp } from './modules/webp.js';
 import { changeTheme } from './modules/theme-switcher.js';
 import { toggleStep } from './modules/step.js';
 import { createSwiper } from './modules/swiper.js';
@@ -13,8 +14,10 @@ import { initScroll } from './modules/scroll.js';
 import { changeVH } from './modules/vh.js';
 import { createHeaderGradient } from './modules/header.js';
 import { toggleCities } from './modules/city.js';
+import { initMap } from './modules/map.js';
 
 changeVH();
+testSupportWebp();
 createHeaderGradient();
 changeTheme();
 initScroll();
@@ -27,3 +30,4 @@ createFieldFiles();
 sendForm();
 toggleModal();
 toggleCities();
+initMap();

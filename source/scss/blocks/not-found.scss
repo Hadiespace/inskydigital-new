@@ -1,0 +1,133 @@
+.not-found {
+	position: relative;
+	display: grid;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		background-image: url("../images/common/not-found-background.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateX(-50%);
+	}
+
+	@media (min-width: 1200px) {
+		@include adaptive("min-height", 640);
+		@include adaptive("padding-top", 200);
+		@include adaptive("margin-bottom", 60);
+
+		&::before {
+			@include adaptive("width", 1492);
+			@include adaptive("height", 556);
+			@include adaptive("top", 84);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 84px;
+		padding-top: 140px;
+		min-height: 640px;
+
+		&::before {
+			top: 84px;
+			width: 1492px;
+			height: 556px;
+		}
+	}
+
+	@media (max-width: 991px) {
+		margin-bottom: 60px;
+		padding-top: 200px;
+	}
+
+	@media (max-width: 599px) {
+		margin-bottom: 60px;
+		padding-top: 160px;
+		min-height: 278px;
+
+		&::before {
+			width: 746px;
+			height: 278px;
+		}
+	}
+}
+
+.not-found__container {
+	display: grid;
+	align-self: start;
+}
+
+.not-found__404 {
+	justify-self: center;
+	font-weight: 600;
+	line-height: 1;
+
+	@media (min-width: 1200px) {
+		@include adaptive("font-size", 180);
+		@include adaptive("margin-bottom", 20);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 20px;
+		font-size: 180px;
+	}
+
+	@media (max-width: 599px) {
+		font-size: 120px;
+	}
+}
+
+.not-found__text {
+	justify-self: center;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	transition: color var(--theme-delay);
+
+	@media (min-width: 1200px) {
+		@include adaptive("margin-bottom", 40);
+		@include adaptive("max-width", 400);
+	}
+
+	@media (max-width: 1199px) {
+		margin-bottom: 40px;
+		max-width: 400px;
+	}
+}
+
+.not-found__link {
+	position: relative;
+	justify-self: center;
+	color: var(--color-accent);
+	transition: color var(--theme-delay);
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: var(--color-accent);
+		transition: opacity var(--theme-delay);
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			opacity: 0;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		&::before {
+			@include adaptive("height", 1);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		&::before {
+			height: 1px;
+		}
+	}
+}

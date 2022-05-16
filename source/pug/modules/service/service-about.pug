@@ -1,0 +1,33 @@
+mixin serviceAbout(props)
+	- const { title, list } = props;
+
+	section.service-about.section
+		div.service-about__container.container
+			div.service-about__aside.aside
+				h2.service-about__title.title!=title
+			ul.service-about__list
+				each item in list
+					li.service-about__item
+						div.service-about__text-wrap
+							h3.service-about__item-title!=item.title
+							div.service-about__content!=item.content
+						if item.isVideo
+							div.service-about__preview.service-about__preview--video
+								picture.service-about__image
+									source(media="(min-width: 2500px)", srcset=`images/content/${item.image}@3x.webp`, type="image/webp")
+									source(media="(min-width: 2500px)", srcset=`images/content/${item.image}@3x.jpg`)
+									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.webp`, type="image/webp")
+									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.jpg`)
+									source(srcset=`images/content/${item.image}.webp`, type="image/webp")
+									img(src=`images/content/${item.image}.jpg`, alt="Фон")
+								button.service-about__video-open.video-open(type="button")
+									span.visually-hidden Открыть видео
+						else
+							div.service-about__preview
+								picture.service-about__image
+									source(media="(min-width: 2500px)", srcset=`images/content/${item.image}@3x.webp`, type="image/webp")
+									source(media="(min-width: 2500px)", srcset=`images/content/${item.image}@3x.jpg`)
+									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.webp`, type="image/webp")
+									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.jpg`)
+									source(srcset=`images/content/${item.image}.webp`, type="image/webp")
+									img(src=`images/content/${item.image}.jpg`, alt="Фон")

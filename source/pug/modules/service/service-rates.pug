@@ -1,0 +1,31 @@
+mixin serviceRates(props)
+	- const { title, rateList, serviceTitles } = props;
+
+	section.service-rates.section
+		div.service-rates__container.container
+			h2.service-rates__title.title!= title
+			ul.service-rates__rate-list
+				each rate in rateList
+					li.service-rates__rate-item
+						h3.service-rates__rate-title!=rate.title
+						p.service-rates__rate-description!=rate.description
+						span.service-rates__rate-cost!=rate.cost
+						ul.service-rates__offer-list
+							each offer in rate.offerList
+								li.service-rates__offer-item
+									h3.service-rates__offer-title!=offer.title
+									if offer.status
+										div.service-rates__offer-status.service-rates__offer-status--on
+											span.visually-hidden Включено
+											svg(width="20", height="20", aria-hidden="true")
+												use(xlink:href="images/sprite.svg#service-on")
+									else
+										div.service-rates__offer-status.service-rates__offer-status--off
+											span.visually-hidden Отсутствует
+											svg(width="20", height="20", aria-hidden="true")
+												use(xlink:href="images/sprite.svg#service-off")
+						button.service-rates__offer-modal-open.recall-open(type="button")
+							span Оставить заявку
+			ul.service-rates__title-list(aria-hidden="true")
+				each service in serviceTitles
+					li.service-rates__title-item!=service

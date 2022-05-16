@@ -20,7 +20,7 @@
 	}
 
 	&--current {
-		margin: 0;
+		margin: 0 !important;
 
 		&::before {
 			display: none;

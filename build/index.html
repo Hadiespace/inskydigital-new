@@ -17,14 +17,14 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
     <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
-    <script src="js/theme.js"></script>
+    <script src="js/theme.js?_v=20220516161653"></script>
     <title>Insky.digital | Главная</title>
     <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220516161653">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220516161653" rel="stylesheet">
   </head>
   <body class="page__body">
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
@@ -175,13 +175,13 @@
               <li class="home-preview__item">Consulting and design</li>
               <li class="home-preview__item">Eye-catchy and functional solutions</li>
               <li class="home-preview__item">Agile development / Scrum-teams outsourcing</li>
-            </ul><a class="review-open home-preview__review-open" tabindex="0">
+            </ul><a class="review-open video-open home-preview__review-open" tabindex="0">
                       <picture class="review-open__picture">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.webp" type="image/webp">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.jpg">
                         <source srcset="images/content/review-client@2x.webp" type="image/webp"><img src="images/content/review-client@2x.jpg" alt="Фото клиента">
                       </picture><span class="review-open__text"><b>Our customers</b><b>live-reviews</b></span></a>
-                    <button class="button button--secondary home-preview__modal-open advisory-open" type="button">Get a Quote<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button><a class="review-open home-preview__mobile-review-open" tabindex="0">
+                    <button class="button button--secondary home-preview__modal-open advisory-open" type="button">Get a Quote<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button><a class="review-open video-open home-preview__mobile-review-open video-open" tabindex="0">
                       <picture class="review-open__picture">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.webp" type="image/webp">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.jpg">
@@ -767,10 +767,19 @@
           <p class="modal__title modal-success__title">Ваша заявка принята!</p>
           <p class="modal__text modal-success__text">Наш менеджер свяжется с вами в ближайшее время</p><span class="modal-success__icon" aria-hidden="true"></span>
         </div>
+        <!-- видео-->
+        <div class="modal__content modal-video">
+          <video class="modal-video__video video-js" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png" data-setup="{}">
+            <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+            <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+            <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+          </video>
+        </div>
       </div>
     </div>
-    <script src="js/bundle.min.js"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
-    <script src="js/switcher.js"></script>
+    <script src="js/leaflet.js?_v=20220516161653"></script>
+    <script src="js/bundle.min.js?_v=20220516161653"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220516161653"></script>
+    <script src="js/switcher.js?_v=20220516161653"></script>
   </body>
 </html>

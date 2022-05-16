@@ -1,0 +1,13 @@
+extends layout/layout
+
+block const
+
+block meta
+	title Insky.digital | 404
+	meta(name="description", content="Страница не найдена")
+block content
+	h1.visually-hidden Страница не найдена
+	// страница не найдена
+	include modules/not-found/not-found
+
+block prepend page-bottom

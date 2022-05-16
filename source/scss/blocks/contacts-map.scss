@@ -46,21 +46,22 @@
 	justify-self: start;
 	grid-column: 1/2;
 	grid-row: 1/2;
+	padding: 0;
 
 	@media (min-width: 1200px) {
 		@include adaptive("width", 348);
-		@include adaptive("padding", 24);
+		@include adaptive("margin", 24);
 	}
 
 	@media (max-width: 1199px) {
-		padding: 24px;
+		margin: 24px;
 		width: 348px;
 	}
 
 	@media (max-width: 767px) {
 		grid-row: 2/3;
+		margin: 0;
 		margin-bottom: 32px;
-		padding: 0;
 		width: auto;
 	}
 }
@@ -313,6 +314,7 @@
 
 .contacts-map__map-wrap {
 	position: relative;
+	z-index: 0;
 	display: grid;
 	grid-column: 1/2;
 	grid-row: 1/2;
@@ -328,4 +330,18 @@
 }
 
 .contacts-map__map {
+	height: 100%;
+
+	@media (max-width: 767px) {
+		position: absolute !important;
+		inset: 0;
+	}
+}
+
+.leaflet-control-zoom {
+	display: none;
+}
+
+.leaflet-control-attribution {
+	display: none;
 }

@@ -1,0 +1,24 @@
+extends layout/layout
+include modules/service/service-preview
+include modules/service/service-advantages
+include modules/service/service-aside
+include modules/service/service-rates
+include modules/service/service-about
+include modules/service/service-offers
+
+block const
+	include modules/service/service-data
+
+block meta
+	title Insky.digital | Услуга
+	meta(name="description", content="Услуга")
+block content
+	+servicePreview(service01.preview)
+	+serviceAdvantages(service01.advantages)
+	+serviceAside(service01.aside)
+	+serviceRates(service01.rates)
+	+serviceAbout(service01.about)
+	+serviceOffers(service01.offers)
+	include modules/service/service-form
+
+block prepend page-bottom

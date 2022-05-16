@@ -1,0 +1,33 @@
+.modal-video {
+	@include adaptive("padding", 40);
+	display: grid;
+	align-items: center;
+
+	@media (min-width: 600px) {
+		@include adaptive("max-width", 848);
+	}
+
+	@media (max-width: 599px) {
+		@include adaptive("max-width", 1040);
+	}
+}
+
+.video-js {
+	position: relative;
+
+	@media (min-width: 600px) {
+		@include adaptive("width", 768);
+		@include adaptive("height", 432);
+	}
+
+	@media (max-width: 599px) {
+		@include adaptive("width", 960);
+		@include adaptive("height", 540);
+	}
+}
+
+.video-js .vjs-big-play-button {
+	left: 50% !important;
+	top: 50% !important;
+	transform: translate(-50%, -50%) !important;
+}

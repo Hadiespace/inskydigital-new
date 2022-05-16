@@ -1,0 +1,7 @@
+mixin serviceAdvantages(advantages)
+	section.service-advantages.section
+		div.service-advantages__container.container
+			h2.visually-hidden Наши преимущества
+			ul.service-advantages__list
+				each advantage in advantages
+					li.service-advantages__item!=advantage
