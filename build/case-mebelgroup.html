@@ -17,23 +17,22 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
     <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
-    <script src="js/theme.js?_v=20220516161653"></script>
+    <script src="js/theme.js?_v=20220518142845"></script>
     <title>Insky.digital | Интернет-магазин итальянской мебели</title>
     <meta name="description">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220516161653">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220518142845">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220516161653" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220518142845" rel="stylesheet">
   </head>
   <body class="page__body">
-    <noscript>У вас отключен JavaScript. Это пугает.</noscript>
     <div class="page__wrapper">
       <header class="header">
         <div class="header__container container">
           <div class="header__right-wrap">
-            <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Открыть меню</span><span></span><span></span><span></span></button><a class="logo header__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
-                  <button class="theme-switcher header__theme-switcher" type="button"><span class="visually-hidden">Переключить на темную тему</span>
+            <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button><a class="logo header__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Logo Insky"><span class="logo__text">Insky.digital</span></a>
+                  <button class="theme-switcher header__theme-switcher" type="button" aria-label="Switch theme">
                     <svg class="theme-switcher__icon"></svg><span class="theme-switcher__check"></span>
                   </button><a class="header__phone-icon" href="tel:+74993507512"><span class="visually-hidden">+7 499 350-75-12</span>
               <svg width="24" height="24" aria-hidden="true">
@@ -43,8 +42,8 @@
           <div class="header__left-wrap">
             <nav class="header__nav main-nav" id="main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Portfolio</a></li>
-                <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html">Services & Technology</a>
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html#projects">Portfolio</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html#services">Services & Technology</a>
                               <button class="nav-arrow" type="button" aria-expanded="false">
                                 <svg width="16" height="16" aria-hidden="true">
                                   <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -101,7 +100,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="index.html">Company</a>
+                <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="index.html#team">Company</a>
                               <button class="nav-arrow" type="button" aria-expanded="false">
                                 <svg width="16" height="16" aria-hidden="true">
                                   <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -109,15 +108,17 @@
                               </button>
                   <div class="menu-small menu">
                     <ul class="menu-small__list menu__container">
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Testimonials</a></li>
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Team</a></li>
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Contacts</a></li>
+                      <li class="menu-small__item"><a class="menu-small__link video-open" href="">Testimonials</a>
+                      </li>
+                      <li class="menu-small__item"><a class="menu-small__link undefined" href="index.html#team">Team</a>
+                      </li>
+                      <li class="menu-small__item"><a class="menu-small__link undefined" href="contacts.html">Contacts</a>
+                      </li>
                     </ul>
                   </div>
                 </li>
               </ul>
               <div class="main-nav__languages">
-                <!-- десктоп-->
                 <button class="main-nav__language main-nav__link main-nav__link--menu" type="button">EN</button>
                             <button class="nav-arrow" type="button" aria-expanded="false">
                               <svg width="16" height="16" aria-hidden="true">
@@ -133,14 +134,13 @@
                     <li class="menu-small__item"><a class="menu-small__link" href="index.html">ES</a>
                     </li>
                   </ul>
-                </div>
-                <!-- мобильная--><a class="main-nav__language-link main-nav__language-link--current" href="index.html">EN</a><a class="main-nav__language-link" href="index.html">NL</a><a class="main-nav__language-link" href="index.html">ES</a>
+                </div><a class="main-nav__language-link main-nav__language-link--current" href="index.html">EN</a><a class="main-nav__language-link" href="index.html">NL</a><a class="main-nav__language-link" href="index.html">ES</a>
               </div>
               <div class="main-nav__contacts"><a class="main-nav__phone" href="tel:+74993507512">+7 499 350-75-12</a>
-                <div class="main-nav__socials"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+                <div class="main-nav__socials"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html" aria-label="Our whatsapp">
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#whatsapp"></use>
-                          </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html" aria-label="Our telegram">
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#telegram"></use>
                           </svg></a>
@@ -148,10 +148,10 @@
               </div>
                     <button class="button button--accent main-nav__modal-open advisory-open" type="button">Contact us<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </nav>
-            <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+            <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html" aria-label="Our whatsapp">
                       <svg width="12" height="12" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#whatsapp"></use>
-                      </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                      </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html" aria-label="Our telegram">
                       <svg width="12" height="12" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#telegram"></use>
                       </svg></a><a class="header__phone" href="tel:+74993507512">+7 499 350-75-12</a>
@@ -163,7 +163,7 @@
       <main class="main" id="main">
         <div class="case-preview">
           <div class="case-preview__container container">
-            <div class="case-preview__crumbs crumbs crumbs--alternate"><a class="crumb" href="index.html">Главная</a><a class="crumb" href="index.html">Портфолио</a><span class="crumb crumb--current">Интернет-магазин итальянской мебели</span>
+            <div class="case-preview__crumbs crumbs crumbs--alternate"><a class="crumb" href="index.html">Home</a><a class="crumb" href="index.html">Портфолио</a><span class="crumb crumb--current">Интернет-магазин итальянской мебели</span>
             </div>
             <h1 class="case-preview__title title">Интернет-магазин <br> итальянской мебели</h1>
             <div class="case-preview__project-info">
@@ -172,7 +172,7 @@
                 <source media="(min-width: 2500px)" srcset="images/content/case-preview-logo01@3x.jpg"/>
                 <source media="(min-width: 1300px)" srcset="images/content/case-preview-logo01@2x.webp" type="image/webp"/>
                 <source media="(min-width: 1300px)" srcset="images/content/case-preview-logo01@2x.jpg"/>
-                <source srcset="images/content/case-preview-logo01.webp" type="image/webp"/><img src="images/content/case-preview-logo01.jpg" alt="Фон"/>
+                <source srcset="images/content/case-preview-logo01.webp" type="image/webp"/><img src="images/content/case-preview-logo01.jpg" alt="Logo"/>
               </picture><a class="case-preview__email case-preview__email--main" href="mailto:mebelgroup.com">mebelgroup.com</a>
               <time class="case-preview__date" datetime="2020">2020</time>
               <picture class="case-preview__background" aria-hidden="true">
@@ -180,9 +180,9 @@
                 <source media="(min-width: 2500px)" srcset="images/content/case-preview-background01@3x.jpg"/>
                 <source media="(min-width: 1300px)" srcset="images/content/case-preview-background01@2x.webp" type="image/webp"/>
                 <source media="(min-width: 1300px)" srcset="images/content/case-preview-background01@2x.jpg"/>
-                <source srcset="images/content/case-preview-background01.webp" type="image/webp"/><img src="images/content/case-preview-background01.jpg" alt="Фон"/>
+                <source srcset="images/content/case-preview-background01.webp" type="image/webp"/><img src="images/content/case-preview-background01.jpg" alt=""/>
               </picture>
-            </div><a class="case-preview__email case-preview__email--secondary" href="mailto:mebelgroup.com">mebelgroup.com</a><a class="case-preview__go-task" href="#case-task"><span class="visually-hidden">Перейти к задаче</span>
+            </div><a class="case-preview__email case-preview__email--secondary" href="mailto:mebelgroup.com">mebelgroup.com</a><a class="case-preview__go-task" href="#case-task" aria-label="Go to task">
               <svg width="40" height="40" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#case-preview-arrow"></use>
               </svg></a>
@@ -209,7 +209,6 @@
         </section>
         <section class="case-steps section">
           <div class="case-steps__container container">
-            <h2 class="visually-hidden">описание проекта</h2>
             <ul class="case-steps__list">
               <li class="case-step case-step--v1">
                 <div class="case-step__wrapper">
@@ -307,7 +306,6 @@
           </div>
         </section>
         <section class="case-another section">
-          <h3 class="visually-hidden">Другие наши кейсы</h3>
           <div class="case-another__slider">
             <div class="case-another__swiper swiper">
               <ul class="case-another__wrapper swiper-wrapper">
@@ -416,12 +414,12 @@
               </ul>
             </div>
             <div class="case-another__buttons">
-              <button class="case-another__button case-another__button--prev" type="button"><span class="visually-hidden">Предыдущий слайд</span>
+              <button class="case-another__button case-another__button--prev" type="button" aria-label="Go to prev slide">
                 <svg width="48" height="48" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#arrow-swiper-prev"></use>
                 </svg>
               </button>
-              <button class="case-another__button case-another__button--next" type="button"><span class="visually-hidden">Следующий слайд</span>
+              <button class="case-another__button case-another__button--next" type="button" aria-label="Go to next slide">
                 <svg width="48" height="48" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#arrow-swiper-next"></use>
                 </svg>
@@ -438,7 +436,7 @@
           </div>
           <div class="footer__addresses">
             <div class="footer__address-wrap">
-              <p class="footer__address">Riga</p>
+              <p class="footer__address">Rīga, Latvija</p>
               <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
             </div>
             <div class="footer__address-wrap">
@@ -446,24 +444,38 @@
               <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
             </div>
             <div class="footer__address-wrap">
-              <p class="footer__address">Valencia</p>
-              <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
+              <p class="footer__address">Torrevieja, Alicante, España</p>
+              <address class="footer__text">C. Fotógrafos Darblade, 10, Entreplanta, 03181</address>
+            </div>
+            <div class="footer__address-wrap">
+              <p class="footer__address">Nikolayev, Ukraine</p>
+              <address class="footer__text">Central Avenue, 6a</address>
             </div>
           </div>
           <div class="footer__nav">
             <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="index.html">Portfolio</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Services and Technology</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Testimonials</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Team</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Contacts</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Web Development</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Mobile Development</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Branding & Design</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Dedicated Teams</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Digital Support</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#projects">Portfolio</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html#services">Services and Technology</a>
+              </li>
+              <li class="footer__item"><a class="footer__link video-open" href="">Testimonials</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html#team">Team</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Web Development</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Mobile Development</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Branding & Design</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Dedicated Teams</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Digital Support</a>
+              </li>
             </ul>
-          </div><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
+          </div><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Logo Insky"><span class="logo__text">Insky.digital</span></a>
           <p class="footer__copyright">
             @ 2022 Insky.eu All Rights Reserved.
             <a href="index.html">Privacy Policy</a>
@@ -473,13 +485,11 @@
     </div>
     <div class="modal">
       <div class="modal__container">
-        <!-- закрыть модальное окно-->
-        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span>
+        <button class="modal__close" type="button" aria-label="Close modal">
           <svg width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#modal-close"></use>
           </svg>
         </button>
-        <!-- обратный звонок-->
         <div class="modal__content modal-recall">
           <p class="modal__title modal-recall__title">Let’s talk. We’ll get back to you within a business day.</p>
           <form class="modal-recall__form form" action="send.php" novalidate>
@@ -504,7 +514,6 @@
             </div>
           </form>
         </div>
-        <!-- проконсультироваться-->
         <div class="modal__content modal-advisory">
           <p class="modal__title modal-advisory__title">Drop us a line and we’ll get back to you within a business day.</p>
           <form class="modal-advisory__form form form--files" action="send.php" novalidate>
@@ -588,12 +597,10 @@
             </div>
           </form>
         </div>
-        <!-- успешная отправка-->
         <div class="modal__content modal-success">
-          <p class="modal__title modal-success__title">Ваша заявка принята!</p>
-          <p class="modal__text modal-success__text">Наш менеджер свяжется с вами в ближайшее время</p><span class="modal-success__icon" aria-hidden="true"></span>
+          <p class="modal__title modal-success__title">Message received!</p>
+          <p class="modal__text modal-success__text">We’ll get back to you within a business day.</p><span class="modal-success__icon" aria-hidden="true"></span>
         </div>
-        <!-- видео-->
         <div class="modal__content modal-video">
           <video class="modal-video__video video-js" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png" data-setup="{}">
             <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
@@ -603,9 +610,9 @@
         </div>
       </div>
     </div>
-    <script src="js/leaflet.js?_v=20220516161653"></script>
-    <script src="js/bundle.min.js?_v=20220516161653"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220516161653"></script>
-    <script src="js/switcher.js?_v=20220516161653"></script>
+    <script src="js/leaflet.js?_v=20220518142845"></script>
+    <script src="js/bundle.min.js?_v=20220518142845"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220518142845"></script>
+    <script src="js/switcher.js?_v=20220518142845"></script>
   </body>
 </html>

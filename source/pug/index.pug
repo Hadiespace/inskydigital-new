@@ -5,22 +5,14 @@ block const
 	- const isHome = true;
 
 block meta
-	title Insky.digital | Главная
-	meta(name="description", content="Главная страница")
+	title Insky.digital
+	meta(name="description", content="Main page")
 block content
-	// заголовок страницы
-	h1.visually-hidden Главная страница компании Insky.digital
-	// Фон превью
 	div.main__background
-	// превью
 	include modules/home-preview/home-preview
-	// наши проекты
 	include modules/home-projects/home-projects
-	// услуги
 	include modules/home-services/home-services
-	// процесс
 	include modules/home-process/home-process
-	// команда
 	include modules/home-team/home-team
 
 block prepend page-bottom

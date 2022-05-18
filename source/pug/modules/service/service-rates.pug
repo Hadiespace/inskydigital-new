@@ -15,13 +15,11 @@ mixin serviceRates(props)
 								li.service-rates__offer-item
 									h3.service-rates__offer-title!=offer.title
 									if offer.status
-										div.service-rates__offer-status.service-rates__offer-status--on
-											span.visually-hidden Включено
+										div.service-rates__offer-status.service-rates__offer-status--on(aria-label="Included")
 											svg(width="20", height="20", aria-hidden="true")
 												use(xlink:href="images/sprite.svg#service-on")
 									else
-										div.service-rates__offer-status.service-rates__offer-status--off
-											span.visually-hidden Отсутствует
+										div.service-rates__offer-status.service-rates__offer-status--off(aria-label="Not included")
 											svg(width="20", height="20", aria-hidden="true")
 												use(xlink:href="images/sprite.svg#service-off")
 						button.service-rates__offer-modal-open.recall-open(type="button")

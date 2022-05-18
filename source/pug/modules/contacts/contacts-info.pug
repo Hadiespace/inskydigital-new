@@ -1,34 +1,31 @@
 include ../social
 
 section.contacts-info.section
-	h2.visually-hidden Дополнительная информация
 	div.contacts-info__container.container
 		div.contacts-info__wrapper
-			h3.contacts-info__title Реквизиты
-			span.contacts-info__text ООО «ИД»
-			span.contacts-info__text ИНН: 9709058960
-			span.contacts-info__text КПП: 770901001
-			span.contacts-info__text ОГРН: 1207700027963
+			h3.contacts-info__title Legal info
+			span.contacts-info__text SIA "iMedia Solutions"
+			span.contacts-info__text Reg. Nr. 40103845909
+			span.contacts-info__text SEPA ID LV24ZZZ40103845909
 
 		div.contacts-info__wrapper
-			h3.contacts-info__title Юридический адрес
+			h3.contacts-info__title Legal address
 			address.contacts-info__text
-				| РФ, 109004, г. Москва, пер. Пестовский, д. 9, цокольный этаж, пом. III, каб. 12
+				| Latvija, Rīga #[br] Lāčplēša iela 14 - 10, LV-1011
 
 		div.contacts-info__wrapper
 			h3.contacts-info__title E-mail
 			div.contacts-info__email-wrap
 				a.contacts-info__email(href="mailto:info@insky.digital") info@insky.digital
-				span.contacts-info__caption По всем вопросам
+				span.contacts-info__caption All inquiries
 			div.contacts-info__email-wrap
 				a.contacts-info__email(href="mailto:hr@insky.digital") hr@insky.digital
-				span.contacts-info__caption Напишите нам
+				span.contacts-info__caption Build career
 
 		div.contacts-info__wrapper.contacts-info__wrapper--socials
-			h3.contacts-info__title Мы в соцсетях
+			h3.contacts-info__title Our socials
 			div.contacts-info__socials
 				+social('facebook').contacts-info__social
 				+social('instagram').contacts-info__social
-				+social('vkontakte').contacts-info__social
 				+social('telegram').contacts-info__social
 				+social('whatsapp').contacts-info__social

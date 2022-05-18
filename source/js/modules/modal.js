@@ -60,7 +60,6 @@ const closeModalContent = () => {
 	const modalContentNodes = modal.querySelectorAll('.modal__content--opened');
 	setTimeout(() => {
 		const modalVideo = document.querySelector('.vjs-button');
-		console.log(modalVideo);
 
 		if (modalVideo && modalVideo.classList.contains('vjs-playing')) {
 			modalVideo.click();
@@ -140,6 +139,7 @@ const onModalOpenClick = (evt) => {
 	}
 
 	if (evt.target.classList.contains('video-open')) {
+		evt.preventDefault();
 		openModal();
 		openModalContent('video');
 	}

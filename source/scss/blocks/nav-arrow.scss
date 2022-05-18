@@ -7,7 +7,9 @@
 	svg {
 		fill: none;
 		stroke: var(--color-main);
-		transition: stroke var(--theme-delay), transform var(--theme-delay);
+		transition:
+			stroke var(--theme-delay),
+			transform var(--theme-delay);
 	}
 
 	@media (min-width: 1200px) {

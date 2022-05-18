@@ -2,13 +2,8 @@ include ../button
 
 section.home-process.section
 	div.home-process__container.container
-		// боковая панель
 		div.home-process__aside.aside
-			// заголовок секции
 			h2.home-process__title.title How We Work
-			// открыть модальное окно "проконсультироваться"
 			+button('Lets\'s start!').home-process__modal-open.home-process__modal-open--main.advisory-open
-		// шаги процесса
 		include home-process-steps
-		// открыть модальное окно "проконсультироваться" (мобильная версия)
 		+button('Lets\'s start!').home-process__modal-open.home-process__modal-open--secondary.advisory-open

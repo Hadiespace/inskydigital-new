@@ -2,4 +2,7 @@ div.menu-small.menu
 	ul.menu-small__list.menu__container
 		each link in aboutLinks
 			li.menu-small__item
-				a.menu-small__link(href=link.href)!= link.name
+				if isHome
+					a.menu-small__link(class=link.modal ? link.modal : '', href=link.hrefIndex)!= link.name
+				else
+					a.menu-small__link(class=`${link.modal}`, href=link.href)!= link.name

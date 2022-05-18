@@ -1,5 +1,4 @@
 mixin themeSwitcher()
-	button.theme-switcher(type="button")&attributes(attributes)
-		span.visually-hidden Переключить на темную тему
+	button.theme-switcher(type="button", aria-label="Switch theme")&attributes(attributes)
 		svg.theme-switcher__icon
 		span.theme-switcher__check

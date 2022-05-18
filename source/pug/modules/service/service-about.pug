@@ -19,9 +19,8 @@ mixin serviceAbout(props)
 									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.webp`, type="image/webp")
 									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.jpg`)
 									source(srcset=`images/content/${item.image}.webp`, type="image/webp")
-									img(src=`images/content/${item.image}.jpg`, alt="Фон")
-								button.service-about__video-open.video-open(type="button")
-									span.visually-hidden Открыть видео
+									img(src=`images/content/${item.image}.jpg`, alt="Image")
+								button.service-about__video-open.video-open(type="button", aria-label="Open video")
 						else
 							div.service-about__preview
 								picture.service-about__image
@@ -30,4 +29,4 @@ mixin serviceAbout(props)
 									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.webp`, type="image/webp")
 									source(media="(min-width: 1300px)", srcset=`images/content/${item.image}@2x.jpg`)
 									source(srcset=`images/content/${item.image}.webp`, type="image/webp")
-									img(src=`images/content/${item.image}.jpg`, alt="Фон")
+									img(src=`images/content/${item.image}.jpg`, alt="Image")

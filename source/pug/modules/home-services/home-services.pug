@@ -1,29 +1,22 @@
 include home-services-data
 include ../service-card
 
-section.home-services.section
+section.home-services.section#services
 	div.home-services__container.container
-		// боковая панель
 		div.home-services__aside.aside
-			// заголовок секции
 			h2.home-services__title.title Services & Technology
-			// информация
 			p.home-services__text-first.home-services__text-first--main
 				b Get your MVP (Minimum Viable Product) in short terms
 			p.home-services__text-secondary.home-services__text-secondary--main
 				| Full-stack services - from assisting with initial UX research to building amazing web & mobile apps
-			// открыть модальное окно "проконсультироваться"
 			+button('Get a quote').home-services__modal-open.home-services__modal-open--main.advisory-open
-		// услуги
 		ul.home-services__cards
 			each card in servicesCards
 				li.home-services__card
 					+serviceCard(card).service-card--number
 		div.home-services__bottom-wrap
-			// информация
 			p.home-services__text-first.home-services__text-first--secondary
 				b Get your MVP (Minimum Viable Product) in short terms
 			p.home-services__text-secondary.home-services__text-secondary--secondary
 				| Full-stack services - from assisting with initial UX research to building amazing web & mobile apps
-			// открыть модальное окно "проконсультироваться"
 			+button('Get a quote').home-services__modal-open.home-services__modal-open--secondary.advisory-open

@@ -5,39 +5,29 @@ div.home-team__slider.team-slider
 		ul.team-slider__wrapper.swiper-wrapper
 			each slide in teamSlides
 				li.team-slider__slide.swiper-slide
-					//- изображение
 					picture.team-slider__picture
 						source(media="(min-width: 2500px)", srcset=`images/content/${slide.image}@3x.webp`, type="image/webp")
 						source(media="(min-width: 2500px)", srcset=`images/content/${slide.image}@3x.png`)
 						source(srcset=`images/content/${slide.image}@2x.webp`, type="image/webp")
 						img(src=`images/content/${slide.image}@2x.png`, alt=slide.name)
-					//- информация
 					div.team-slider__info-wrap
-						//- имя, статус и город
 						div.team-slider__top-wrap
 							h3.team-slider__title.sub-title!= slide.name
 							span.team-slider__status!= slide.status
 							span.team-slider__city!= slide.city
-						//- специализация
 						p.team-slider__specialization!= slide.specialization
 	div.team-slider__navigation
 		div.team-slider__buttons
-			//- перейти на предыдущий слайд
-			button.team-slider__button.team-slider__button--prev(type="button")
-				span.visually-hidden Предыдущий слайд
+			button.team-slider__button.team-slider__button--prev(type="button", aria-label="Go to prev slide")
 				svg(width="48", height="48", aria-hidden="true")
 					use(xlink:href="images/sprite.svg#arrow-swiper-prev")
-			//- перейти на следующий слайд
-			button.team-slider__button.team-slider__button--next(type="button")
-				span.visually-hidden Следующий слайд
+			button.team-slider__button.team-slider__button--next(type="button", aria-label="Go to next slide")
 				svg(width="48", height="48", aria-hidden="true")
 					use(xlink:href="images/sprite.svg#arrow-swiper-next")
 		div.team-slider__contacts
-			//- контакты
 			div.home-team__socials.home-team__socials--secondary
 				+social('facebook').home-team__social
 				+social('instagram').home-team__social
 				+social('vkontakte').home-team__social
 				+social('telegram').home-team__social
-			//- открыть модальное окно "проконсультироваться"
 			+button('Let\'s meet!').team-slider__modal-open.team-slider__modal-open.recall-open

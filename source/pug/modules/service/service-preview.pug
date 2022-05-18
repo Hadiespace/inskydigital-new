@@ -7,16 +7,9 @@ mixin servicePreview(props)
 		div.service-preview__container.container
 			div.service-preview__wrapper
 				//- хлебные крошки
-				div.service-preview__crumbs.crumbs.crumbs--alternate
-					+crumb('Главная', 'index.html')
+				div.service-preview__crumbs.crumbs
+					+crumb('Home', 'index.html')
 					+crumb('Услуги', 'index.html')
 					+crumb(crumb)
 				h1.service-preview__title.title!= title
 				p.service-preview__sub-title!= subTitle
-				picture.service-preview__background
-					source(media="(min-width: 2500px)", srcset=`images/content/${background}@3x.webp`, type="image/webp")
-					source(media="(min-width: 2500px)", srcset=`images/content/${background}@3x.jpg`)
-					source(media="(min-width: 1300px)", srcset=`images/content/${background}@3x.webp`, type="image/webp")
-					source(media="(min-width: 1300px)", srcset=`images/content/${background}@3x.jpg`)
-					source(srcset=`images/content/${background}@2x.webp`, type="image/webp")
-					img(src=`images/content/${background}@2x.jpg`, alt="Фон")

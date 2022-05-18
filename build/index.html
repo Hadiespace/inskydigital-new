@@ -17,23 +17,22 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
     <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
-    <script src="js/theme.js?_v=20220516161653"></script>
-    <title>Insky.digital | Главная</title>
-    <meta name="description" content="Главная страница">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220516161653">
+    <script src="js/theme.js?_v=20220518142845"></script>
+    <title>Insky.digital</title>
+    <meta name="description" content="Main page">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220518142845">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220516161653" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220518142845" rel="stylesheet">
   </head>
   <body class="page__body">
-    <noscript>У вас отключен JavaScript. Это пугает.</noscript>
     <div class="page__wrapper">
       <header class="header">
         <div class="header__container container">
           <div class="header__right-wrap">
-            <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Открыть меню</span><span></span><span></span><span></span></button><a class="logo header__logo"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
-                  <button class="theme-switcher header__theme-switcher" type="button"><span class="visually-hidden">Переключить на темную тему</span>
+            <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button><a class="logo header__logo"><img class="logo__image" src="images/content/logo.svg" alt="Logo Insky"><span class="logo__text">Insky.digital</span></a>
+                  <button class="theme-switcher header__theme-switcher" type="button" aria-label="Switch theme">
                     <svg class="theme-switcher__icon"></svg><span class="theme-switcher__check"></span>
                   </button><a class="header__phone-icon" href="tel:+74993507512"><span class="visually-hidden">+7 499 350-75-12</span>
               <svg width="24" height="24" aria-hidden="true">
@@ -43,8 +42,8 @@
           <div class="header__left-wrap">
             <nav class="header__nav main-nav" id="main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Portfolio</a></li>
-                <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html">Services & Technology</a>
+                <li class="main-nav__item"><a class="main-nav__link" href="#projects">Portfolio</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="#services">Services & Technology</a>
                               <button class="nav-arrow" type="button" aria-expanded="false">
                                 <svg width="16" height="16" aria-hidden="true">
                                   <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -101,7 +100,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="index.html">Company</a>
+                <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="#team">Company</a>
                               <button class="nav-arrow" type="button" aria-expanded="false">
                                 <svg width="16" height="16" aria-hidden="true">
                                   <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -109,15 +108,17 @@
                               </button>
                   <div class="menu-small menu">
                     <ul class="menu-small__list menu__container">
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Testimonials</a></li>
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Team</a></li>
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Contacts</a></li>
+                      <li class="menu-small__item"><a class="menu-small__link video-open" href="">Testimonials</a>
+                      </li>
+                      <li class="menu-small__item"><a class="menu-small__link" href="#team">Team</a>
+                      </li>
+                      <li class="menu-small__item"><a class="menu-small__link" href="contacts.html">Contacts</a>
+                      </li>
                     </ul>
                   </div>
                 </li>
               </ul>
               <div class="main-nav__languages">
-                <!-- десктоп-->
                 <button class="main-nav__language main-nav__link main-nav__link--menu" type="button">EN</button>
                             <button class="nav-arrow" type="button" aria-expanded="false">
                               <svg width="16" height="16" aria-hidden="true">
@@ -133,14 +134,13 @@
                     <li class="menu-small__item"><a class="menu-small__link" href="index.html">ES</a>
                     </li>
                   </ul>
-                </div>
-                <!-- мобильная--><a class="main-nav__language-link main-nav__language-link--current" href="index.html">EN</a><a class="main-nav__language-link" href="index.html">NL</a><a class="main-nav__language-link" href="index.html">ES</a>
+                </div><a class="main-nav__language-link main-nav__language-link--current" href="index.html">EN</a><a class="main-nav__language-link" href="index.html">NL</a><a class="main-nav__language-link" href="index.html">ES</a>
               </div>
               <div class="main-nav__contacts"><a class="main-nav__phone" href="tel:+74993507512">+7 499 350-75-12</a>
-                <div class="main-nav__socials"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+                <div class="main-nav__socials"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html" aria-label="Our whatsapp">
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#whatsapp"></use>
-                          </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html" aria-label="Our telegram">
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#telegram"></use>
                           </svg></a>
@@ -148,10 +148,10 @@
               </div>
                     <button class="button button--accent main-nav__modal-open advisory-open" type="button">Contact us<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </nav>
-            <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+            <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html" aria-label="Our whatsapp">
                       <svg width="12" height="12" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#whatsapp"></use>
-                      </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                      </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html" aria-label="Our telegram">
                       <svg width="12" height="12" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#telegram"></use>
                       </svg></a><a class="header__phone" href="tel:+74993507512">+7 499 350-75-12</a>
@@ -161,16 +161,12 @@
         </div>
       </header>
       <main class="main" id="main">
-        <!-- заголовок страницы-->
-        <h1 class="visually-hidden">Главная страница компании Insky.digital</h1>
-        <!-- Фон превью-->
         <div class="main__background"></div>
-        <!-- превью-->
         <section class="home-preview section">
           <div class="home-preview__container container">
-            <h2 class="home-preview__title title">Web/Mobile <br>
+            <h1 class="home-preview__title title">Web/Mobile <br>
               Development Company
-            </h2>
+            </h1>
             <ul class="home-preview__list">
               <li class="home-preview__item">Consulting and design</li>
               <li class="home-preview__item">Eye-catchy and functional solutions</li>
@@ -179,18 +175,17 @@
                       <picture class="review-open__picture">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.webp" type="image/webp">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.jpg">
-                        <source srcset="images/content/review-client@2x.webp" type="image/webp"><img src="images/content/review-client@2x.jpg" alt="Фото клиента">
+                        <source srcset="images/content/review-client@2x.webp" type="image/webp"><img src="images/content/review-client@2x.jpg" alt="Client photo">
                       </picture><span class="review-open__text"><b>Our customers</b><b>live-reviews</b></span></a>
                     <button class="button button--secondary home-preview__modal-open advisory-open" type="button">Get a Quote<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button><a class="review-open video-open home-preview__mobile-review-open video-open" tabindex="0">
                       <picture class="review-open__picture">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.webp" type="image/webp">
                         <source media="(min-width: 2500px)" srcset="images/content/review-client@3x.jpg">
-                        <source srcset="images/content/review-client@2x.webp" type="image/webp"><img src="images/content/review-client@2x.jpg" alt="Фото клиента">
+                        <source srcset="images/content/review-client@2x.webp" type="image/webp"><img src="images/content/review-client@2x.jpg" alt="Client photo">
                       </picture><span class="review-open__text"><b>Our customers</b><b>live-reviews</b></span></a>
           </div>
         </section>
-        <!-- наши проекты-->
-        <section class="home-projects section">
+        <section class="home-projects section" id="projects">
           <div class="home-projects__container container">
             <div class="home-projects__aside aside">
               <h2 class="home-projects__title title">Cases</h2><a class="button button--accent home-projects__portfolio-open home-projects__portfolio-open--main" href="index.html">More cases<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
@@ -204,12 +199,12 @@
                           <picture class="project-card__logo">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo01@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo01@3x.png">
-                            <source srcset="images/content/project-logo01@2x.webp" type="image/webp"><img src="images/content/project-logo01@2x.png" alt="Логотип">
+                            <source srcset="images/content/project-logo01@2x.webp" type="image/webp"><img src="images/content/project-logo01@2x.png" alt="Logo">
                           </picture>
                           <picture class="project-card__background" aria-hidden="true">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background01@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background01@3x.jpg">
-                            <source srcset="images/content/project-background01@2x.webp" type="image/webp"><img src="images/content/project-background01@2x.jpg" alt="Фон">
+                            <source srcset="images/content/project-background01@2x.webp" type="image/webp"><img src="images/content/project-background01@2x.jpg" alt="">
                           </picture>
                         </div>
               </li>
@@ -221,12 +216,12 @@
                           <picture class="project-card__logo">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo02@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo02@3x.png">
-                            <source srcset="images/content/project-logo02@2x.webp" type="image/webp"><img src="images/content/project-logo02@2x.png" alt="Логотип">
+                            <source srcset="images/content/project-logo02@2x.webp" type="image/webp"><img src="images/content/project-logo02@2x.png" alt="Logo">
                           </picture>
                           <picture class="project-card__background" aria-hidden="true">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background02@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background02@3x.jpg">
-                            <source srcset="images/content/project-background02@2x.webp" type="image/webp"><img src="images/content/project-background02@2x.jpg" alt="Фон">
+                            <source srcset="images/content/project-background02@2x.webp" type="image/webp"><img src="images/content/project-background02@2x.jpg" alt="">
                           </picture>
                         </div>
               </li>
@@ -238,12 +233,12 @@
                           <picture class="project-card__logo">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo03@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo03@3x.png">
-                            <source srcset="images/content/project-logo03@2x.webp" type="image/webp"><img src="images/content/project-logo03@2x.png" alt="Логотип">
+                            <source srcset="images/content/project-logo03@2x.webp" type="image/webp"><img src="images/content/project-logo03@2x.png" alt="Logo">
                           </picture>
                           <picture class="project-card__background" aria-hidden="true">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background03@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background03@3x.jpg">
-                            <source srcset="images/content/project-background03@2x.webp" type="image/webp"><img src="images/content/project-background03@2x.jpg" alt="Фон">
+                            <source srcset="images/content/project-background03@2x.webp" type="image/webp"><img src="images/content/project-background03@2x.jpg" alt="">
                           </picture>
                         </div>
               </li>
@@ -255,12 +250,12 @@
                           <picture class="project-card__logo">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo04@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo04@3x.png">
-                            <source srcset="images/content/project-logo04@2x.webp" type="image/webp"><img src="images/content/project-logo04@2x.png" alt="Логотип">
+                            <source srcset="images/content/project-logo04@2x.webp" type="image/webp"><img src="images/content/project-logo04@2x.png" alt="Logo">
                           </picture>
                           <picture class="project-card__background" aria-hidden="true">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background04@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background04@3x.jpg">
-                            <source srcset="images/content/project-background04@2x.webp" type="image/webp"><img src="images/content/project-background04@2x.jpg" alt="Фон">
+                            <source srcset="images/content/project-background04@2x.webp" type="image/webp"><img src="images/content/project-background04@2x.jpg" alt="">
                           </picture>
                         </div>
               </li>
@@ -272,12 +267,12 @@
                           <picture class="project-card__logo">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo05@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo05@3x.png">
-                            <source srcset="images/content/project-logo05@2x.webp" type="image/webp"><img src="images/content/project-logo05@2x.png" alt="Логотип">
+                            <source srcset="images/content/project-logo05@2x.webp" type="image/webp"><img src="images/content/project-logo05@2x.png" alt="Logo">
                           </picture>
                           <picture class="project-card__background" aria-hidden="true">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background05@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background05@3x.jpg">
-                            <source srcset="images/content/project-background05@2x.webp" type="image/webp"><img src="images/content/project-background05@2x.jpg" alt="Фон">
+                            <source srcset="images/content/project-background05@2x.webp" type="image/webp"><img src="images/content/project-background05@2x.jpg" alt="">
                           </picture>
                         </div>
               </li>
@@ -289,32 +284,26 @@
                           <picture class="project-card__logo">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo06@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-logo06@3x.png">
-                            <source srcset="images/content/project-logo06@2x.webp" type="image/webp"><img src="images/content/project-logo06@2x.png" alt="Логотип">
+                            <source srcset="images/content/project-logo06@2x.webp" type="image/webp"><img src="images/content/project-logo06@2x.png" alt="Logo">
                           </picture>
                           <picture class="project-card__background" aria-hidden="true">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background06@3x.webp" type="image/webp">
                             <source media="(min-width: 2500px)" srcset="images/content/project-background06@3x.jpg">
-                            <source srcset="images/content/project-background06@2x.webp" type="image/webp"><img src="images/content/project-background06@2x.jpg" alt="Фон">
+                            <source srcset="images/content/project-background06@2x.webp" type="image/webp"><img src="images/content/project-background06@2x.jpg" alt="">
                           </picture>
                         </div>
               </li>
             </ul><a class="button button--accent home-projects__portfolio-open home-projects__portfolio-open--secondary" href="index.html">More cases<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></a>
           </div>
         </section>
-        <!-- услуги-->
-        <section class="home-services section">
+        <section class="home-services section" id="services">
           <div class="home-services__container container">
-            <!-- боковая панель-->
             <div class="home-services__aside aside">
-              <!-- заголовок секции-->
               <h2 class="home-services__title title">Services & Technology</h2>
-              <!-- информация-->
               <p class="home-services__text-first home-services__text-first--main"><b>Get your MVP (Minimum Viable Product) in short terms</b></p>
               <p class="home-services__text-secondary home-services__text-secondary--main">Full-stack services — from assisting with initial UX research to building amazing web & mobile apps</p>
-              <!-- открыть модальное окно "проконсультироваться"-->
                       <button class="button button--accent home-services__modal-open home-services__modal-open--main advisory-open" type="button">Get a quote<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
-            <!-- услуги-->
             <ul class="home-services__cards">
               <li class="home-services__card">
                         <div class="service-card service-card--number">
@@ -383,7 +372,7 @@
               <li class="home-services__card">
                         <div class="service-card service-card--number">
                           <h3 class="service-card__title"><a href="index.html">Digital Support</a></h3>
-                          <p class="service-card__description">Consulting, <br> remote support <br> and quality assuarance.</p><span class="service-card__more">More info</span>
+                          <p class="service-card__description">Consulting, <br> remote support <br> and quality assurance.</p><span class="service-card__more">More info</span>
                           <picture class="service-card__background" aria-hidden="true">
                             <source media="(min-width: 1200px)" srcset="images/common/service-background07-3.svg">
                             <source media="(min-width: 600px)" srcset="images/common/service-background07-2.svg"><img src="images/common/service-background07-1.svg" alt="">
@@ -402,25 +391,18 @@
               </li>
             </ul>
             <div class="home-services__bottom-wrap">
-              <!-- информация-->
               <p class="home-services__text-first home-services__text-first--secondary"><b>Get your MVP (Minimum Viable Product) in short terms</b></p>
               <p class="home-services__text-secondary home-services__text-secondary--secondary">Full-stack services — from assisting with initial UX research to building amazing web & mobile apps</p>
-              <!-- открыть модальное окно "проконсультироваться"-->
                       <button class="button button--accent home-services__modal-open home-services__modal-open--secondary advisory-open" type="button">Get a quote<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
           </div>
         </section>
-        <!-- процесс-->
         <section class="home-process section">
           <div class="home-process__container container">
-            <!-- боковая панель-->
             <div class="home-process__aside aside">
-              <!-- заголовок секции-->
               <h2 class="home-process__title title">How We Work</h2>
-              <!-- открыть модальное окно "проконсультироваться"-->
                       <button class="button button--accent home-process__modal-open home-process__modal-open--main advisory-open" type="button">Lets’s start!<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </div>
-            <!-- шаги процесса-->
             <ul class="home-process__steps">
               <li class="home-process__step">
                 <button class="home-process__toggle" type="button" aria-controls="item0" aria-expanded="false"><span>Dedicated Scrum-Team</span>
@@ -428,10 +410,10 @@
                     <use xlink:href="images/sprite.svg#arrow-step"></use>
                   </svg>
                 </button>
-                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
-        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
-        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
-        совершать действия, необходимые вам по их доброй воле.</p></div>
+                <div class="home-process__text"><p>A dedicated scrum team is a group of developers that work on a specific project.
+        They are usually assembled with the skill set needed to complete the project.</p>
+        <p>When you have your own team, you have more control over the time and tasks allocated to
+        each developer. It also helps when you need to scale quickly for a specific project.</p></div>
               </li>
               <li class="home-process__step">
                 <button class="home-process__toggle" type="button" aria-controls="item1" aria-expanded="false"><span>Remote Developers</span>
@@ -439,10 +421,10 @@
                     <use xlink:href="images/sprite.svg#arrow-step"></use>
                   </svg>
                 </button>
-                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
-        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
-        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
-        совершать действия, необходимые вам по их доброй воле.</p></div>
+                <div class="home-process__text"><p>Remote developers are becoming more and more popular in the software development industry.
+        They are often used by companies that need to optimize development costs.</p>
+        <p>But they are not just cheaper, they also have an edge over their onshore counterparts
+        when it comes to creativity and innovation.</p></div>
               </li>
               <li class="home-process__step">
                 <button class="home-process__toggle" type="button" aria-controls="item2" aria-expanded="false"><span>Managed Projects</span>
@@ -450,10 +432,12 @@
                     <use xlink:href="images/sprite.svg#arrow-step"></use>
                   </svg>
                 </button>
-                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
-        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
-        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
-        совершать действия, необходимые вам по их доброй воле.</p></div>
+                <div class="home-process__text"><p>Project management is an integral part of any business. It is a process that
+        involves monitoring and controlling the work of the team to ensure that all tasks are
+        completed on time and within budget.</p>
+        <p>Our project managers have different levels of responsibility depending on the project,
+        but they all have huge experience at budget planning, managing deadlines, and making sure
+        there’s enough time for revisions.</p></div>
               </li>
               <li class="home-process__step">
                 <button class="home-process__toggle" type="button" aria-controls="item3" aria-expanded="false"><span>UX/UI, Web and Mobile Design</span>
@@ -461,10 +445,10 @@
                     <use xlink:href="images/sprite.svg#arrow-step"></use>
                   </svg>
                 </button>
-                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
-        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
-        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
-        совершать действия, необходимые вам по их доброй воле.</p></div>
+                <div class="home-process__text"><p>As a technology company we design and create stunning, interactive and
+        user-friendly websites and apps. We provide a range of services with a focus on UX/UI,
+        Web and Mobile Design. With our qualified team of designers and developers, we can create
+        your website or app in any platform you need.</p></div>
               </li>
               <li class="home-process__step">
                 <button class="home-process__toggle" type="button" aria-controls="item4" aria-expanded="false"><span>Web/Mobile Development</span>
@@ -472,10 +456,13 @@
                     <use xlink:href="images/sprite.svg#arrow-step"></use>
                   </svg>
                 </button>
-                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
-        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
-        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
-        совершать действия, необходимые вам по их доброй воле.</p></div>
+                <div class="home-process__text"><p>The web and mobile development process starts with an idea for a product or
+        service that needs to be developed into a tangible product or service. This idea will
+        then be prototyped in order to get feedback on the viability of the idea before moving
+        on to more costly stages in the process.</p>
+        <p>The MVP (minimum viable product) phase will typically include just enough features
+        to test whether there’s a market for the product or service, while proof-of-concepts
+        are often used as a way for startups.</p></div>
               </li>
               <li class="home-process__step">
                 <button class="home-process__toggle" type="button" aria-controls="item5" aria-expanded="false"><span>Quality Assurance</span>
@@ -483,18 +470,16 @@
                     <use xlink:href="images/sprite.svg#arrow-step"></use>
                   </svg>
                 </button>
-                <div class="home-process__text"><p><b>Разработка дизайна</b> — это не просто создание красивой картинки,
-        а способ передать главные смыслы вашего проекта с помощью понятных посетителю
-        визуальных образов. Сайт или мобильное приложение должны мотивировать людей
-        совершать действия, необходимые вам по их доброй воле.</p></div>
+                <div class="home-process__text"><p>Quality assurance is an important aspect of any project. It ensures that the quality
+        of a product or service meets customer expectations and it can be used to find errors
+        in the system. There are many different types of testing that can be done, but they all
+        serve one purpose — to ensure that your product or service meets customer expectations.</p></div>
               </li>
             </ul>
-            <!-- открыть модальное окно "проконсультироваться" (мобильная версия)-->
                     <button class="button button--accent home-process__modal-open home-process__modal-open--secondary advisory-open" type="button">Lets’s start!<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
           </div>
         </section>
-        <!-- команда-->
-        <section class="home-team section">
+        <section class="home-team section" id="team">
           <div class="home-team__container container">
             <div class="home-team__wrapper">
               <div class="home-team__top-wrap">
@@ -505,18 +490,18 @@
                 </p>
               </div>
               <p class="home-team__text"><span>50+</span>professionals in Riga, <br> Amsterdam and Valencia</p>
-              <div class="home-team__socials home-team__socials--main"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+              <div class="home-team__socials home-team__socials--main"><a class="social social social--facebook home-team__social" href="index.html" aria-label="Our facebook">
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#facebook"></use>
-                          </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                          </svg></a><a class="social social social--instagram home-team__social" href="index.html" aria-label="Our instagram">
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#instagram"></use>
-                          </svg></a><a class="social social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#vkontakte"></use>
-                          </svg></a><a class="social social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          </svg></a><a class="social social social--telegram home-team__social" href="index.html" aria-label="Our telegram">
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#telegram"></use>
+                          </svg></a><a class="social social social--whatsapp home-team__social" href="index.html" aria-label="Our whatsapp">
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#whatsapp"></use>
                           </svg></a>
               </div>
             </div>
@@ -554,28 +539,28 @@
               </div>
               <div class="team-slider__navigation">
                 <div class="team-slider__buttons">
-                  <button class="team-slider__button team-slider__button--prev" type="button"><span class="visually-hidden">Предыдущий слайд</span>
+                  <button class="team-slider__button team-slider__button--prev" type="button" aria-label="Go to prev slide">
                     <svg width="48" height="48" aria-hidden="true">
                       <use xlink:href="images/sprite.svg#arrow-swiper-prev"></use>
                     </svg>
                   </button>
-                  <button class="team-slider__button team-slider__button--next" type="button"><span class="visually-hidden">Следующий слайд</span>
+                  <button class="team-slider__button team-slider__button--next" type="button" aria-label="Go to next slide">
                     <svg width="48" height="48" aria-hidden="true">
                       <use xlink:href="images/sprite.svg#arrow-swiper-next"></use>
                     </svg>
                   </button>
                 </div>
                 <div class="team-slider__contacts">
-                  <div class="home-team__socials home-team__socials--secondary"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+                  <div class="home-team__socials home-team__socials--secondary"><a class="social social social--facebook home-team__social" href="index.html" aria-label="Our facebook">
                               <svg width="20" height="20" aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#facebook"></use>
-                              </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                              </svg></a><a class="social social social--instagram home-team__social" href="index.html" aria-label="Our instagram">
                               <svg width="20" height="20" aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#instagram"></use>
-                              </svg></a><a class="social social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
+                              </svg></a><a class="social social social--vkontakte home-team__social" href="index.html" aria-label="Our vkontakte">
                               <svg width="20" height="20" aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#vkontakte"></use>
-                              </svg></a><a class="social social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                              </svg></a><a class="social social social--telegram home-team__social" href="index.html" aria-label="Our telegram">
                               <svg width="20" height="20" aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#telegram"></use>
                               </svg></a>
@@ -585,18 +570,18 @@
               </div>
             </div>
             <div class="home-team__mobile-contacts">
-              <div class="home-team__socials home-team__socials--third"><a class="social social social--facebook home-team__social" href="index.html"><span class="visually-hidden">Мы в facebook</span>
+              <div class="home-team__socials home-team__socials--third"><a class="social social social--facebook home-team__social" href="index.html" aria-label="Our facebook">
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#facebook"></use>
-                          </svg></a><a class="social social social--instagram home-team__social" href="index.html"><span class="visually-hidden">Мы в instagram</span>
+                          </svg></a><a class="social social social--instagram home-team__social" href="index.html" aria-label="Our instagram">
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#instagram"></use>
-                          </svg></a><a class="social social social--vkontakte home-team__social" href="index.html"><span class="visually-hidden">Мы в vkontakte</span>
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#vkontakte"></use>
-                          </svg></a><a class="social social social--telegram home-team__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          </svg></a><a class="social social social--telegram home-team__social" href="index.html" aria-label="Our telegram">
                           <svg width="20" height="20" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#telegram"></use>
+                          </svg></a><a class="social social social--whatsapp home-team__social" href="index.html" aria-label="Our whatsapp">
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#whatsapp"></use>
                           </svg></a>
               </div>
                       <button class="button button--accent home-team__modal-open recall-open" type="button">Let’s meet!<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
@@ -612,7 +597,7 @@
           </div>
           <div class="footer__addresses">
             <div class="footer__address-wrap">
-              <p class="footer__address">Riga</p>
+              <p class="footer__address">Rīga, Latvija</p>
               <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
             </div>
             <div class="footer__address-wrap">
@@ -620,24 +605,38 @@
               <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
             </div>
             <div class="footer__address-wrap">
-              <p class="footer__address">Valencia</p>
-              <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
+              <p class="footer__address">Torrevieja, Alicante, España</p>
+              <address class="footer__text">C. Fotógrafos Darblade, 10, Entreplanta, 03181</address>
+            </div>
+            <div class="footer__address-wrap">
+              <p class="footer__address">Nikolayev, Ukraine</p>
+              <address class="footer__text">Central Avenue, 6a</address>
             </div>
           </div>
           <div class="footer__nav">
             <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="index.html">Portfolio</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Services and Technology</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Testimonials</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Team</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Contacts</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Web Development</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Mobile Development</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Branding & Design</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Dedicated Teams</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Digital Support</a></li>
+              <li class="footer__item"><a class="footer__link" href="#projects">Portfolio</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="#services">Services and Technology</a>
+              </li>
+              <li class="footer__item"><a class="footer__link video-open" href="">Testimonials</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="#team">Team</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Web Development</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Mobile Development</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Branding & Design</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Dedicated Teams</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Digital Support</a>
+              </li>
             </ul>
-          </div><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
+          </div><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Logo Insky"><span class="logo__text">Insky.digital</span></a>
           <p class="footer__copyright">
             @ 2022 Insky.eu All Rights Reserved.
             <a href="index.html">Privacy Policy</a>
@@ -647,13 +646,11 @@
     </div>
     <div class="modal">
       <div class="modal__container">
-        <!-- закрыть модальное окно-->
-        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span>
+        <button class="modal__close" type="button" aria-label="Close modal">
           <svg width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#modal-close"></use>
           </svg>
         </button>
-        <!-- обратный звонок-->
         <div class="modal__content modal-recall">
           <p class="modal__title modal-recall__title">Let’s talk. We’ll get back to you within a business day.</p>
           <form class="modal-recall__form form" action="send.php" novalidate>
@@ -678,7 +675,6 @@
             </div>
           </form>
         </div>
-        <!-- проконсультироваться-->
         <div class="modal__content modal-advisory">
           <p class="modal__title modal-advisory__title">Drop us a line and we’ll get back to you within a business day.</p>
           <form class="modal-advisory__form form form--files" action="send.php" novalidate>
@@ -762,12 +758,10 @@
             </div>
           </form>
         </div>
-        <!-- успешная отправка-->
         <div class="modal__content modal-success">
-          <p class="modal__title modal-success__title">Ваша заявка принята!</p>
-          <p class="modal__text modal-success__text">Наш менеджер свяжется с вами в ближайшее время</p><span class="modal-success__icon" aria-hidden="true"></span>
+          <p class="modal__title modal-success__title">Message received!</p>
+          <p class="modal__text modal-success__text">We’ll get back to you within a business day.</p><span class="modal-success__icon" aria-hidden="true"></span>
         </div>
-        <!-- видео-->
         <div class="modal__content modal-video">
           <video class="modal-video__video video-js" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png" data-setup="{}">
             <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
@@ -777,9 +771,9 @@
         </div>
       </div>
     </div>
-    <script src="js/leaflet.js?_v=20220516161653"></script>
-    <script src="js/bundle.min.js?_v=20220516161653"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220516161653"></script>
-    <script src="js/switcher.js?_v=20220516161653"></script>
+    <script src="js/leaflet.js?_v=20220518142845"></script>
+    <script src="js/bundle.min.js?_v=20220518142845"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220518142845"></script>
+    <script src="js/switcher.js?_v=20220518142845"></script>
   </body>
 </html>

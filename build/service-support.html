@@ -17,23 +17,22 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" id="meta-light" media="(prefers-color-scheme: light)">
     <meta name="theme-color" id="meta-dark" media="(prefers-color-scheme: dark)">
-    <script src="js/theme.js?_v=20220516161653"></script>
-    <title>Insky.digital | Услуга</title>
-    <meta name="description" content="Услуга">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220516161653">
+    <script src="js/theme.js?_v=20220518142845"></script>
+    <title>Insky.digital | Service</title>
+    <meta name="description" content="Service">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220518142845">
     <link rel="preload" href="fonts/graphik-lcg-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/graphik-lcg-600.woff2" as="font" crossorigin="anonymous">
-    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220516161653" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css?_v=20220518142845" rel="stylesheet">
   </head>
   <body class="page__body">
-    <noscript>У вас отключен JavaScript. Это пугает.</noscript>
     <div class="page__wrapper">
       <header class="header">
         <div class="header__container container">
           <div class="header__right-wrap">
-            <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Открыть меню</span><span></span><span></span><span></span></button><a class="logo header__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
-                  <button class="theme-switcher header__theme-switcher" type="button"><span class="visually-hidden">Переключить на темную тему</span>
+            <button class="header__main-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button><a class="logo header__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Logo Insky"><span class="logo__text">Insky.digital</span></a>
+                  <button class="theme-switcher header__theme-switcher" type="button" aria-label="Switch theme">
                     <svg class="theme-switcher__icon"></svg><span class="theme-switcher__check"></span>
                   </button><a class="header__phone-icon" href="tel:+74993507512"><span class="visually-hidden">+7 499 350-75-12</span>
               <svg width="24" height="24" aria-hidden="true">
@@ -43,8 +42,8 @@
           <div class="header__left-wrap">
             <nav class="header__nav main-nav" id="main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Portfolio</a></li>
-                <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html">Services & Technology</a>
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html#projects">Portfolio</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--menu" href="index.html#services">Services & Technology</a>
                               <button class="nav-arrow" type="button" aria-expanded="false">
                                 <svg width="16" height="16" aria-hidden="true">
                                   <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -101,7 +100,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="index.html">Company</a>
+                <li class="main-nav__item main-nav__item--menu-small"><a class="main-nav__link main-nav__link--menu" href="index.html#team">Company</a>
                               <button class="nav-arrow" type="button" aria-expanded="false">
                                 <svg width="16" height="16" aria-hidden="true">
                                   <use xlink:href="images/sprite.svg#arrow-link"></use>
@@ -109,15 +108,17 @@
                               </button>
                   <div class="menu-small menu">
                     <ul class="menu-small__list menu__container">
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Testimonials</a></li>
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Team</a></li>
-                      <li class="menu-small__item"><a class="menu-small__link" href="index.pug">Contacts</a></li>
+                      <li class="menu-small__item"><a class="menu-small__link video-open" href="">Testimonials</a>
+                      </li>
+                      <li class="menu-small__item"><a class="menu-small__link undefined" href="index.html#team">Team</a>
+                      </li>
+                      <li class="menu-small__item"><a class="menu-small__link undefined" href="contacts.html">Contacts</a>
+                      </li>
                     </ul>
                   </div>
                 </li>
               </ul>
               <div class="main-nav__languages">
-                <!-- десктоп-->
                 <button class="main-nav__language main-nav__link main-nav__link--menu" type="button">EN</button>
                             <button class="nav-arrow" type="button" aria-expanded="false">
                               <svg width="16" height="16" aria-hidden="true">
@@ -133,14 +134,13 @@
                     <li class="menu-small__item"><a class="menu-small__link" href="index.html">ES</a>
                     </li>
                   </ul>
-                </div>
-                <!-- мобильная--><a class="main-nav__language-link main-nav__language-link--current" href="index.html">EN</a><a class="main-nav__language-link" href="index.html">NL</a><a class="main-nav__language-link" href="index.html">ES</a>
+                </div><a class="main-nav__language-link main-nav__language-link--current" href="index.html">EN</a><a class="main-nav__language-link" href="index.html">NL</a><a class="main-nav__language-link" href="index.html">ES</a>
               </div>
               <div class="main-nav__contacts"><a class="main-nav__phone" href="tel:+74993507512">+7 499 350-75-12</a>
-                <div class="main-nav__socials"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+                <div class="main-nav__socials"><a class="social-accent social-accent--whatsapp main-nav__social" href="index.html" aria-label="Our whatsapp">
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#whatsapp"></use>
-                          </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                          </svg></a><a class="social-accent social-accent--telegram main-nav__social" href="index.html" aria-label="Our telegram">
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="images/sprite.svg#telegram"></use>
                           </svg></a>
@@ -148,10 +148,10 @@
               </div>
                     <button class="button button--accent main-nav__modal-open advisory-open" type="button">Contact us<span class="button__line button__line--top"></span><span class="button__line button__line--top-right"></span><span class="button__line button__line--bottom-right"></span><span class="button__line button__line--left"></span><span class="button__line button__line--bottom"></span></button>
             </nav>
-            <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html"><span class="visually-hidden">Мы в whatsapp</span>
+            <div class="header__contacts"><a class="social-accent social-accent--whatsapp header__social" href="index.html" aria-label="Our whatsapp">
                       <svg width="12" height="12" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#whatsapp"></use>
-                      </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html"><span class="visually-hidden">Мы в telegram</span>
+                      </svg></a><a class="social-accent social-accent--telegram header__social" href="index.html" aria-label="Our telegram">
                       <svg width="12" height="12" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#telegram"></use>
                       </svg></a><a class="header__phone" href="tel:+74993507512">+7 499 350-75-12</a>
@@ -164,24 +164,16 @@
         <div class="service-preview section">
           <div class="service-preview__container container">
             <div class="service-preview__wrapper">
-              <div class="service-preview__crumbs crumbs crumbs--alternate"><a class="crumb" href="index.html">Главная</a><a class="crumb" href="index.html">Услуги</a><span class="crumb crumb--current">Поддержка сайтов</span>
+              <div class="service-preview__crumbs crumbs"><a class="crumb" href="index.html">Home</a><a class="crumb" href="index.html">Услуги</a><span class="crumb crumb--current">Поддержка сайтов</span>
               </div>
               <h1 class="service-preview__title title">Поддержка сайтов</h1>
               <p class="service-preview__sub-title">От мониторинга до полноценного развития
         и антивирусной защиты</p>
-              <picture class="service-preview__background">
-                <source media="(min-width: 2500px)" srcset="images/content/service-preview-background01@3x.webp" type="image/webp"/>
-                <source media="(min-width: 2500px)" srcset="images/content/service-preview-background01@3x.jpg"/>
-                <source media="(min-width: 1300px)" srcset="images/content/service-preview-background01@3x.webp" type="image/webp"/>
-                <source media="(min-width: 1300px)" srcset="images/content/service-preview-background01@3x.jpg"/>
-                <source srcset="images/content/service-preview-background01@2x.webp" type="image/webp"/><img src="images/content/service-preview-background01@2x.jpg" alt="Фон"/>
-              </picture>
             </div>
           </div>
         </div>
         <section class="service-advantages section">
           <div class="service-advantages__container container">
-            <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="service-advantages__list">
               <li class="service-advantages__item"><strong>15+</strong>
         <span>лет мы разрабатываем сайты</span></li>
@@ -211,7 +203,7 @@
                 <ul class="service-rates__offer-list">
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Хранение доступов</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -219,7 +211,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Персональный менеджер</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -227,7 +219,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Отчетность в ЛК</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -235,7 +227,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Контроль продлений</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--off"><span class="visually-hidden">Отсутствует</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--off" aria-label="Not included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-off"></use>
                       </svg>
@@ -243,7 +235,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Антивирусная защита</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--off"><span class="visually-hidden">Отсутствует</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--off" aria-label="Not included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-off"></use>
                       </svg>
@@ -251,7 +243,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Мониторинг работы сайта</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--off"><span class="visually-hidden">Отсутствует</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--off" aria-label="Not included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-off"></use>
                       </svg>
@@ -259,7 +251,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Резервное копирование</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--off"><span class="visually-hidden">Отсутствует</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--off" aria-label="Not included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-off"></use>
                       </svg>
@@ -274,7 +266,7 @@
                 <ul class="service-rates__offer-list">
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Хранение доступов</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -282,7 +274,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Персональный менеджер</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -290,7 +282,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Отчетность в ЛК</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -298,7 +290,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Контроль продлений</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -306,7 +298,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Антивирусная защита</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -314,7 +306,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Мониторинг работы сайта</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--off"><span class="visually-hidden">Отсутствует</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--off" aria-label="Not included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-off"></use>
                       </svg>
@@ -322,7 +314,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Резервное копирование</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--off"><span class="visually-hidden">Отсутствует</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--off" aria-label="Not included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-off"></use>
                       </svg>
@@ -337,7 +329,7 @@
                 <ul class="service-rates__offer-list">
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Хранение доступов</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -345,7 +337,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Персональный менеджер</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -353,7 +345,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Отчетность в ЛК</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -361,7 +353,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Контроль продлений</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -369,7 +361,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Антивирусная защита</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -377,7 +369,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Мониторинг работы сайта</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -385,7 +377,7 @@
                   </li>
                   <li class="service-rates__offer-item">
                     <h3 class="service-rates__offer-title">Резервное копирование</h3>
-                    <div class="service-rates__offer-status service-rates__offer-status--on"><span class="visually-hidden">Включено</span>
+                    <div class="service-rates__offer-status service-rates__offer-status--on" aria-label="Included">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="images/sprite.svg#service-on"></use>
                       </svg>
@@ -425,9 +417,9 @@
                     <source media="(min-width: 2500px)" srcset="images/content/service-about-image01-1@3x.jpg"/>
                     <source media="(min-width: 1300px)" srcset="images/content/service-about-image01-1@2x.webp" type="image/webp"/>
                     <source media="(min-width: 1300px)" srcset="images/content/service-about-image01-1@2x.jpg"/>
-                    <source srcset="images/content/service-about-image01-1.webp" type="image/webp"/><img src="images/content/service-about-image01-1.jpg" alt="Фон"/>
+                    <source srcset="images/content/service-about-image01-1.webp" type="image/webp"/><img src="images/content/service-about-image01-1.jpg" alt="Image"/>
                   </picture>
-                  <button class="service-about__video-open video-open" type="button"><span class="visually-hidden">Открыть видео</span></button>
+                  <button class="service-about__video-open video-open" type="button" aria-label="Open video"></button>
                 </div>
               </li>
               <li class="service-about__item">
@@ -445,7 +437,7 @@
                     <source media="(min-width: 2500px)" srcset="images/content/service-about-image01-2@3x.jpg"/>
                     <source media="(min-width: 1300px)" srcset="images/content/service-about-image01-2@2x.webp" type="image/webp"/>
                     <source media="(min-width: 1300px)" srcset="images/content/service-about-image01-2@2x.jpg"/>
-                    <source srcset="images/content/service-about-image01-2.webp" type="image/webp"/><img src="images/content/service-about-image01-2.jpg" alt="Фон"/>
+                    <source srcset="images/content/service-about-image01-2.webp" type="image/webp"/><img src="images/content/service-about-image01-2.jpg" alt="Image"/>
                   </picture>
                 </div>
               </li>
@@ -464,7 +456,7 @@
                     <source media="(min-width: 2500px)" srcset="images/content/service-about-image01-3@3x.jpg"/>
                     <source media="(min-width: 1300px)" srcset="images/content/service-about-image01-3@2x.webp" type="image/webp"/>
                     <source media="(min-width: 1300px)" srcset="images/content/service-about-image01-3@2x.jpg"/>
-                    <source srcset="images/content/service-about-image01-3.webp" type="image/webp"/><img src="images/content/service-about-image01-3.jpg" alt="Фон"/>
+                    <source srcset="images/content/service-about-image01-3.webp" type="image/webp"/><img src="images/content/service-about-image01-3.jpg" alt="Image"/>
                   </picture>
                 </div>
               </li>
@@ -574,7 +566,7 @@
           </div>
           <div class="footer__addresses">
             <div class="footer__address-wrap">
-              <p class="footer__address">Riga</p>
+              <p class="footer__address">Rīga, Latvija</p>
               <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
             </div>
             <div class="footer__address-wrap">
@@ -582,24 +574,38 @@
               <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
             </div>
             <div class="footer__address-wrap">
-              <p class="footer__address">Valencia</p>
-              <address class="footer__text">Pulkveža Brieža iela 6 — 1, Rīga, LV-1010</address>
+              <p class="footer__address">Torrevieja, Alicante, España</p>
+              <address class="footer__text">C. Fotógrafos Darblade, 10, Entreplanta, 03181</address>
+            </div>
+            <div class="footer__address-wrap">
+              <p class="footer__address">Nikolayev, Ukraine</p>
+              <address class="footer__text">Central Avenue, 6a</address>
             </div>
           </div>
           <div class="footer__nav">
             <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="index.html">Portfolio</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Services and Technology</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Testimonials</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Team</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Contacts</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Web Development</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Mobile Development</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Branding & Design</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Dedicated Teams</a></li>
-              <li class="footer__item"><a class="footer__link" href="index.html">Digital Support</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html#projects">Portfolio</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html#services">Services and Technology</a>
+              </li>
+              <li class="footer__item"><a class="footer__link video-open" href="">Testimonials</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html#team">Team</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Web Development</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Mobile Development</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Branding & Design</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Dedicated Teams</a>
+              </li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Digital Support</a>
+              </li>
             </ul>
-          </div><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Логотип Insky.digital"><span class="logo__text">Insky.digital</span></a>
+          </div><a class="logo footer__logo" href="index.html"><img class="logo__image" src="images/content/logo.svg" alt="Logo Insky"><span class="logo__text">Insky.digital</span></a>
           <p class="footer__copyright">
             @ 2022 Insky.eu All Rights Reserved.
             <a href="index.html">Privacy Policy</a>
@@ -609,13 +615,11 @@
     </div>
     <div class="modal">
       <div class="modal__container">
-        <!-- закрыть модальное окно-->
-        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span>
+        <button class="modal__close" type="button" aria-label="Close modal">
           <svg width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#modal-close"></use>
           </svg>
         </button>
-        <!-- обратный звонок-->
         <div class="modal__content modal-recall">
           <p class="modal__title modal-recall__title">Let’s talk. We’ll get back to you within a business day.</p>
           <form class="modal-recall__form form" action="send.php" novalidate>
@@ -640,7 +644,6 @@
             </div>
           </form>
         </div>
-        <!-- проконсультироваться-->
         <div class="modal__content modal-advisory">
           <p class="modal__title modal-advisory__title">Drop us a line and we’ll get back to you within a business day.</p>
           <form class="modal-advisory__form form form--files" action="send.php" novalidate>
@@ -724,12 +727,10 @@
             </div>
           </form>
         </div>
-        <!-- успешная отправка-->
         <div class="modal__content modal-success">
-          <p class="modal__title modal-success__title">Ваша заявка принята!</p>
-          <p class="modal__text modal-success__text">Наш менеджер свяжется с вами в ближайшее время</p><span class="modal-success__icon" aria-hidden="true"></span>
+          <p class="modal__title modal-success__title">Message received!</p>
+          <p class="modal__text modal-success__text">We’ll get back to you within a business day.</p><span class="modal-success__icon" aria-hidden="true"></span>
         </div>
-        <!-- видео-->
         <div class="modal__content modal-video">
           <video class="modal-video__video video-js" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png" data-setup="{}">
             <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
@@ -739,9 +740,9 @@
         </div>
       </div>
     </div>
-    <script src="js/leaflet.js?_v=20220516161653"></script>
-    <script src="js/bundle.min.js?_v=20220516161653"></script>
-    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220516161653"></script>
-    <script src="js/switcher.js?_v=20220516161653"></script>
+    <script src="js/leaflet.js?_v=20220518142845"></script>
+    <script src="js/bundle.min.js?_v=20220518142845"></script>
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js?_v=20220518142845"></script>
+    <script src="js/switcher.js?_v=20220518142845"></script>
   </body>
 </html>

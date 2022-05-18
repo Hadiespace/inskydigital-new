@@ -3,7 +3,6 @@ include footer-data
 
 footer.footer
 	div.footer__container.container
-		//- Контакты
 		div.footer__contacts
 			div.footer__contact-wrap
 				a.footer__contact-link(href=`tel:${phoneHref}`)!= phoneName
@@ -11,21 +10,20 @@ footer.footer
 			div.footer__contact-wrap
 				a.footer__contact-link(href=`mailto:${email}`)!= email
 				span.footer__contact-text Drop us a line
-		//- Адреса
 		div.footer__addresses
 			each city in addresses
 				div.footer__address-wrap
 					p.footer__address!= city.name
 					address.footer__text!= city.address
-		//- Страницы
 		div.footer__nav
 			ul.footer__list
 				each link in navLinks
 					li.footer__item
-						a.footer__link(href=link.href)!= link.name
-		//-- Логотип
+						if isHome
+							a.footer__link(class=link.modal ? link.modal : '', href=link.hrefIndex)!= link.name
+						else
+							a.footer__link(class=link.modal ? link.modal : '', href=link.href)!= link.name
 		+logo.footer__logo
-		//-- Копирайт
 		p.footer__copyright
 			| @ 2022 Insky.eu All Rights Reserved.
 			| #[a(href="index.html") Privacy Policy]

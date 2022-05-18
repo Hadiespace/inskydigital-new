@@ -2,36 +2,40 @@ include header-data
 include ../nav-arrow
 
 nav.header__nav.main-nav#main-nav
-	//- страницы
-	//- main-nav__link--current (активная страница)
-	ul.main-nav__list
-		li.main-nav__item
-			a.main-nav__link(href="index.html") Portfolio
-		li.main-nav__item
-			a.main-nav__link.main-nav__link--menu(href="index.html") Services & Technology
-			+navArrow
-			//- выпадающее меню (большое)
-			include menu-big
-		li.main-nav__item.main-nav__item--menu-small
-			a.main-nav__link.main-nav__link--menu(href="index.html") Company
-			+navArrow
-			//- выпадающее меню (маленькое)
-			include menu-small-about
-	//- смена языка
+	if isHome
+		ul.main-nav__list
+			li.main-nav__item
+				a.main-nav__link(href="#projects") Portfolio
+			li.main-nav__item
+				a.main-nav__link.main-nav__link--menu(href="#services") Services & Technology
+				+navArrow
+				include menu-big
+			li.main-nav__item.main-nav__item--menu-small
+				a.main-nav__link.main-nav__link--menu(href="#team") Company
+				+navArrow
+				include menu-small-about
+	else
+		ul.main-nav__list
+			li.main-nav__item
+				a.main-nav__link(href="index.html#projects") Portfolio
+			li.main-nav__item
+				a.main-nav__link.main-nav__link--menu(href="index.html#services") Services & Technology
+				+navArrow
+				include menu-big
+			li.main-nav__item.main-nav__item--menu-small
+				a.main-nav__link.main-nav__link--menu(href="index.html#team") Company
+				+navArrow
+				include menu-small-about
 	div.main-nav__languages
-		// десктоп
 		button.main-nav__language.main-nav__link.main-nav__link--menu(type="button") EN
 		+navArrow
 		include menu-small-languages
-		// мобильная
 		a.main-nav__language-link.main-nav__language-link--current(href="index.html") EN
 		a.main-nav__language-link(href="index.html") NL
 		a.main-nav__language-link(href="index.html") ES
-	//- контакты
 	div.main-nav__contacts
 		a.main-nav__phone(href=`tel:${phoneHref}`)!= phoneName
 		div.main-nav__socials
 			+socialAccent('whatsapp').main-nav__social
 			+socialAccent('telegram').main-nav__social
-	//- открыть модальное окно "проконсультироваться"
 	+button('Contact us').main-nav__modal-open.advisory-open
