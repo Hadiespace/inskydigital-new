@@ -15,6 +15,8 @@ import { changeVH } from './modules/vh.js';
 import { createHeaderGradient } from './modules/header.js';
 import { toggleCities } from './modules/city.js';
 import { initMap } from './modules/map.js';
+import { closeCookies } from './modules/cookies.js';
+import { createParallaxEffect } from './modules/parallax.js';
 
 changeVH();
 testSupportWebp();
@@ -31,3 +33,5 @@ sendForm();
 toggleModal();
 toggleCities();
 initMap();
+closeCookies();
+createParallaxEffect();

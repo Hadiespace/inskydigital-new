@@ -1,0 +1,13 @@
+extends layout/layout
+include modules/page-header
+
+block const
+
+block meta
+	title Insky.digital | Projects
+	meta(name="description", content="Projects")
+block content
+	+pageHeader('Projects', 'Projects')
+	include modules/projects/projects
+
+block prepend page-bottom

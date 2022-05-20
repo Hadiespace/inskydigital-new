@@ -15,6 +15,8 @@ footer.footer
 				div.footer__address-wrap
 					p.footer__address!= city.name
 					address.footer__text!= city.address
+					if city.isClosed
+						span.footer__closed Temporarily closed
 		div.footer__nav
 			ul.footer__list
 				each link in navLinks

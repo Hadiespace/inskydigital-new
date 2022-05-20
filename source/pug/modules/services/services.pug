@@ -1,0 +1,13 @@
+include services-data
+include ../service-card
+
+div.services.section
+	div.services__container.container
+		each service in servicesCards
+			div.services__wrapper
+				div.services__aside.aside
+					h2.services__title!= service.title
+				ul.services__cards
+					each card in service.list
+						li.services__card
+							+serviceCard(card)

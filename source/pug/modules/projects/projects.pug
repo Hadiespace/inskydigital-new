@@ -1,0 +1,18 @@
+include projects-data
+include ../project-card
+include ../tab-filter
+
+div.projects.section
+	div.projects__container.container
+		div.projects__wrapper
+			p.projects__text #[span 20+] лет создаем проекты #[br] для наших клиентов
+			p.projects__description Некоторые кейсы нам нельзя показывать, но экспертиза, полученная при их создании, остается с нами. Полное портфолио и проекты в вашей нише бизнеса предоставим по запросу.
+		div.projects__aside.aside
+			ul.projects__types
+				each item in projectsTypes
+					li.projects__type
+						+tabFilter(item)
+		ul.projects__cards
+			each card in projectsCards
+				li.projects__card
+					+projectCard(card)

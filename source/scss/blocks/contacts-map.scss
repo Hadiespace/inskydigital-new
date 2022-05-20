@@ -19,6 +19,18 @@
 }
 
 .contacts-map__buttons {
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		width: 0;
+		height: 0;
+	}
+
 	@media (min-width: 768px) {
 		display: none;
 	}
@@ -36,6 +48,7 @@
 .contacts-map__button-wrap {
 	display: grid;
 	justify-self: start;
+	width: max-content;
 }
 
 .contacts-map__list {
@@ -205,6 +218,7 @@
 }
 
 .contacts-map__city-wrap {
+	display: grid;
 	overflow: hidden;
 	height: 0;
 	visibility: hidden;
@@ -344,4 +358,8 @@
 
 .leaflet-control-attribution {
 	display: none;
+}
+
+.contacts-map__closed {
+	color: var(--color-accent);
 }

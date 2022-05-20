@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const currentPage = (window.location.pathname).replace('/', '');
 	const pagesList = {
-		'01. Главная': 'index.html',
-		'02. Кейс (Mebelgroup)': 'case-mebelgroup.html',
-		'03. Контакты': 'contacts.html',
-		'04. Услуга (Поддержка сайтов)': 'service-support.html',
-		'05. 404 страница': '404.html',
+		'Главная': 'index.html',
+		'Проекты': 'projects.html',
+		'Кейс (Mebelgroup)': 'case-mebelgroup.html',
+		'Услуги': 'services.html',
+		'Услуга (Поддержка сайтов)': 'service-support.html',
+		'Контакты': 'contacts.html',
+		'Политика': 'policy.html',
+		'Страница 404': '404.html',
 	};
 
 	const link = '' +

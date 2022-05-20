@@ -1,0 +1,13 @@
+extends layout/layout
+include modules/page-header
+
+block const
+
+block meta
+	title Insky.digital | Policy
+	meta(name="description", content="Policy")
+block content
+	+pageHeader('Policy', 'Policy')
+	include modules/policy/policy
+
+block prepend page-bottom

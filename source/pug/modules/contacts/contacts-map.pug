@@ -16,7 +16,10 @@ section.contacts-map.section
 						h3.contacts-map__title!= city.title
 						address.contacts-map__address!= city.address
 						div.contacts-map__links
-							each value, key in city.links
-								a.contacts-map__link(href=key)!= value
+							if city.links
+								each value, key in city.links
+									a.contacts-map__link(href=key)!= value
+						if city.isClosed
+							span.contacts-map__closed Temporarily closed
 		div.contacts-map__map-wrap
 			div.contacts-map__map#map

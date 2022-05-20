@@ -3,38 +3,16 @@
 	display: grid;
 	overflow: hidden;
 
-	&::before {
-		content: "";
-		position: absolute;
-		left: 50%;
-		background-image: url("../images/common/not-found-background.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		transform: translateX(-50%);
-	}
-
 	@media (min-width: 1200px) {
 		@include adaptive("min-height", 640);
 		@include adaptive("padding-top", 200);
 		@include adaptive("margin-bottom", 60);
-
-		&::before {
-			@include adaptive("width", 1492);
-			@include adaptive("height", 556);
-			@include adaptive("top", 84);
-		}
 	}
 
 	@media (max-width: 1199px) {
 		margin-bottom: 84px;
 		padding-top: 140px;
 		min-height: 640px;
-
-		&::before {
-			top: 84px;
-			width: 1492px;
-			height: 556px;
-		}
 	}
 
 	@media (max-width: 991px) {
@@ -46,11 +24,6 @@
 		margin-bottom: 60px;
 		padding-top: 160px;
 		min-height: 278px;
-
-		&::before {
-			width: 746px;
-			height: 278px;
-		}
 	}
 }
 
@@ -128,6 +101,46 @@
 	@media (max-width: 1199px) {
 		&::before {
 			height: 1px;
+		}
+	}
+}
+
+.not-found__background {
+	z-index: -1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		background-image: url("../images/common/not-found-background.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateX(-50%);
+	}
+
+	@media (min-width: 1200px) {
+		position: absolute;
+		inset: 0;
+
+		&::before {
+			@include adaptive("width", 1492);
+			@include adaptive("height", 556);
+			@include adaptive("top", 84);
+		}
+	}
+
+	@media (max-width: 1199px) {
+		&::before {
+			top: 84px;
+			width: 1492px;
+			height: 556px;
+		}
+	}
+
+	@media (max-width: 599px) {
+		&::before {
+			width: 746px;
+			height: 278px;
 		}
 	}
 }

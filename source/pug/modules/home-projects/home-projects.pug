@@ -7,10 +7,10 @@ section.home-projects.section#projects
 	div.home-projects__container.container
 		div.home-projects__aside.aside
 			h2.home-projects__title.title Cases
-			//- ul.home-projects__types
-			//- 	each item in projectsTypes
-			//- 		li.home-projects__type
-			//- 			+tabFilter(item)
+			ul.home-projects__types
+				each item in projectsTypes
+					li.home-projects__type
+						+tabFilter(item)
 			+button('More cases', false, true, 'index.html').home-projects__portfolio-open.home-projects__portfolio-open--main
 		ul.home-projects__cards
 			each card in projectsCards
